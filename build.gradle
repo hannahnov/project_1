@@ -26,4 +26,8 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
+    // https://mvnrepository.com/artifact/io.javalin/javalin
+	compile group: 'io.javalin', name: 'javalin', version: '3.11.2'
+    
 }
