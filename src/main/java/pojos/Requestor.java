@@ -1,6 +1,6 @@
 package pojos;
 
-public class Requestor {
+public class Requestor implements Employee {
 	
 	private String firstName;
 
@@ -84,7 +84,7 @@ public class Requestor {
 		return availableReimbursement;
 	}
 
-	public void setAvailableReimbursement(int availableReimbursement) {
+	public void setAvailableReimbursement(double availableReimbursement) {
 		this.availableReimbursement = availableReimbursement;
 	}
 
