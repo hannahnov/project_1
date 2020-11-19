@@ -14,7 +14,13 @@ public class Requestor {
 	
 	private Event event;
 	
-	private int availableReimbursement;
+	//could be a grade or presentation
+	private EventResult eventResult;
+	
+	private double availableReimbursement;
+	
+	private double pendingReimbursement;
+	
 	
 	
 
@@ -23,19 +29,6 @@ public class Requestor {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-
-	public Requestor(String firstName, String lastName, String userName, String password, Approver directSupervisor,
-			Event event, int availableReimbursement) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.directSupervisor = directSupervisor;
-		this.event = event;
-		this.availableReimbursement = availableReimbursement;
-	}
 
 
 
@@ -87,14 +80,43 @@ public class Requestor {
 		this.event = event;
 	}
 
-	public int getAvailableReimbursement() {
+	public double getAvailableReimbursement() {
 		return availableReimbursement;
 	}
 
 	public void setAvailableReimbursement(int availableReimbursement) {
 		this.availableReimbursement = availableReimbursement;
 	}
-	
+
+
+
+
+	public EventResult getEventResult() {
+		return eventResult;
+	}
+
+
+
+
+	public void setEventResult(EventResult eventResult) {
+		this.eventResult = eventResult;
+	}
+
+
+
+
+	public double getPendingReimbursement() {
+		return pendingReimbursement;
+	}
+
+
+
+
+	public void setPendingReimbursement(double pendingReimbursement) {
+		this.pendingReimbursement = pendingReimbursement;
+	}
+
+
 	
 
 }
