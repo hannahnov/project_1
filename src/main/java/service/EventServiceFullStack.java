@@ -1,5 +1,5 @@
 package service;
 
-public class EventServiceFullStack {
+public class EventServiceFullStack implements EventService {
 
 }

@@ -1,5 +1,5 @@
 package service;
 
-public class ReimbursementRequestServiceFullStack {
+public class ReimbursementRequestServiceFullStack implements ReimbursementRequestService {
 
 }
