@@ -1,9 +1,13 @@
 package controllers;
 
-import java.sql.Date;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.logging.Logger;
 
 import io.javalin.http.Context;
+import pojos.Event;
 import pojos.EventResult;
 import pojos.EventType;
 import service.EventService;
@@ -31,91 +35,127 @@ public class EventController {
 		
 		log.info("Controller: create event");
 		
-		//TODO figure out
-		EventType eventType = EventType.(ctx.formParam("eventResult"));
+		EventType eventType;
+		int eventTypeint = Integer.valueOf(ctx.formParam("eventtype"));
 		
+		switch (eventTypeint) {
 		
+		case 1: eventType = EventType.UNIVERSITY_COURSE;
+			break;
+		case 2: eventType = EventType.CERTIFICATION;
+			break;
+		case 3: eventType = EventType.CERTIFICATION_PREP_CLASS;
+			break;
+		case 4: eventType = EventType.TECHNICAL_TRAINING;
+			break;
+		case 5: eventType = EventType.SEMINAR;
+			break;
+		case 6: eventType = EventType.OTHER;
+			break;
+		default: eventType = null;
+			break;
+		}
 		
-		int dogId = Integer.valueOf(ctx.formParam("dogid"));
+		int eventId = Integer.valueOf(ctx.formParam("eventid"));
 		
 		String name = ctx.formParam("name");
 		
 		int skillLevel = Integer.parseInt(ctx.formParam("skilllevel"));
 		
-		boolean isAvailable = Boolean.parseBoolean(ctx.formParam("isavailable"));
-		String ownername = ctx.formParam("ownerusername");
+		DateFormat dateForm;
+	
+		Date eventStartDate = new Date();
+		eventStartDate = dateForm.parse(ctx.formParam("startdate"));
 		
-		System.out.println("owner name is " + ownername);
-		Dog dog = new Dog(dogId, name, ownername, skillLevel, isAvailable);
+		//TODO figure out eventResult
+		EventResult eventResult = ctx.formParam("eventResult");
 		
-		System.out.println(" controller owner name is " + dog.getOwnerName());
-		System.out.println(" controller dog name is " + dog.getDogName());
+		Event event = new Event (eventResult, eventId, name, eventStartDate, eventType);
+		eventService.createEvent(event);
 		
-		dogService.createDog(dog);
-		
-		ctx.html(((Integer)dog.getDogid()).toString());
+		ctx.html(event.toString());
 	}
-	public void readDog(Context ctx) {
+	public void readEvent(Context ctx) {
 		
-		log.info("Controller: read a dog");
+		log.info("Controller: read an event");
 
-		System.out.println("Responding to post read dog request");
+		System.out.println("Responding to get read event request");
 		
-		int dogId = Integer.valueOf(ctx.formParam("dogid"));
-		Dog dog = dogService.readDog(dogId);
-		ctx.html("Dog with id: " + dogId + "'s name is :" + dog.getDogName() + ", their owner is "
-				+ dog.getOwnerName() + ", and their skill level is: " + dog.getSkillLevelDog());
+		int eventId = Integer.valueOf(ctx.formParam("eventid"));
+		Event event = eventService.readEvent(eventId);
+		ctx.html(event.toString());
 	}
 	
-	public void readAllDogs(Context ctx) {
+	public void readAllEvents(Context ctx) {
 		
-		System.out.println("Responding to post read all Dogs request");
-		log.info("Controller: read all dogs");
+		System.out.println("Responding to get read all Events request");
+		log.info("Controller: read all events");
 			
-			List<Dog> dogList = new ArrayList<>();
+			List<Event> eventList = new ArrayList<>();
 		
-			dogList = dogService.getAllDogs();
+			eventList = eventService.getAllEvents();
 			
 			String str = "";
 		
-			for (int i = 0; i < dogList.size(); i++) {
-			Dog dog = dogList.get(i);
-			str += ("Dog with id: " + dog.getDogid() + "'s name is :" + dog.getDogName() + ", their owner is "
-					+ dog.getOwnerName() + ", and their skill level is: " + dog.getSkillLevelDog() + "\n");
+			for (int i = 0; i < eventList.size(); i++) {
+			Event event = eventList.get(i);
+			str += (event.toString() + "\n");
 	}
 			ctx.html(str);
 		
 	}
 	
-	public void updateDog(Context ctx) {
-		System.out.println("Responding update dog request");
+	public void updateEvent(Context ctx) {
+		System.out.println("Responding put update event request");
 		
-		int dogId = Integer.valueOf(ctx.formParam("dogid"));
+		int eventId = Integer.valueOf(ctx.formParam("eventid"));
+		EventType eventType;
+		int eventTypeint = Integer.valueOf(ctx.formParam("eventtype"));
 		
-		String dogName = ctx.formParam("name");
+		switch (eventTypeint) {
 		
-		String ownerName = ctx.formParam("ownerusername");
+		case 1: eventType = EventType.UNIVERSITY_COURSE;
+			break;
+		case 2: eventType = EventType.CERTIFICATION;
+			break;
+		case 3: eventType = EventType.CERTIFICATION_PREP_CLASS;
+			break;
+		case 4: eventType = EventType.TECHNICAL_TRAINING;
+			break;
+		case 5: eventType = EventType.SEMINAR;
+			break;
+		case 6: eventType = EventType.OTHER;
+			break;
+		default: eventType = null;
+			break;
+		}
 		
+		String name = ctx.formParam("name");
+		
+		int skillLevel = Integer.parseInt(ctx.formParam("skilllevel"));
+		
+		DateFormat dateForm;
 	
-		int skillLevel = Integer.valueOf(ctx.formParam("skilllevel"));
-		System.out.print("Controller dog skill level is " + skillLevel);
+		Date eventStartDate = new Date();
+		eventStartDate = dateForm.parse(ctx.formParam("startdate"));
 		
-		boolean isAvailable = Boolean.valueOf(ctx.formParam("isavailable"));
+		//TODO figure out eventResult
+		EventResult eventResult = ctx.formParam("eventResult");
 		
-		Dog dog = new Dog(dogId, dogName, ownerName, skillLevel, isAvailable);
+		Event event = new Event (eventResult, eventId, name, eventStartDate, eventType);
+
+		eventService.updateEvent(eventId, event);
 		
-		dogService.updateDog(dogId, dog);
-		
-		ctx.html(Integer.toString(dog.getDogid()));
+		ctx.html(event.toString());
 	}
 	
-	public void deleteDog(Context ctx) {
-		System.out.println("Responding delete dog request");
+	public void deleteEvent(Context ctx) {
+		System.out.println("Responding delete event request");
 		
-		log.info("deleting dog");
-		int dogId = Integer.valueOf(ctx.formParam("dogid"));
+		log.info("deleting event");
+		int eventId = Integer.valueOf(ctx.formParam("eventid"));
 		
-		dogService.deleteDog(dogId);
+		eventService.deleteEvent(eventId);
 		
 	}
 }

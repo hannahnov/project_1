@@ -1,6 +1,6 @@
 package pojos;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Event {
 	
@@ -8,14 +8,24 @@ public class Event {
 	private EventResult eventResult;
 	
 	private int eventId;
-	
+
 	private String name;
 	
 	private Date eventStartDate;
 	
 	private EventType eventType;
 	
+	
 
+	public Event(EventResult eventResult, int eventId, String name, Date eventStartDate, EventType eventType) {
+		super();
+		this.eventResult = eventResult;
+		this.eventId = eventId;
+		this.name = name;
+		this.eventStartDate = eventStartDate;
+		this.eventType = eventType;
+	}
+	
 	public EventResult getEventResult() {
 		return eventResult;
 	}
@@ -55,5 +65,9 @@ public class Event {
 	public void setEventId(int eventId) {
 		this.eventId = eventId;
 	}
-
+	@Override
+	public String toString() {
+		return "Event [eventResult=" + eventResult + ", eventId=" + eventId + ", name=" + name + ", eventStartDate="
+				+ eventStartDate + ", eventType=" + eventType + "]";
+	}
 }

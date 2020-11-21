@@ -7,6 +7,8 @@ public class ReimbursementRequest {
 	
 	private Requestor requestor;
 	
+	private int requestId;
+	
 	private double projectedReimbursement;
 	
 	//if the request is turned in less than 2 weeks before the event start date, it is marked as urgent
@@ -17,6 +19,22 @@ public class ReimbursementRequest {
 	private boolean isApprovedByDirectSupervisor;
 	
 	private boolean isApprovedByBenCo;
+	
+	
+	
+	
+
+	public ReimbursementRequest(int requestId, Requestor requestor, double projectedReimbursement, boolean isUrgent, boolean isPending,
+			boolean isApprovedByDirectSupervisor, boolean isApprovedByBenCo) {
+		super();
+		this.requestId = requestId;
+		this.requestor = requestor;
+		this.projectedReimbursement = projectedReimbursement;
+		this.isUrgent = isUrgent;
+		this.isPending = isPending;
+		this.isApprovedByDirectSupervisor = isApprovedByDirectSupervisor;
+		this.isApprovedByBenCo = isApprovedByBenCo;
+	}
 
 	public boolean isUrgent() {
 		return isUrgent;
@@ -64,6 +82,14 @@ public class ReimbursementRequest {
 
 	public void setApprovedByBenCo(boolean isApprovedByBenCo) {
 		this.isApprovedByBenCo = isApprovedByBenCo;
+	}
+
+	public int getRequestId() {
+		return requestId;
+	}
+
+	public void setRequestId(int requestId) {
+		this.requestId = requestId;
 	}
 
 }
