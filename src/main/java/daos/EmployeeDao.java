@@ -1,5 +1,5 @@
 package daos;
 
-public class EmployeeDao {
+public interface EmployeeDao {
 
 }

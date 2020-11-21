@@ -1,0 +1,11 @@
+package pojos;
+
+public enum EventType {
+		UNIVERSITY_COURSE,
+		SEMINAR,
+		CERTIFICATION_PREP_CLASS,
+		CERTIFICATION,
+		TECHNICAL_TRAINING,
+		OTHER
+	
+}

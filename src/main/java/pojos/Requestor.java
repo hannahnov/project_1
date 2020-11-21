@@ -14,8 +14,6 @@ public class Requestor implements Employee {
 	
 	private Event event;
 	
-	//could be a grade or presentation
-	private EventResult eventResult;
 	
 	private double availableReimbursement;
 	
@@ -86,20 +84,6 @@ public class Requestor implements Employee {
 
 	public void setAvailableReimbursement(double availableReimbursement) {
 		this.availableReimbursement = availableReimbursement;
-	}
-
-
-
-
-	public EventResult getEventResult() {
-		return eventResult;
-	}
-
-
-
-
-	public void setEventResult(EventResult eventResult) {
-		this.eventResult = eventResult;
 	}
 
 

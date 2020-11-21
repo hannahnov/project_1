@@ -5,7 +5,6 @@ package Project1;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
         LibraryTest classUnderTest = new LibraryTest();

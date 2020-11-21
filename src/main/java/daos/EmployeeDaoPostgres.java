@@ -1,5 +1,5 @@
 package daos;
 
-public class EmployeeDaoPostgres {
+public class EmployeeDaoPostgres implements EmployeeDao {
 
 }
