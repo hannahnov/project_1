@@ -1,11 +1,12 @@
 package pojos;
 
-public class DepartmentHead implements Approver, Employee {
+public class DepartmentHead extends Employee implements Approver {
 
 	@Override
-	public boolean approveForms(ReimbursementRequest req) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean approveForms(ReimbursementRequest req, boolean approval) {
+		req.setApprovedByBenCo(approval);
+		
+		return approval;
 	}
 
 }

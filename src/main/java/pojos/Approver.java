@@ -2,7 +2,7 @@ package pojos;
 
 public interface Approver {
 	
-	public boolean approveForms(ReimbursementRequest req);
+	public boolean approveForms(ReimbursementRequest req, boolean approval);
 	
 
 }
