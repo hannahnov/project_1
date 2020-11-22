@@ -41,8 +41,6 @@ public class EmployeeController {
 		
 		int supId = Integer.valueOf(ctx.formParam("supervisorid"));
 		
-		Approver directSupervisor = employeeService.readEmployee(supId);
-		
 		Event event = eventService.createEvent();
 		
 		double availableReimbursement = Double.valueOf(ctx.formParam("availablereimbursement"));
@@ -51,18 +49,8 @@ public class EmployeeController {
 		
 		int rankInt = Integer.valueOf(ctx.formParam("employeeRank"));
 		
-		EmployeeRank employeeRank;
-		
-		switch(rankInt) {
-		case 1: employeeRank = EmployeeRank.DEPARTMENT_HEAD;
-			break;
-		case 2: employeeRank = EmployeeRank.BENEFIT_COORDINATOR;
-			break;
-		case 3: employeeRank = EmployeeRank.OTHER;
-			break;
-		default: employeeRank = EmployeeRank.OTHER;
-		}
-		
+		EmployeeRank employeeRank = EmployeeRank.valueOf(rankInt);
+	
 		boolean isRequesting = Boolean.valueOf(ctx.formParam("requesting"));
 		
 		boolean isApproving = Boolean.valueOf(ctx.formParam("approving"));
@@ -70,14 +58,14 @@ public class EmployeeController {
 	
 		if (isRequesting) {
 			
-		Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, directSupervisor, event, 
+		Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, supId, event, 
 					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
 		employeeService.createEmployee(empl);
 		ctx.html(empl.toString());
 			
 		}
 		if (isApproving) {
-			Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, directSupervisor, event, 
+			Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, supId, event, 
 					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
 			employeeService.createEmployee(empl);
 			ctx.html(empl.toString());

@@ -12,7 +12,7 @@ public class Employee {
 	
 	private String password;
 	
-	private Approver directSupervisor;
+	private int directSupervisorId;
 	
 	private Event event;
 	
@@ -32,7 +32,7 @@ public class Employee {
 	}
 
 	
-public Employee(int emplId, String firstName, String lastName, String userName, String password, Approver directSupervisor,
+public Employee(int emplId, String firstName, String lastName, String userName, String password, int directSupervisorId,
 			Event event, double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank,
 			boolean isRequesting, boolean isApproving) {
 		super();
@@ -41,7 +41,7 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 		this.lastName = lastName;
 		this.userName = userName;
 		this.password = password;
-		this.directSupervisor = directSupervisor;
+		this.directSupervisorId = directSupervisorId;
 		this.event = event;
 		this.availableReimbursement = availableReimbursement;
 		this.pendingReimbursement = pendingReimbursement;
@@ -86,14 +86,6 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public Approver getDirectSupervisor() {
-		return directSupervisor;
-	}
-
-	public void setDirectSupervisor(Approver directSupervisor) {
-		this.directSupervisor = directSupervisor;
 	}
 
 	public Event getEvent() {
@@ -169,6 +161,16 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 
 	public void setEmplId(int emplId) {
 		this.emplId = emplId;
+	}
+
+
+	public int getDirectSupervisorId() {
+		return directSupervisorId;
+	}
+
+
+	public void setDirectSupervisorId(int directSupervisorId) {
+		this.directSupervisorId = directSupervisorId;
 	}
 
 
