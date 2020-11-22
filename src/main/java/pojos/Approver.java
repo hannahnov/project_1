@@ -1,8 +1,12 @@
 package pojos;
 
-public interface Approver {
+public class Approver extends Employee {
 	
-	public boolean approveForms(ReimbursementRequest req, boolean approval);
+	public boolean approveForms(ReimbursementRequest req, boolean approval) {
+		req.setApprovedByBenCo(approval);
+		
+		return approval;
+	}
 	
 
 }

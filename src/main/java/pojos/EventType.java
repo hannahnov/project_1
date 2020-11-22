@@ -7,5 +7,4 @@ public enum EventType {
 		CERTIFICATION,
 		TECHNICAL_TRAINING,
 		OTHER
-	
 }

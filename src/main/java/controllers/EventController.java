@@ -19,15 +19,6 @@ public class EventController {
 	
 	private static Logger log = Logger.getRootLogger();
 	
-//	private EventResult eventResult;
-//	
-//	private int eventId;
-//	
-//	private String name;
-//	
-//	private Date eventStartDate;
-//	
-//	private EventType eventType;
 	
 	public void createEvent(Context ctx) {
 		
@@ -52,7 +43,7 @@ public class EventController {
 			break;
 		case 6: eventType = EventType.OTHER;
 			break;
-		default: eventType = null;
+		default: eventType = EventType.OTHER;
 			break;
 		}
 		

@@ -1,6 +1,8 @@
 package pojos;
 
-public abstract class Employee {
+public class Employee {
+	
+	private int emplId;
 	
 	private String firstName;
 
@@ -18,9 +20,7 @@ public abstract class Employee {
 	
 	private double pendingReimbursement;
 	
-	private boolean isDepartmentHead;
-	
-	private boolean isBenefitCoordinator;
+	private EmployeeRank employeeRank;
 	
 	private boolean isRequesting;
 	
@@ -31,10 +31,12 @@ public abstract class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(String firstName, String lastName, String userName, String password, Approver directSupervisor,
-			Event event, double availableReimbursement, double pendingReimbursement, boolean isDepartmentHead,
-			boolean isBenefitCoordinator, boolean isRequesting, boolean isApproving) {
+	
+public Employee(int emplId, String firstName, String lastName, String userName, String password, Approver directSupervisor,
+			Event event, double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank,
+			boolean isRequesting, boolean isApproving) {
 		super();
+		this.emplId = emplId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.userName = userName;
@@ -43,11 +45,13 @@ public abstract class Employee {
 		this.event = event;
 		this.availableReimbursement = availableReimbursement;
 		this.pendingReimbursement = pendingReimbursement;
-		this.isDepartmentHead = isDepartmentHead;
-		this.isBenefitCoordinator = isBenefitCoordinator;
+		this.employeeRank = employeeRank;
 		this.isRequesting = isRequesting;
 		this.isApproving = isApproving;
 	}
+
+
+
 
 
 
@@ -116,21 +120,6 @@ public abstract class Employee {
 		this.pendingReimbursement = pendingReimbursement;
 	}
 
-	public boolean isDepartmentHead() {
-		return isDepartmentHead;
-	}
-
-	public void setDepartmentHead(boolean isDepartmentHead) {
-		this.isDepartmentHead = isDepartmentHead;
-	}
-
-	public boolean isBenefitCoordinator() {
-		return isBenefitCoordinator;
-	}
-
-	public void setBenefitCoordinator(boolean isBenefitCoordinator) {
-		this.isBenefitCoordinator = isBenefitCoordinator;
-	}
 
 
 	public boolean isRequesting() {
@@ -150,6 +139,36 @@ public abstract class Employee {
 
 	public void setApproving(boolean isApproving) {
 		this.isApproving = isApproving;
+	}
+
+
+
+
+
+
+
+	public EmployeeRank getEmployeeRank() {
+		return employeeRank;
+	}
+
+
+
+
+
+
+
+	public void setEmployeeRank(EmployeeRank employeeRank) {
+		this.employeeRank = employeeRank;
+	}
+
+
+	public int getEmplId() {
+		return emplId;
+	}
+
+
+	public void setEmplId(int emplId) {
+		this.emplId = emplId;
 	}
 
 
