@@ -11,15 +11,14 @@ public class Event {
 
 	private String name;
 	
-	private LocalDate eventStartDateLocal;
 	
-	private Date eventStartDate;
+	private String eventStartDate;
 	
 	private EventType eventType;
 	
 	
 
-	public Event(GradingFormat gradingFormat, int eventId, String name, Date eventStartDate, EventType eventType) {
+	public Event(GradingFormat gradingFormat, int eventId, String name, String eventStartDate, EventType eventType) {
 		super();
 		this.gradingFormat = gradingFormat;
 		this.eventId = eventId;
@@ -28,12 +27,20 @@ public class Event {
 		this.eventType = eventType;
 	}
 	
-	public Date getEventStartDate() {
+	public GradingFormat getGradingFormat() {
+		return gradingFormat;
+	}
+
+	public void setGradingFormat(GradingFormat gradingFormat) {
+		this.gradingFormat = gradingFormat;
+	}
+	
+	public String getEventStartDate() {
 		return eventStartDate;
 	}
 	
 
-	public void setEventStartDate(Date eventStartDate) {
+	public void setEventStartDate(String eventStartDate) {
 		this.eventStartDate = eventStartDate;
 	}
 
