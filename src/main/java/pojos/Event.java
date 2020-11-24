@@ -1,15 +1,17 @@
 package pojos;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Event {
 	
-	//could be a grade or presentation
-	private EventResult eventResult;
+	private GradingFormat gradingFormat;
 	
 	private int eventId;
 
 	private String name;
+	
+	private LocalDate eventStartDateLocal;
 	
 	private Date eventStartDate;
 	
@@ -17,26 +19,19 @@ public class Event {
 	
 	
 
-	public Event(EventResult eventResult, int eventId, String name, Date eventStartDate, EventType eventType) {
+	public Event(GradingFormat gradingFormat, int eventId, String name, Date eventStartDate, EventType eventType) {
 		super();
-		this.eventResult = eventResult;
+		this.gradingFormat = gradingFormat;
 		this.eventId = eventId;
 		this.name = name;
 		this.eventStartDate = eventStartDate;
 		this.eventType = eventType;
 	}
 	
-	public EventResult getEventResult() {
-		return eventResult;
-	}
-
-	public void setEventResult(EventResult eventResult) {
-		this.eventResult = eventResult;
-	}
-
 	public Date getEventStartDate() {
 		return eventStartDate;
 	}
+	
 
 	public void setEventStartDate(Date eventStartDate) {
 		this.eventStartDate = eventStartDate;
@@ -67,7 +62,7 @@ public class Event {
 	}
 	@Override
 	public String toString() {
-		return "Event [eventResult=" + eventResult + ", eventId=" + eventId + ", name=" + name + ", eventStartDate="
+		return "Event [gradingFormat=" + gradingFormat + ", eventId=" + eventId + ", name=" + name + ", eventStartDate="
 				+ eventStartDate + ", eventType=" + eventType + "]";
 	}
 }
