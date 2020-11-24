@@ -1,5 +1,17 @@
 package daos;
 
-public interface ReimbursementRequestDao {
+import java.util.List;
 
+import pojos.ReimbursementRequest;
+
+public interface ReimbursementRequestDao {
+	public void createReimbursementRequest(ReimbursementRequest req);
+	
+	public ReimbursementRequest readReimbursementRequest(int reqId);
+	
+	public List<ReimbursementRequest> readAllReimbursementRequests();
+	
+	public ReimbursementRequest updateReimbursementRequest(int reqId, ReimbursementRequest req);
+	
+	public int deleteReimbursementRequest(int reqId);
 }

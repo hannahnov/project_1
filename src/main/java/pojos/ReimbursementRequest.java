@@ -18,14 +18,18 @@ public class ReimbursementRequest {
 	
 	private boolean isApprovedByDirectSupervisor;
 	
+	private boolean isApprovedByDepartmentHead;
+	
 	private boolean isApprovedByBenCo;
+	
+	private String requestDate;
 	
 	
 	
 	
 
 	public ReimbursementRequest(int requestId, Requestor requestor, double projectedReimbursement, boolean isUrgent, boolean isPending,
-			boolean isApprovedByDirectSupervisor, boolean isApprovedByBenCo) {
+			boolean isApprovedByDirectSupervisor, boolean isApprovedByDepartmentHead, boolean isApprovedByBenCo, String requestDate) {
 		super();
 		this.requestId = requestId;
 		this.requestor = requestor;
@@ -34,6 +38,8 @@ public class ReimbursementRequest {
 		this.isPending = isPending;
 		this.isApprovedByDirectSupervisor = isApprovedByDirectSupervisor;
 		this.isApprovedByBenCo = isApprovedByBenCo;
+		this.requestDate = requestDate;
+		this.isApprovedByDepartmentHead = isApprovedByDepartmentHead;
 	}
 
 	public boolean isUrgent() {
@@ -90,6 +96,22 @@ public class ReimbursementRequest {
 
 	public void setRequestId(int requestId) {
 		this.requestId = requestId;
+	}
+
+	public String getRequestDate() {
+		return requestDate;
+	}
+
+	public void setRequestDate(String requestDate) {
+		this.requestDate = requestDate;
+	}
+
+	public boolean isApprovedByDepartmentHead() {
+		return isApprovedByDepartmentHead;
+	}
+
+	public void setApprovedByDepartmentHead(boolean isApprovedByDepartmentHead) {
+		this.isApprovedByDepartmentHead = isApprovedByDepartmentHead;
 	}
 
 }
