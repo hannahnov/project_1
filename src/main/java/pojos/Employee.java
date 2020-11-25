@@ -2,19 +2,15 @@ package pojos;
 
 public class Employee {
 	
+	private String emailAddress;
+	
 	private int emplId;
 	
 	private String firstName;
 
 	private String lastName;
 	
-	private String userName;
-	
-	private String password;
-	
 	private int directSupervisorId;
-	
-	private Event event;
 	
 	private double availableReimbursement;
 	
@@ -22,35 +18,24 @@ public class Employee {
 	
 	private EmployeeRank employeeRank;
 	
-	private boolean isRequesting;
-	
-	private boolean isApproving;
-	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	
-public Employee(int emplId, String firstName, String lastName, String userName, String password, int directSupervisorId,
-			Event event, double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank,
-			boolean isRequesting, boolean isApproving) {
+public Employee(String emailAddress, int emplId, String firstName, String lastName, int directSupervisorId,
+			double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank) {
 		super();
+		this.emailAddress = emailAddress;
 		this.emplId = emplId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
 		this.directSupervisorId = directSupervisorId;
-		this.event = event;
 		this.availableReimbursement = availableReimbursement;
 		this.pendingReimbursement = pendingReimbursement;
 		this.employeeRank = employeeRank;
-		this.isRequesting = isRequesting;
-		this.isApproving = isApproving;
 	}
-
-
 
 
 
@@ -72,29 +57,6 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 		this.lastName = lastName;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Event getEvent() {
-		return event;
-	}
-
-	public void setEvent(Event event) {
-		this.event = event;
-	}
 
 	public double getAvailableReimbursement() {
 		return availableReimbursement;
@@ -114,37 +76,12 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 
 
 
-	public boolean isRequesting() {
-		return isRequesting;
-	}
-
-
-	public void setRequesting(boolean isRequesting) {
-		this.isRequesting = isRequesting;
-	}
-
-
-	public boolean isApproving() {
-		return isApproving;
-	}
-
-
-	public void setApproving(boolean isApproving) {
-		this.isApproving = isApproving;
-	}
-
-
-
-
 
 
 
 	public EmployeeRank getEmployeeRank() {
 		return employeeRank;
 	}
-
-
-
 
 
 
@@ -171,6 +108,16 @@ public Employee(int emplId, String firstName, String lastName, String userName, 
 
 	public void setDirectSupervisorId(int directSupervisorId) {
 		this.directSupervisorId = directSupervisorId;
+	}
+
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 

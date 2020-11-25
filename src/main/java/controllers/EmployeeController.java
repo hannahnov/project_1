@@ -29,45 +29,32 @@ public class EmployeeController {
 		
 		log.info("Controller: create Employee");
 		
-		int emplId = Integer.valueOf(ctx.formParam("employeeid"));
+		String emailAddress = ctx.formParam("email_address");
 		
-		String firstName = ctx.formParam("firstname");
+		int emplId = Integer.valueOf(ctx.formParam("employee_id"));
 		
-		String lastName = ctx.formParam("lastname");
+		String firstName = ctx.formParam("first_name");
 		
-		String userName = ctx.formParam("username");
+		String lastName = ctx.formParam("last_name");
 		
-		String password = ctx.formParam("password");
+		int supId = Integer.valueOf(ctx.formParam("supervisor_id"));
+	
+		double availableReimbursement = Double.valueOf(ctx.formParam("available_reimbursement"));
 		
-		int supId = Integer.valueOf(ctx.formParam("supervisorid"));
+		double pendingReimbursement = Double.valueOf(ctx.formParam("pending_reimbursement"));
 		
-		Event event = eventService.createEvent();
-		
-		double availableReimbursement = Double.valueOf(ctx.formParam("availablereimbursement"));
-		
-		double pendingReimbursement = Double.valueOf(ctx.formParam("pendingreimbursement"));
-		
-		int rankInt = Integer.valueOf(ctx.formParam("employeeRank"));
+		int rankInt = Integer.valueOf(ctx.formParam("employee_Rank"));
 		
 		EmployeeRank employeeRank = EmployeeRank.valueOf(rankInt);
 	
-		boolean isRequesting = Boolean.valueOf(ctx.formParam("requesting"));
-		
-		boolean isApproving = Boolean.valueOf(ctx.formParam("approving"));
-		
 	
-		if (isRequesting) {
-			
-		Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, supId, event, 
-					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
+
+		Employee empl = new Employee(emailAddress, emplId, firstName, lastName, supId,  
+					availableReimbursement, pendingReimbursement, employeeRank);
 		employeeService.createEmployee(empl);
 		ctx.html(empl.toString());
 			
-		}
-		if (isApproving) {
-			Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, supId, event, 
-					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
-			employeeService.createEmployee(empl);
+	
 			ctx.html(empl.toString());
 		}
 		
