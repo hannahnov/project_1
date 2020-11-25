@@ -4,6 +4,8 @@ public class Employee {
 	
 	private String emailAddress;
 	
+	private int departmentId;
+	
 	private int emplId;
 	
 	private String firstName;
@@ -24,9 +26,10 @@ public class Employee {
 	}
 
 	
-public Employee(String emailAddress, int emplId, String firstName, String lastName, int directSupervisorId,
+public Employee(String emailAddress, int departmentId, int emplId, String firstName, String lastName, int directSupervisorId,
 			double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank) {
 		super();
+		this.departmentId = departmentId;
 		this.emailAddress = emailAddress;
 		this.emplId = emplId;
 		this.firstName = firstName;
@@ -118,6 +121,16 @@ public Employee(String emailAddress, int emplId, String firstName, String lastNa
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+
+
+	public int getDepartmentId() {
+		return departmentId;
+	}
+
+
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
 	}
 
 
