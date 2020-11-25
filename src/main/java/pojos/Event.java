@@ -10,14 +10,12 @@ public class Event {
 	private int eventId;
 
 	private String name;
-	
-	
+		
 	private String eventStartDate;
 	
 	private EventType eventType;
 	
 	
-
 	public Event(GradingFormat gradingFormat, int eventId, String name, String eventStartDate, EventType eventType) {
 		super();
 		this.gradingFormat = gradingFormat;

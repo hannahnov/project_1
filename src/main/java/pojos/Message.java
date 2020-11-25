@@ -1,6 +1,6 @@
 package pojos;
 
-public class InfoRequest {
+public class Message {
 
 	private Employee sender;
 	
@@ -8,19 +8,23 @@ public class InfoRequest {
 	
 	private String dateSent;
 	
-	private String dateDelivered;
-	
 	private boolean receieved;
+	
+	private String header;
+	
+	private String message;
+	
 	
 	
 
-	public InfoRequest(Employee sender, Employee recipient, String dateSent, String dateDelivered, boolean receieved) {
+	public Message(Employee sender, Employee recipient, String dateSent, boolean receieved, String header, String message) {
 		super();
 		this.sender = sender;
 		this.recipient = recipient;
 		this.dateSent = dateSent;
-		this.dateDelivered = dateDelivered;
 		this.receieved = receieved;
+		this.header = header;
+		this.message = message;
 	}
 
 	public Employee getSender() {
@@ -47,13 +51,6 @@ public class InfoRequest {
 		this.dateSent = dateSent;
 	}
 
-	public String getDateDelivered() {
-		return dateDelivered;
-	}
-
-	public void setDateDelivered(String dateDelivered) {
-		this.dateDelivered = dateDelivered;
-	}
 
 	public boolean isReceieved() {
 		return receieved;
@@ -61,6 +58,22 @@ public class InfoRequest {
 
 	public void setReceieved(boolean receieved) {
 		this.receieved = receieved;
+	}
+
+	public String getHeader() {
+		return header;
+	}
+
+	public void setHeader(String header) {
+		this.header = header;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	
 }
