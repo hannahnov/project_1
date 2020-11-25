@@ -5,7 +5,9 @@ public class ReimbursementRequest {
 //	date, time, location, description, cost, grading format,
 //	and type of event; work-related justification.  
 	
-	private Requestor requestor;
+	private Employee requestor;
+	
+	private Event event;
 	
 	private int requestId;
 	
@@ -14,21 +16,26 @@ public class ReimbursementRequest {
 	//if the request is turned in less than 2 weeks before the event start date, it is marked as urgent
 	private boolean isUrgent;
 	
-	
 	private String requestDate;
 	
+	private int workDaysMissed;
 	
+	private String justification;
 	
 	
 
-	public ReimbursementRequest(int requestId, Requestor requestor, double projectedReimbursement, boolean isUrgent,
-			String requestDate) {
+
+	public ReimbursementRequest(Employee requestor, Event event, int requestId, double projectedReimbursement,
+			boolean isUrgent, String requestDate, int workDaysMissed, String justification) {
 		super();
-		this.requestId = requestId;
 		this.requestor = requestor;
+		this.event = event;
+		this.requestId = requestId;
 		this.projectedReimbursement = projectedReimbursement;
 		this.isUrgent = isUrgent;
 		this.requestDate = requestDate;
+		this.workDaysMissed = workDaysMissed;
+		this.justification = justification;
 	}
 
 	public boolean isUrgent() {
@@ -39,11 +46,11 @@ public class ReimbursementRequest {
 		this.isUrgent = isUrgent;
 	}
 
-	public Requestor getRequestor() {
+	public Employee getRequestor() {
 		return requestor;
 	}
 
-	public void setRequestor(Requestor requestor) {
+	public void setRequestor(Employee requestor) {
 		this.requestor = requestor;
 	}
 
@@ -70,6 +77,30 @@ public class ReimbursementRequest {
 
 	public void setRequestDate(String requestDate) {
 		this.requestDate = requestDate;
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+	public int getWorkDaysMissed() {
+		return workDaysMissed;
+	}
+
+	public void setWorkDaysMissed(int workDaysMissed) {
+		this.workDaysMissed = workDaysMissed;
+	}
+
+	public String getJustification() {
+		return justification;
+	}
+
+	public void setJustification(String justification) {
+		this.justification = justification;
 	}
 
 }

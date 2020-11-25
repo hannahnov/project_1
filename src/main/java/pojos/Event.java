@@ -1,7 +1,5 @@
 package pojos;
 
-import java.time.LocalDate;
-import java.util.Date;
 
 public class Event {
 	
@@ -15,14 +13,17 @@ public class Event {
 	
 	private EventType eventType;
 	
+	private String location;
 	
-	public Event(GradingFormat gradingFormat, int eventId, String name, String eventStartDate, EventType eventType) {
+	
+	public Event(GradingFormat gradingFormat, int eventId, String name, String eventStartDate, EventType eventType, String location) {
 		super();
 		this.gradingFormat = gradingFormat;
 		this.eventId = eventId;
 		this.name = name;
 		this.eventStartDate = eventStartDate;
 		this.eventType = eventType;
+		this.location = location;
 	}
 	
 	public GradingFormat getGradingFormat() {
@@ -69,5 +70,13 @@ public class Event {
 	public String toString() {
 		return "Event [gradingFormat=" + gradingFormat + ", eventId=" + eventId + ", name=" + name + ", eventStartDate="
 				+ eventStartDate + ", eventType=" + eventType + "]";
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 }

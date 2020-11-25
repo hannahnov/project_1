@@ -4,30 +4,28 @@ public class RequestApproval {
 	
 	private ReimbursementRequest request;
 	
-	private Approver directSupervisor;
-	
 	private String directSupApprovalDate;
-	
-	private Approver departmentHead;
 	
 	private String depHeadApprovalDate;
 	
-	private Approver benCo;
-	
 	private String benCoApprovalDate;
 	
+	private ApprovalStatus supervisorApproval;
 	
-
-	public RequestApproval(ReimbursementRequest request, Approver directSupervisor, String directSupApprovalDate,
-			Approver departmentHead, String depHeadApprovalDate, Approver benCo, String benCoApprovalDate) {
+	private ApprovalStatus depHeadApproval;
+	
+	private ApprovalStatus benCoApproval;
+	
+	public RequestApproval(ReimbursementRequest request, String directSupApprovalDate, String depHeadApprovalDate, String benCoApprovalDate,
+			ApprovalStatus supervisorApproval, ApprovalStatus depHeadApproval, ApprovalStatus benCoApproval) {
 		super();
 		this.request = request;
-		this.directSupervisor = directSupervisor;
 		this.directSupApprovalDate = directSupApprovalDate;
-		this.departmentHead = departmentHead;
 		this.depHeadApprovalDate = depHeadApprovalDate;
-		this.benCo = benCo;
 		this.benCoApprovalDate = benCoApprovalDate;
+		this.supervisorApproval = supervisorApproval;
+		this.depHeadApproval = depHeadApproval;
+		this.benCoApproval = benCoApproval;
 	}
 
 	public ReimbursementRequest getRequest() {
@@ -38,13 +36,6 @@ public class RequestApproval {
 		this.request = request;
 	}
 
-	public Approver getDirectSupervisor() {
-		return directSupervisor;
-	}
-
-	public void setDirectSupervisor(Approver directSupervisor) {
-		this.directSupervisor = directSupervisor;
-	}
 
 	public String getDirectSupApprovalDate() {
 		return directSupApprovalDate;
@@ -54,13 +45,6 @@ public class RequestApproval {
 		this.directSupApprovalDate = directSupApprovalDate;
 	}
 
-	public Approver getDepartmentHead() {
-		return departmentHead;
-	}
-
-	public void setDepartmentHead(Approver departmentHead) {
-		this.departmentHead = departmentHead;
-	}
 
 	public String getDepHeadApprovalDate() {
 		return depHeadApprovalDate;
@@ -70,13 +54,6 @@ public class RequestApproval {
 		this.depHeadApprovalDate = depHeadApprovalDate;
 	}
 
-	public Approver getBenCo() {
-		return benCo;
-	}
-
-	public void setBenCo(Approver benCo) {
-		this.benCo = benCo;
-	}
 
 	public String getBenCoApprovalDate() {
 		return benCoApprovalDate;
@@ -84,6 +61,30 @@ public class RequestApproval {
 
 	public void setBenCoApprovalDate(String benCoApprovalDate) {
 		this.benCoApprovalDate = benCoApprovalDate;
+	}
+
+	public ApprovalStatus getSupervisorApproval() {
+		return supervisorApproval;
+	}
+
+	public void setSupervisorApproval(ApprovalStatus supervisorApproval) {
+		this.supervisorApproval = supervisorApproval;
+	}
+
+	public ApprovalStatus getDepHeadApproval() {
+		return depHeadApproval;
+	}
+
+	public void setDepHeadApproval(ApprovalStatus depHeadApproval) {
+		this.depHeadApproval = depHeadApproval;
+	}
+
+	public ApprovalStatus getBenCoApproval() {
+		return benCoApproval;
+	}
+
+	public void setBenCoApproval(ApprovalStatus benCoApproval) {
+		this.benCoApproval = benCoApproval;
 	}
 	
 	
