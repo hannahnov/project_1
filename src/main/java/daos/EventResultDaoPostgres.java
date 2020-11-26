@@ -10,10 +10,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import javalin.util.ConnectionUtil;
-import pojos.Event;
 import pojos.EventResult;
-import pojos.EventType;
-import pojos.GradingFormat;
 import pojos.ReimbursementRequest;
 
 public class EventResultDaoPostgres implements EventResultDao {
@@ -135,4 +132,3 @@ public class EventResultDaoPostgres implements EventResultDao {
 }
 	}
 
-}

@@ -14,13 +14,10 @@ import java.util.List;
 import pojos.Event;
 import pojos.EventType;
 import pojos.GradingFormat;
-import service.EventService;
-import service.EventServiceFullStack;
 
 public class EventDaoPostgres implements EventDao {
 	private static Logger log = Logger.getRootLogger();
 	private PreparedStatement statement;
-	EventService eventService = new EventServiceFullStack();
 	private ConnectionUtil connUtil = new ConnectionUtil();
 
 	@Override
