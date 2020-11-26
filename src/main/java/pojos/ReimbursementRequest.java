@@ -22,11 +22,12 @@ public class ReimbursementRequest {
 	
 	private String justification;
 	
+	private ApprovalStatus approvalStatus;
 	
 
-
 	public ReimbursementRequest(Employee requestor, Event event, int requestId, double projectedReimbursement,
-			boolean isUrgent, String requestDate, int workDaysMissed, String justification) {
+			boolean isUrgent, String requestDate, int workDaysMissed, String justification,
+			ApprovalStatus approvalStatus) {
 		super();
 		this.requestor = requestor;
 		this.event = event;
@@ -36,6 +37,11 @@ public class ReimbursementRequest {
 		this.requestDate = requestDate;
 		this.workDaysMissed = workDaysMissed;
 		this.justification = justification;
+		this.approvalStatus = approvalStatus;
+	}
+
+	public ReimbursementRequest() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public boolean isUrgent() {
@@ -101,6 +107,14 @@ public class ReimbursementRequest {
 
 	public void setJustification(String justification) {
 		this.justification = justification;
+	}
+
+	public ApprovalStatus getApprovalStatus() {
+		return approvalStatus;
+	}
+
+	public void setApprovalStatus(ApprovalStatus approvalStatus) {
+		this.approvalStatus = approvalStatus;
 	}
 
 }
