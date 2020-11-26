@@ -28,6 +28,10 @@ public class RequestApproval {
 		this.benCoApproval = benCoApproval;
 	}
 
+	public RequestApproval() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public ReimbursementRequest getRequest() {
 		return request;
 	}
