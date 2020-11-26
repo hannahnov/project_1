@@ -16,7 +16,8 @@ public class Event {
 	private String location;
 	
 	
-	public Event(GradingFormat gradingFormat, int eventId, String name, String eventStartDate, EventType eventType, String location) {
+	public Event(GradingFormat gradingFormat, int eventId, String name, 
+			String eventStartDate, EventType eventType, String location) {
 		super();
 		this.gradingFormat = gradingFormat;
 		this.eventId = eventId;

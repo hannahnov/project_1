@@ -39,7 +39,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 		log.info("Employee dao postgres: creating employee");
 		
 		String sql = "insert into employees (employee_id, first_name, last_name, directsupervisor_id, "
-				+ "available_reimbursement, pending_Reimbursement, employee_rank, email_address)"
+				+ "available_reimbursement, pending_Reimbursement, employee_rank, email_address, department_id)"
 				+ " values(?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
@@ -52,6 +52,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 			statement.setDouble(6, employee.getPendingReimbursement());
 			statement.setInt(7, employee.getEmployeeRank().getValue());
 			statement.setString(8, employee.getEmailAddress());
+			statement.setInt(9, employee.getDepartmentId());
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
@@ -80,8 +81,9 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 				double availableReimbursement = rs.getDouble("available_reimbursement");
 				double pendingReimbursement = rs.getDouble("pending_reimbursement");
 				EmployeeRank employeeRank = EmployeeRank.valueOf(rs.getInt("employee_rank"));
-				employee = new Employee(emailAddress, employeeId, firstName, lastName, supervisorId, availableReimbursement, pendingReimbursement, 
-						employeeRank);
+				int departmentId = rs.getInt("department_id");
+				employee = new Employee(emailAddress, departmentId, employeeId, firstName, 
+						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank);
 		
 			} 
 			
@@ -103,33 +105,18 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next()) {
-				int employeeId = rs.getInt("employeeid");
-				String firstName = rs.getString("firstname");
-				String lastName = rs.getString("lastname");
-				String password = rs.getString("password");
-				String userName = rs.getString("username");
-				int supervisorId = rs.getInt("directsupervisorId");
-				double availableReimbursement = rs.getDouble("availablereimbursement");
-				double pendingReimbursement = rs.getDouble("pendingreimbursement");
-				EmployeeRank employeeRank = EmployeeRank.valueOf(rs.getInt("employeerank"));
-				Boolean isRequesting = rs.getBoolean("isrequesting");
-				Boolean isApproving = !isRequesting;
-				int eventId = rs.getInt("eventid");
-				Event event;
-				if (isRequesting) {
-			event = eventService.readEvent(eventId);
-			Requestor empl = (Requestor) new Employee(employeeId, firstName, lastName, userName, password, supervisorId,
-							event, availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);	
-			employeeService.createEmployee(empl);
-						employeeList.add(empl);
-							}
-			if (isApproving) {
-			Requestor empl = (Requestor) new Employee(employeeId, firstName, lastName, userName, password, supervisorId, event, 
-					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
-					employeeService.createEmployee(empl);
-					employeeList.add(empl);
-						}
-		
+				int employeeId = rs.getInt("employee_id");
+				String emailAddress = rs.getString("email_address");
+				String firstName = rs.getString("first_name");
+				String lastName = rs.getString("last_name");
+				int supervisorId = rs.getInt("directsupervisor_id");
+				double availableReimbursement = rs.getDouble("available_reimbursement");
+				double pendingReimbursement = rs.getDouble("pending_reimbursement");
+				EmployeeRank employeeRank = EmployeeRank.valueOf(rs.getInt("employee_rank"));
+				int departmentId = rs.getInt("department_id");
+				Employee employee = new Employee(emailAddress, departmentId, employeeId, firstName, 
+						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank);
+				employeeList.add(employee);
 			} 
 				
 			} catch (SQLException e) {
@@ -141,23 +128,23 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 	@Override
 	public Employee updateEmployee(int employeeId, Employee employee) {
 		log.info("Employee dao postgres: updating employee");
-		String sql = "update employees set firstname = ?, lastname = ?, password = ?, supervisorId = ?, eventid = ?,"
-				+ " availablereimbursement = ?, pendingreimbursement = ?, employeerank = ?, isrequesting = ?, isapproving = ?"
+		String sql = "update employees set first_name = ?, last_name = ?, supervisor_Id = ?"
+				+ " available_reimbursement = ?, pending_reimbursement = ?, employee_rank = ?, email_address = ?"
+				+ ", deparment_id = ? "
 				+ " where employeeid = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			statement.setString(1, employee.getFirstName());
 			statement.setString(2, employee.getLastName());
-			statement.setString(3, employee.getPassword());
-			statement.setString(4, employee.getUserName());
-			statement.setInt(5, employee.getDirectSupervisorId());
-			statement.setDouble(6, employee.getAvailableReimbursement());
-			statement.setDouble(7, employee.getPendingReimbursement());
-			statement.setInt(8, employee.getEmployeeRank().getValue());
-			statement.setBoolean(9, employee.isRequesting());
-			statement.setInt(10, employee.getEvent().getEventId());
-			statement.setInt(11, employee.getEmplId());
+			statement.setInt(3, employee.getDirectSupervisorId());
+			statement.setDouble(4, employee.getAvailableReimbursement());
+			statement.setDouble(5, employee.getPendingReimbursement());
+			statement.setInt(6, employee.getEmployeeRank().getValue());
+			statement.setString(7, employee.getEmailAddress());
+			statement.setInt(8, employee.getDepartmentId());
+			statement.setInt(9, employeeId);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -168,7 +155,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 	public int deleteEmployee(int employeeId) {
 		log.info("employee dao postgres: deleting employee");
 		int rowsToDelete = 0;
-		String sql = "delete from employees where employeeid = ?";
+		String sql = "delete from employees where employee_id = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 		statement = conn.prepareStatement(sql);	

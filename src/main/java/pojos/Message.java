@@ -1,7 +1,11 @@
 package pojos;
 
 public class Message {
-
+	
+	private int messageId;
+	
+	private ReimbursementRequest req;
+	
 	private Employee sender;
 	
 	private Employee recipient;
@@ -13,12 +17,12 @@ public class Message {
 	private String header;
 	
 	private String message;
-	
-	
-	
 
-	public Message(Employee sender, Employee recipient, String dateSent, boolean receieved, String header, String message) {
+	public Message(int messageId, ReimbursementRequest req, Employee sender, Employee recipient, String dateSent,
+			boolean receieved, String header, String message) {
 		super();
+		this.messageId = messageId;
+		this.req = req;
 		this.sender = sender;
 		this.recipient = recipient;
 		this.dateSent = dateSent;
@@ -26,6 +30,7 @@ public class Message {
 		this.header = header;
 		this.message = message;
 	}
+
 
 	public Employee getSender() {
 		return sender;
@@ -74,6 +79,22 @@ public class Message {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public int getMessageId() {
+		return messageId;
+	}
+
+	public void setMessageId(int messageId) {
+		this.messageId = messageId;
+	}
+
+	public ReimbursementRequest getReq() {
+		return req;
+	}
+
+	public void setReq(ReimbursementRequest req) {
+		this.req = req;
 	}
 	
 }
