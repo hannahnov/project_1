@@ -3,15 +3,16 @@ package daos;
 import java.util.List;
 
 import pojos.Event;
+import pojos.EventResult;
 
 public interface EventResultDao {
-	public void createEvent(Event event);
+	public void createEventResult(EventResult result);
 	
-	public Event readEvent(int eventId);
+	public EventResult readEventResult(int requestId);
 	
-	public List<Event> readAllEvents();
+	public List<EventResult> readAllEventResults();
 	
-	public Event updateEvent(int eventId, Event event);
+	public EventResult updateEventResult(int requestId, EventResult eventResult);
 	
-	public int deleteEvent(int eventId);
+	public int deleteEventResult(int requestId);
 }

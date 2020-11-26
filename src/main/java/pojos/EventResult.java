@@ -1,6 +1,5 @@
 package pojos;
 
-import java.io.File;
 
 public class EventResult {
 	
@@ -8,15 +7,19 @@ public class EventResult {
 	
 	private String grade;
 	
-	private File presentation;
+	private byte[] presentation;
 	
 	
 
-	public EventResult(ReimbursementRequest req, String grade, File presentation) {
+	public EventResult(ReimbursementRequest req, String grade, byte[] presentation) {
 		super();
 		this.req = req;
 		this.grade = grade;
 		this.presentation = presentation;
+	}
+
+	public EventResult() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public ReimbursementRequest getReq() {
@@ -35,11 +38,11 @@ public class EventResult {
 		this.grade = grade;
 	}
 
-	public File getPresentation() {
+	public byte[] getPresentation() {
 		return presentation;
 	}
 
-	public void setPresentation(File presentation) {
+	public void setPresentation(byte[] presentation) {
 		this.presentation = presentation;
 	}
 }
