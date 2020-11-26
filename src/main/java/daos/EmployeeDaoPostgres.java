@@ -11,11 +11,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import pojos.Approver;
 import pojos.Employee;
 import pojos.EmployeeRank;
 import pojos.Event;
-import pojos.Requestor;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 import service.EventService;
