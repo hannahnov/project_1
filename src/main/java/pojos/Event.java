@@ -27,6 +27,10 @@ public class Event {
 		this.location = location;
 	}
 	
+	public Event() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public GradingFormat getGradingFormat() {
 		return gradingFormat;
 	}

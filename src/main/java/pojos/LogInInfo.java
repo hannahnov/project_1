@@ -5,16 +5,17 @@ public class LogInInfo {
 	private String userName;
 	private String emailAddress;
 	private String password;
-	private EmployeeRank employeeRank;
 	
 	
-	public LogInInfo(int employeeId, String userName, String emailAddress, String password, EmployeeRank employeeRank) {
+	public LogInInfo(int employeeId, String userName, String emailAddress, String password) {
 		super();
 		this.employeeId = employeeId;
 		this.userName = userName;
 		this.emailAddress = emailAddress;
 		this.password = password;
-		this.employeeRank = employeeRank;
+	}
+	public LogInInfo() {
+		// TODO Auto-generated constructor stub
 	}
 	public int getEmployeeId() {
 		return employeeId;
@@ -39,12 +40,6 @@ public class LogInInfo {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public EmployeeRank getEmployeeRank() {
-		return employeeRank;
-	}
-	public void setEmployeeRank(EmployeeRank employeeRank) {
-		this.employeeRank = employeeRank;
 	}
 
 }

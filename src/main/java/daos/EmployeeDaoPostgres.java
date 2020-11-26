@@ -13,7 +13,6 @@ import java.util.List;
 
 import pojos.Employee;
 import pojos.EmployeeRank;
-import pojos.Event;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 import service.EventService;
@@ -24,7 +23,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 	EmployeeService employeeService = new EmployeeServiceFullStack();
 	EventService eventService = new EventServiceFullStack();
 	
-	private static java.util.logging.Logger log = Logger.getRootLogger();
+	private static Logger log = Logger.getRootLogger();
 	
 	private PreparedStatement statement;
 	
@@ -63,7 +62,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 	public Employee readEmployee(int employeeId) {
 		log.info("employeeDaoPostgres: reading employee");
 		String sql = "select * from employees where employee_id = ?";
-		Employee employee;
+		Employee employee = new Employee();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
@@ -88,7 +87,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		return employee;
 	}
 
 	@Override

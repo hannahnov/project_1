@@ -8,17 +8,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import pojos.Employee;
-import pojos.EmployeeRank;
 import pojos.Event;
 import pojos.EventType;
 import pojos.GradingFormat;
-import pojos.Requestor;
 import service.EventService;
 import service.EventServiceFullStack;
 
@@ -54,7 +49,7 @@ public class EventDaoPostgres implements EventDao {
 	public Event readEvent(int eventId) {
 		log.info("Event Dao Postgres: reading event");
 		String sql = "select * from events where eventid = ?";
-		Event event;
+		Event event = new Event();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
