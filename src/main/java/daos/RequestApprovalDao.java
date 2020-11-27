@@ -14,4 +14,6 @@ public void createRequestApproval(RequestApproval requestApproval);
 	public RequestApproval updateRequestApproval(int requestId, RequestApproval requestApproval);
 	
 	public int deleteRequestApproval(int requestId);
+
+	public void approveRequest(boolean approval, int employeeId, int requestId);
 }

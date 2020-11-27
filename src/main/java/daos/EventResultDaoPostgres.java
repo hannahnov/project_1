@@ -130,5 +130,64 @@ public class EventResultDaoPostgres implements EventResultDao {
 	}
 		return rowsToDelete;
 }
+
+	@Override
+	public String readGradeByBencoId(int bencoId) {
+		
+		log.info("EventResult Dao Postgres: reading grade by bencoid");
+		String sql = "select * from eventresults where employee_id = (select employee_id from employees where "
+				+ "	department_id = (select department_id from employees where employee_id = ?))";
+			EventResult eventResult = new EventResult();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setInt(1, bencoId);
+			
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+			//	(ReimbursementRequest req, String grade, byte[] presentation)
+				int requestId = rs.getInt("request_id");
+				ReimbursementRequest req = reqDao.readReimbursementRequest(requestId);
+				String grade = rs.getString("grade");
+				byte[] presentation = rs.getBytes("attachment");
+
+				 eventResult = new EventResult(req, grade, presentation);
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return eventResult.getGrade();
 	}
+
+	@Override
+	public byte[] readAttachmentByDepheadId(int depheadId) {
+		log.info("EventResult Dao Postgres: reading presentation");
+		String sql = "select * from eventresults where employee_id = (select employee_id from employees where "
+				+ "	department_id = (select department_id from employees where employee_id = ?))";
+			EventResult eventResult = new EventResult();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setInt(1, depheadId);
+			
+			ResultSet rs = statement.executeQuery();
+			
+			while(rs.next()) {
+			//	(ReimbursementRequest req, String grade, byte[] presentation)
+				int requestId = rs.getInt("request_id");
+				ReimbursementRequest req = reqDao.readReimbursementRequest(requestId);
+				String grade = rs.getString("grade");
+				byte[] presentation = rs.getBytes("attachment");
+
+				 eventResult = new EventResult(req, grade, presentation);
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return eventResult.getPresentation();
+	}
+		
+}
 

@@ -160,4 +160,10 @@ public class RequestApprovalDaoPostgres implements RequestApprovalDao {
 		return rowsToDelete;
 	}
 
+	@Override
+	public void approveRequest(boolean approval, int employeeId, int requestId) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

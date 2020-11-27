@@ -17,6 +17,21 @@ public class Message {
 	private String header;
 	
 	private String message;
+	
+	
+
+	public Message(ReimbursementRequest req, Employee sender, Employee recipient, String dateSent, boolean receieved,
+			String header, String message) {
+		super();
+		this.req = req;
+		this.sender = sender;
+		this.recipient = recipient;
+		this.dateSent = dateSent;
+		this.receieved = receieved;
+		this.header = header;
+		this.message = message;
+	}
+
 
 	public Message(int messageId, ReimbursementRequest req, Employee sender, Employee recipient, String dateSent,
 			boolean receieved, String header, String message) {

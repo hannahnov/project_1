@@ -2,11 +2,14 @@ package service;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import daos.EventDao;
 import daos.EventDaoPostgres;
 import pojos.Event;
 
 public class EventServiceFullStack implements EventService {
+	private static Logger log = Logger.getRootLogger();
 	EventDao eventDao = new EventDaoPostgres();
 
 	@Override

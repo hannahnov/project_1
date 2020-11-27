@@ -14,4 +14,8 @@ public interface EventResultDao {
 	public EventResult updateEventResult(int requestId, EventResult eventResult);
 	
 	public int deleteEventResult(int requestId);
+
+	public String readGradeByBencoId(int bencoId);
+
+	public byte[] readAttachmentByDepheadId(int depheadId);
 }
