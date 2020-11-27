@@ -158,4 +158,103 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 		return rowsToDelete;
 	}
 
+	@Override
+	public ReimbursementRequest readRequestBySupervisorId(int supervisorId) {
+		log.info("request Dao Postgres: reading request by supervisorId");
+		String sql = "select * from requests where employee_id = (select employee_id from employees where "
+				+ "directsupervisor_id = ?)";
+		ReimbursementRequest request = new ReimbursementRequest();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setInt(1, supervisorId);
+			
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				int reqId = rs.getInt("request_id");
+				Event event = eventDao.readEvent(rs.getInt("event_id"));
+				double projectedReimbursement = rs.getDouble("projected_reimbursement");
+				boolean isUrgent = rs.getBoolean("is_urgent");
+				String requestDate = rs.getString("request_date");
+				int workDaysMissed = rs.getInt("work_days_missed");
+				String justification = rs.getString("justification");
+				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
+				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
+						requestDate, workDaysMissed, justification, approvalStatus);
+				
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return request;
+	}
+
+	@Override
+	public ReimbursementRequest readRequestsByBencoId(int bencoId) {
+		log.info("request Dao Postgres: reading request by bencoId");
+		String sql = "select * from requests where employee_id = (select employee_id from employees where "
+				+ "department_id = (select department_id from employees where employee_id = ?))";
+		ReimbursementRequest request = new ReimbursementRequest();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setInt(1, bencoId);
+			
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				int reqId = rs.getInt("request_id");
+				Event event = eventDao.readEvent(rs.getInt("event_id"));
+				double projectedReimbursement = rs.getDouble("projected_reimbursement");
+				boolean isUrgent = rs.getBoolean("is_urgent");
+				String requestDate = rs.getString("request_date");
+				int workDaysMissed = rs.getInt("work_days_missed");
+				String justification = rs.getString("justification");
+				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
+				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
+						requestDate, workDaysMissed, justification, approvalStatus);
+				
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return request;
+	}
+
+	@Override
+	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
+		log.info("request Dao Postgres: reading request by depheadId");
+		String sql = "select * from requests where employee_id = (select employee_id from employees where "
+				+ "department_id = (select department_id from employees where employee_id = ?))";
+		ReimbursementRequest request = new ReimbursementRequest();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setInt(1, depheadId);
+			
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				int reqId = rs.getInt("request_id");
+				Event event = eventDao.readEvent(rs.getInt("event_id"));
+				double projectedReimbursement = rs.getDouble("projected_reimbursement");
+				boolean isUrgent = rs.getBoolean("is_urgent");
+				String requestDate = rs.getString("request_date");
+				int workDaysMissed = rs.getInt("work_days_missed");
+				String justification = rs.getString("justification");
+				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
+				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
+						requestDate, workDaysMissed, justification, approvalStatus);
+				
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return request;
+	}
+
 }

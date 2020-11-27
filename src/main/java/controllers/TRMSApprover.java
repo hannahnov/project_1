@@ -1,11 +1,33 @@
 package controllers;
 
+import org.apache.log4j.Logger;
+
 import io.javalin.http.Context;
+import pojos.ReimbursementRequest;
+import service.ReimbursementRequestService;
+import service.ReimbursementRequestServiceFullStack;
 
 public class TRMSApprover {
+	private static Logger log = Logger.getRootLogger();
+
+	private ReimbursementRequestService reimbursementRequestService = new ReimbursementRequestServiceFullStack();
+	public void supervisorViewRequests(Context ctx) {
+		System.out.println("Responding to Get read reimbursement request by supervisor ID");
+		
+		log.info("Controller: read a reimbursement request by supervisor ID");
+		
+		int supervisorId = Integer.valueOf(ctx.formParam("directsupervisor_id"));
+		
+		ReimbursementRequest req = reimbursementRequestService.readReimbursementRequest(supervisorId);
+		
+		ctx.html(req.toString());
+	}
 	
-	//a benco, direct supervisor, or department head can view requests associated with their employee ID
-	public void viewRequests(Context ctx) {
+	public void bencoViewRequests(Context ctx) {
+		
+	}
+	
+	public void depHeadViewRequests(Context ctx) {
 		
 	}
 	

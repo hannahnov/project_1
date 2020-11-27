@@ -15,5 +15,11 @@ public interface ReimbursementRequestService {
 	public ReimbursementRequest updateReimbursementRequest(int requestId, ReimbursementRequest req);
 	
 	public void deleteReimbursementRequest(int requestId);
+	
+	public ReimbursementRequest readRequestBySupervisorId(int supervisorId);
+	
+	public ReimbursementRequest readRequestsByBencoId(int bencoId);
+	
+	public ReimbursementRequest readRequestsByDepheadId(int depheadId);
 
 }

@@ -11,13 +11,13 @@ public class EmployeeServiceFullStack implements EmployeeService {
 	
 	EmployeeDao employeeDao = new EmployeeDaoPostgres();
 	
-	private static java.util.logging.Logger log = Logger.getRootLogger();
+	private static Logger log = Logger.getRootLogger();
 
 	@Override
 	public Employee createEmployee(Employee employee) {
 		log.info("Employee service: create employee");
 		
-		employeeDao.createEmoloyee(employee);
+		employeeDao.createEmployee(employee);
 		
 		return employee;
 	}
@@ -30,7 +30,7 @@ public class EmployeeServiceFullStack implements EmployeeService {
 	}
 
 	@Override
-	public List<Employee> readALlEmployees() {
+	public List<Employee> readAllEmployees() {
 		log.info("Employee service: read all employees");
 		
 		return employeeDao.readAllEmployees();

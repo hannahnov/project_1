@@ -2,7 +2,6 @@ package daos;
 
 import java.util.List;
 
-import pojos.Event;
 import pojos.EventResult;
 
 public interface EventResultDao {

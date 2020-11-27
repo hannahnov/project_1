@@ -14,4 +14,11 @@ public interface ReimbursementRequestDao {
 	public ReimbursementRequest updateReimbursementRequest(int reqId, ReimbursementRequest req);
 	
 	public int deleteReimbursementRequest(int reqId);
+	
+	public ReimbursementRequest readRequestBySupervisorId(int supervisorId);
+
+	public ReimbursementRequest readRequestsByBencoId(int bencoId);
+	
+	public ReimbursementRequest readRequestsByDepheadId(int depheadId);
+
 }

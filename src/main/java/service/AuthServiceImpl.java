@@ -4,9 +4,13 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class AuthServiceHardCoded implements AuthService {
+import daos.LogInInfoDao;
+import daos.LogInInfoDaoPostgres;
+
+public class AuthServiceImpl implements AuthService {
 
 	private static byte[] salt = SecureRandom.getSeed(16);
 	
@@ -15,8 +19,10 @@ public class AuthServiceHardCoded implements AuthService {
 	@Override
 	public boolean authenticateUser(String username, String password) {
 		
-		//TODO put logic here
-		if (username.equals(username) && password.equals(password)) {
+		LogInInfoDao loginDao = new LogInInfoDaoPostgres();
+		
+		String pword = loginDao.getPassword(username);
+		if (password.equals(pword)) {
 			return true;
 		}
 		return false;

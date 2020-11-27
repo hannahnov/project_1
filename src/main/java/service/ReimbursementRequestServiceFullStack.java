@@ -11,7 +11,7 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 	
 	ReimbursementRequestDao reqDao = new ReimbursementRequestDaoPostgres();
 	
-	private static java.util.logging.Logger log = Logger.getRootLogger();
+	private static Logger log = Logger.getRootLogger();
 
 	@Override
 	public ReimbursementRequest createReimbursementRequest(ReimbursementRequest req) {
@@ -52,6 +52,26 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 		reqDao.deleteReimbursementRequest(requestId);
 		
 		
+	}
+
+	@Override
+	public ReimbursementRequest readRequestBySupervisorId(int supervisorId) {
+		
+		log.info("Reimbursement request service: read request by supervisor ID");
+		
+		return reqDao.readRequestBySupervisorId(supervisorId);
+	}
+
+	@Override
+	public ReimbursementRequest readRequestsByBencoId(int bencoId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -91,6 +91,32 @@ public class LogInInfoDaoPostgres implements LogInInfoDao {
 		}
 		return login;
 	}
+
+
+	@Override
+	public String getPassword(String userName) {
+		log.info("Login Dao Postgres: reading password info");
+		String sql = "select * from logininfo where user_name = ?";
+		LogInInfo logInInfo = new LogInInfo();
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			
+			statement.setString(1, userName);
+			
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				int employeeId = rs.getInt("employee_id");
+				String emailAddress = rs.getString("email_address");
+				String password = rs.getString("password");
+				logInInfo = new LogInInfo(employeeId, userName, emailAddress, password);
+				
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return logInInfo.getPassword();
+	}
 	
 	
 }

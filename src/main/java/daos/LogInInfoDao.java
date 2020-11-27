@@ -12,5 +12,7 @@ public interface LogInInfoDao {
 	public List<LogInInfo> readAllLogInInfo();
 	
 	public LogInInfo updateLogInInfo(int employeeId, LogInInfo login);
+	
+	public String getPassword(String userName);
 
 }

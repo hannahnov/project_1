@@ -10,7 +10,7 @@ public interface EmployeeService {
 	
 	public Employee readEmployee(int employeeId);
 	
-	public List<Employee> readALlEmployees();
+	public List<Employee> readAllEmployees();
 	
 	public Employee updateEmployee(int employeeId, Employee employee);
 	
