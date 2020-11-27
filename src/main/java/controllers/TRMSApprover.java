@@ -19,6 +19,8 @@ import service.MessageService;
 import service.MessageServiceFullStack;
 import service.ReimbursementRequestService;
 import service.ReimbursementRequestServiceFullStack;
+import service.RequestApprovalService;
+import service.RequestApprovalServiceFullStack;
 
 public class TRMSApprover {
 	private static Logger log = Logger.getRootLogger();
@@ -30,6 +32,8 @@ public class TRMSApprover {
 	private MessageService messageService = new MessageServiceFullStack();
 	
 	private EventResultService resultService = new EventResultServiceFullStack();
+	
+	private RequestApprovalService requestApprovalService = new RequestApprovalServiceFullStack();
 	
 	public void supervisorViewRequests(Context ctx) {
 		System.out.println("Responding to Get read reimbursement request by supervisor ID");
@@ -140,11 +144,13 @@ public class TRMSApprover {
 		
 		log.info("Controller: update request to add approval");
 		
-		boolean approval = Boolean.valueOf(ctx.formParam("approval_status"));
+		int approval = Integer.valueOf(ctx.formParam("approval_status"));
 		
 		int employeeId = Integer.valueOf(ctx.formParam("employee_id"));
 		
-		requestApprovalService.approveRequest(approval, employeeId);
+		int requestId = Integer.valueOf(ctx.formParam("request_id"));
+		String date = ctx.formParam("approval_date");
+		requestApprovalService.approveRequest(approval, employeeId, requestId, date);
 		
 	}
 	

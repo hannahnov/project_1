@@ -15,5 +15,5 @@ public void createRequestApproval(RequestApproval requestApproval);
 	
 	public int deleteRequestApproval(int requestId);
 
-	public void approveRequest(boolean approval, int employeeId, int requestId);
+	public void approveRequest(int approval, int employeeId, int requestId, String approvalDate, String approvalEmployeeColumn, String approvalDateColumn);
 }

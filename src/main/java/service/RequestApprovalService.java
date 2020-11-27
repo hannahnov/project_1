@@ -2,6 +2,6 @@ package service;
 
 public interface RequestApprovalService {
 
-	void approveRequest(boolean approval, int employeeId, int requestId);
+	void approveRequest(int approval, int employeeId, int requestId, String date);
 
 }

@@ -1,6 +1,5 @@
 package service;
 
-import pojos.EventResult;
 
 public interface EventResultService {
 

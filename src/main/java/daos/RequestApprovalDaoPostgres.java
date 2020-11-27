@@ -161,8 +161,24 @@ public class RequestApprovalDaoPostgres implements RequestApprovalDao {
 	}
 
 	@Override
-	public void approveRequest(boolean approval, int employeeId, int requestId) {
-		// TODO Auto-generated method stub
+	public void approveRequest(int approval, int employeeId, int requestId, String approvalDate, 
+			String approvalEmployeeColumn, String approvalDateColumn) {
+		log.info("requestApproval Dao Postgres: updating requestApproval");
+		String sql = "update requestapprovals set " + approvalEmployeeColumn + " = ?, " + approvalDateColumn 
+				+ " = date(?) "
+				+ "where request_id = ?";
+					
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			statement.setInt(1, approval);
+			statement.setString(2, approvalDate);
+			statement.setInt(3, requestId);
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+			
 		
 	}
 
