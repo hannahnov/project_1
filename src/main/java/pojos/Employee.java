@@ -20,6 +20,8 @@ public class Employee {
 	
 	private EmployeeRank employeeRank;
 	
+	private double awardedReimbursement;
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -27,7 +29,7 @@ public class Employee {
 
 	
 public Employee(String emailAddress, int departmentId, int emplId, String firstName, String lastName, int directSupervisorId,
-			double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank) {
+			double availableReimbursement, double pendingReimbursement, EmployeeRank employeeRank, double awardedReimbursement) {
 		super();
 		this.departmentId = departmentId;
 		this.emailAddress = emailAddress;
@@ -38,6 +40,7 @@ public Employee(String emailAddress, int departmentId, int emplId, String firstN
 		this.availableReimbursement = availableReimbursement;
 		this.pendingReimbursement = pendingReimbursement;
 		this.employeeRank = employeeRank;
+		this.awardedReimbursement = awardedReimbursement;
 	}
 
 
@@ -131,6 +134,16 @@ public Employee(String emailAddress, int departmentId, int emplId, String firstN
 
 	public void setDepartmentId(int departmentId) {
 		this.departmentId = departmentId;
+	}
+
+
+	public double getAwardedReimbursement() {
+		return awardedReimbursement;
+	}
+
+
+	public void setAwardedReimbursement(double awardedReimbursement) {
+		this.awardedReimbursement = awardedReimbursement;
 	}
 
 

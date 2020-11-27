@@ -36,8 +36,8 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 		log.info("Employee dao postgres: creating employee");
 		
 		String sql = "insert into employees (employee_id, first_name, last_name, directsupervisor_id, "
-				+ "available_reimbursement, pending_Reimbursement, employee_rank, email_address, department_id)"
-				+ " values(?, ?, ?, ?, ?, ?, ?, ?)";
+				+ "available_reimbursement, pending_Reimbursement, employee_rank, email_address, department_id, awarded_reimbursement)"
+				+ " values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -50,6 +50,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 			statement.setInt(7, employee.getEmployeeRank().getValue());
 			statement.setString(8, employee.getEmailAddress());
 			statement.setInt(9, employee.getDepartmentId());
+			statement.setDouble(10, employee.getAwardedReimbursement());
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
@@ -79,8 +80,9 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 				double pendingReimbursement = rs.getDouble("pending_reimbursement");
 				EmployeeRank employeeRank = EmployeeRank.valueOf(rs.getInt("employee_rank"));
 				int departmentId = rs.getInt("department_id");
+				double awardedReimbursement = rs.getDouble("awarded_reimbursement");
 				employee = new Employee(emailAddress, departmentId, employeeId, firstName, 
-						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank);
+						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank, awardedReimbursement);
 		
 			} 
 			
@@ -111,8 +113,9 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 				double pendingReimbursement = rs.getDouble("pending_reimbursement");
 				EmployeeRank employeeRank = EmployeeRank.valueOf(rs.getInt("employee_rank"));
 				int departmentId = rs.getInt("department_id");
+				double awardedReimbursement = rs.getDouble("awarded_reimbursement");
 				Employee employee = new Employee(emailAddress, departmentId, employeeId, firstName, 
-						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank);
+						lastName, supervisorId, availableReimbursement, pendingReimbursement, employeeRank, awardedReimbursement);
 				employeeList.add(employee);
 			} 
 				
@@ -127,7 +130,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 		log.info("Employee dao postgres: updating employee");
 		String sql = "update employees set first_name = ?, last_name = ?, supervisor_Id = ?"
 				+ " available_reimbursement = ?, pending_reimbursement = ?, employee_rank = ?, email_address = ?"
-				+ ", deparment_id = ? "
+				+ ", deparment_id = ?, awarded_reimbursement = ? "
 				+ " where employeeid = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
@@ -140,7 +143,8 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 			statement.setInt(6, employee.getEmployeeRank().getValue());
 			statement.setString(7, employee.getEmailAddress());
 			statement.setInt(8, employee.getDepartmentId());
-			statement.setInt(9, employeeId);
+			statement.setDouble(9, employee.getAwardedReimbursement());
+			statement.setInt(10, employeeId);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

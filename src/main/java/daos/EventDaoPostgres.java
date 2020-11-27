@@ -23,8 +23,8 @@ public class EventDaoPostgres implements EventDao {
 	@Override
 	public void createEvent(Event event) {
 		log.info("Event dao postgres: creating event");
-		String sql = "insert into events (event_id, grading_format, event_name, event_start_date, event_type, event_location)"
-				+ " values(?, ?, ?, date(?), ?, ?)";
+		String sql = "insert into events (event_id, grading_format, event_name, event_start_date, event_type, event_location, event_cost)"
+				+ " values(?, ?, ?, date(?), ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -34,6 +34,7 @@ public class EventDaoPostgres implements EventDao {
 			statement.setString(4, event.getEventStartDate());
 			statement.setInt(5, event.getEventType().getValue());
 			statement.setString(6, event.getLocation());
+			statement.setDouble(7, event.getCost());
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
@@ -62,7 +63,8 @@ public class EventDaoPostgres implements EventDao {
 				String eventStartDate = rs.getString("event_start_date");
 				EventType eventType = EventType.valueOf(rs.getInt("event_Type"));
 				String location = rs.getString("event_location");
-				 event = new Event(gradingFormat, eventId, eventName, eventStartDate, eventType, location);
+				double cost = rs.getDouble("event_cost");
+				 event = new Event(gradingFormat, eventId, eventName, eventStartDate, eventType, location, cost);
 			} 
 			
 		} catch (SQLException e) {
@@ -91,7 +93,8 @@ public class EventDaoPostgres implements EventDao {
 				String eventStartDate = rs.getString("event_start_date");
 				EventType eventType = EventType.valueOf(rs.getInt("event_Type"));
 				String location = rs.getString("event_location");
-				Event event = new Event(gradingFormat, eventId, eventName, eventStartDate, eventType, location);
+				double cost = rs.getDouble("event_cost");
+				Event event = new Event(gradingFormat, eventId, eventName, eventStartDate, eventType, location, cost);
 				eventList.add(event);
 			} 
 			
@@ -105,8 +108,9 @@ public class EventDaoPostgres implements EventDao {
 	public Event updateEvent(int eventId, Event event) {
 		log.info("Event dao postgres: updating event");
 		//public Event(GradingFormat gradingFormat, int eventId, String name, Date eventStartDate, EventType eventType)
-		String sql = "update events set gradingformat = ?, name = ?, startdate = date(?), eventtype = ?,"
-				+  " where eventid = ?";
+		String sql = "update events set grading_format = ?, event_name = ?, event_start_date = date(?), "
+				+ "event_type = ?, event_cost = ?"
+				+  " where event_id = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -114,7 +118,8 @@ public class EventDaoPostgres implements EventDao {
 			statement.setString(2, event.getName());
 			statement.setString(3, event.getEventStartDate());
 			statement.setInt(4, event.getEventType().getValue());
-			statement.setInt(5, eventId);
+			statement.setDouble(5, event.getCost());
+			statement.setInt(6, eventId);
 		
 		} catch (SQLException e) {
 			e.printStackTrace();

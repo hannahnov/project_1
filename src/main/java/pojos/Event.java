@@ -15,9 +15,19 @@ public class Event {
 	
 	private String location;
 	
+	private double cost;
 	
+	
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
 	public Event(GradingFormat gradingFormat, int eventId, String name, 
-			String eventStartDate, EventType eventType, String location) {
+			String eventStartDate, EventType eventType, String location, double cost) {
 		super();
 		this.gradingFormat = gradingFormat;
 		this.eventId = eventId;
@@ -25,6 +35,7 @@ public class Event {
 		this.eventStartDate = eventStartDate;
 		this.eventType = eventType;
 		this.location = location;
+		this.cost = cost;
 	}
 	
 	public Event() {

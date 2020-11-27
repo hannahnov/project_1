@@ -10,6 +10,7 @@ import daos.RequestApprovalDao;
 import daos.RequestApprovalDaoPostgres;
 import pojos.ApprovalStatus;
 import pojos.Employee;
+import pojos.Event;
 import pojos.ReimbursementRequest;
 
 public class RequestApprovalServiceFullStack implements RequestApprovalService {
@@ -54,7 +55,21 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 		
 		 approvalDao.approveRequest(approval, employeeId, requestId, approvalDate, 
 				 approvalEmployeeColumn, approvalDateColumn);
+	}
+
+	@Override
+	public void grantReimbursement(int requestId, int approverId, double reimbursement) {
+		log.info("Request Approval service: granting reimbursement to employee");
+		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
+		Employee employee = employeeDao.readEmployee(req.getRequestor().getEmplId());
+		double actualReimbursement = reimbursement;
 		
+		if (reimbursement + (employee.getAvailableReimbursement() +  employee.getPendingReimbursement()) >= 1000) {
+			actualReimbursement = 1000 - (employee.getAvailableReimbursement() + employee.getPendingReimbursement());
+		}
+		employee.setAwardedReimbursement(employee.getAwardedReimbursement() + actualReimbursement);
+		employee.setAvailableReimbursement(employee.getAvailableReimbursement() - actualReimbursement);
+		employeeDao.updateEmployee(employee.getEmplId(), employee);
 	}
 
 }
