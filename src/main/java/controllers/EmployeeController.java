@@ -6,11 +6,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import io.javalin.http.Context;
-import pojos.Approver;
-import pojos.Employee;
 import pojos.EmployeeRank;
 import pojos.Event;
-import pojos.Requestor;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 import service.EventService;
@@ -22,7 +19,7 @@ public class EmployeeController {
 	
 	EventService eventService = new EventServiceFullStack();
 	
-	private static java.util.logging.Logger log = Logger.getRootLogger();
+	private static Logger log = Logger.getRootLogger();
 	
 	public void createEmployee(Context ctx) {
 		System.out.println("Responding to post create employee request");
@@ -32,6 +29,8 @@ public class EmployeeController {
 		String emailAddress = ctx.formParam("email_address");
 		
 		int emplId = Integer.valueOf(ctx.formParam("employee_id"));
+		
+		
 		
 		String firstName = ctx.formParam("first_name");
 		
@@ -43,14 +42,16 @@ public class EmployeeController {
 		
 		double pendingReimbursement = Double.valueOf(ctx.formParam("pending_reimbursement"));
 		
+		int departmentId = Integer.valueOf(ctx.formParam("department_id"));
+		
 		int rankInt = Integer.valueOf(ctx.formParam("employee_Rank"));
 		
 		EmployeeRank employeeRank = EmployeeRank.valueOf(rankInt);
 	
 	
 
-		Employee empl = new Employee(emailAddress, emplId, firstName, lastName, supId,  
-					availableReimbursement, pendingReimbursement, employeeRank);
+		Employee empl = new Employee(emailAddress, departmentId, emplId, firstName, lastName, supId,
+				availableReimbursement, pendingReimbursement, employeeRank);
 		employeeService.createEmployee(empl);
 		ctx.html(empl.toString());
 			
@@ -65,7 +66,7 @@ public class EmployeeController {
 		System.out.println("Responding to GET read employee request");
 		log.info("Controller: read an Employee");
 		
-		String emplId = ctx.formParam("employeeid");
+		int emplId = Integer.valueOf(ctx.formParam("employe_eid"));
 		Employee empl = employeeService.readEmployee(emplId);
 		ctx.html(empl.toString());
 	}
@@ -89,59 +90,27 @@ public class EmployeeController {
 	public void updateEmployee(Context ctx) {
 		System.out.println("Responding to PUT update employee request");
 		log.info("Controller: updating employee");
-int emplId = Integer.valueOf(ctx.formParam("employeeid"));
+		int emplId = Integer.valueOf(ctx.formParam("employee_id"));
 		
-		String firstName = ctx.formParam("firstname");
+		String emailAddress = ctx.formParam("email_address");
 		
-		String lastName = ctx.formParam("lastname");
+		int departmentId = Integer.valueOf(ctx.formParam("department_id"));
 		
-		String userName = ctx.formParam("username");
+		String firstName = ctx.formParam("first_name");
 		
-		String password = ctx.formParam("password");
-		
+		String lastName = ctx.formParam("last_name");
+				
 		int supId = Integer.valueOf(ctx.formParam("supervisorid"));
-		
-		Approver directSupervisor = employeeService.readEmployee(supId);
-		
-		Event event = eventService.createEvent();
-		
-		double availableReimbursement = Double.valueOf(ctx.formParam("availablereimbursement"));
-		
-		double pendingReimbursement = Double.valueOf(ctx.formParam("pendingreimbursement"));
-		
-		int rankInt = Integer.valueOf(ctx.formParam("employeeRank"));
-		
-		EmployeeRank employeeRank;
-		
-		switch(rankInt) {
-		case 1: employeeRank = EmployeeRank.DEPARTMENT_HEAD;
-			break;
-		case 2: employeeRank = EmployeeRank.BENEFIT_COORDINATOR;
-			break;
-		case 3: employeeRank = EmployeeRank.OTHER;
-			break;
-		default: employeeRank = EmployeeRank.OTHER;
-		}
-		
-		boolean isRequesting = Boolean.valueOf(ctx.formParam("requesting"));
-		
-		boolean isApproving = Boolean.valueOf(ctx.formParam("approving"));
-		
 	
-		if (isRequesting) {
-			
-		Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, directSupervisor, event, 
-					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
-		employeeService.updateEmployee(emplId, empl);
-		ctx.html(empl.toString());
-			
-		}
-		if (isApproving) {
-			Requestor empl = (Requestor) new Employee(emplId, firstName, lastName, userName, password, directSupervisor, event, 
-					availableReimbursement, pendingReimbursement, employeeRank, isRequesting, isApproving);
-			employeeService.updateEmployee(emplId, empl);
-			ctx.html(empl.toString());
-		}
+		double availableReimbursement = Double.valueOf(ctx.formParam("available_reimbursement"));
+		
+		double pendingReimbursement = Double.valueOf(ctx.formParam("pending_reimbursement"));
+		
+		
+		EmployeeRank employeeRank = EmployeeRank.valueOf((ctx.formParam("employee_rank")));
+		
+		Employee employee = new Employee(emailAddress, departmentId, emplId, firstName, lastName, supId,
+				availableReimbursement, pendingReimbursement, employeeRank);
 		
 		
 	}
