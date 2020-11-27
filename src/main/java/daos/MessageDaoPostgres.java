@@ -47,20 +47,21 @@ public class MessageDaoPostgres implements MessageDao {
 	}
 
 	@Override
-	public Message readMessage(int messageId) {
+	public Message readMessageByRecipientId(int recipientId) {
 		log.info("message Dao Postgres: reading message");
-		String sql = "select * from messages where message_id = ?";
+		String sql = "select * from messages where recipient_id = ?";
 		Message message = new Message();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
-			statement.setInt(1, messageId);
+			statement.setInt(1, recipientId);
 			
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
+				int messageId = rs.getInt("message_id");
 				ReimbursementRequest req = reqDao.readReimbursementRequest(rs.getInt("request_id"));
 				Employee sender = employeeDao.readEmployee(rs.getInt("sender_id"));
-				Employee recipient = employeeDao.readEmployee(rs.getInt("recipient_id"));
+				Employee recipient = employeeDao.readEmployee(recipientId);
 				String date = rs.getString("date_sent");
 				Boolean isReceived = rs.getBoolean("is_received");
 				String header = rs.getString("message_header");

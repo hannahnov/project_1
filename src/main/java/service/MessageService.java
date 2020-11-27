@@ -1,11 +1,12 @@
-package daos;
+package service;
 
 import java.util.List;
 
 import pojos.Message;
 
-public interface MessageDao {
-public void createMessage(Message message);
+
+public interface MessageService {
+	public Message createMessage(Message message);
 	
 	public Message readMessageByRecipientId(int recipientId);
 	
@@ -13,5 +14,5 @@ public void createMessage(Message message);
 	
 	public Message updateMessage(int messageId, Message message);
 	
-	public int deleteMessage(int messageId);
+	public void deleteMessage(int messageId);
 }

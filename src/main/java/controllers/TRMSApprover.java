@@ -18,12 +18,21 @@ public class TRMSApprover {
 		
 		int supervisorId = Integer.valueOf(ctx.formParam("directsupervisor_id"));
 		
-		ReimbursementRequest req = reimbursementRequestService.readReimbursementRequest(supervisorId);
+		ReimbursementRequest req = reimbursementRequestService.readRequestBySupervisorId(supervisorId);
 		
 		ctx.html(req.toString());
 	}
 	
 	public void bencoViewRequests(Context ctx) {
+		System.out.println("Responding to Get read reimbursement request by benco ID");
+		
+		log.info("Controller: read a reimbursement request by benco ID");
+		
+		int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
+		
+		ReimbursementRequest req = reimbursementRequestService.readRequestsByBencoId(bencoId);
+		
+		ctx.html(req.toString());
 		
 	}
 	
