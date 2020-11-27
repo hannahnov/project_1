@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import io.javalin.http.Context;
+import pojos.Employee;
 import pojos.ReimbursementRequest;
 import pojos.Requestor;
 import service.EmployeeService;
@@ -17,7 +18,7 @@ public class ReimbursementRequestController {
 	EmployeeService employeeService = new EmployeeServiceFullStack();
 	ReimbursementRequestService reimbursementRequestService = new ReimbursementRequestServiceFullStack();
 	
-	private static java.util.logging.Logger log = Logger.getRootLogger();
+	private static Logger log = Logger.getRootLogger();
 	
 	public void createReimbursementRequest(Context ctx) {
 		
@@ -39,7 +40,7 @@ public class ReimbursementRequestController {
 		
 		int requestorId = Integer.parseInt(ctx.formParam("requestorid"));
 		
-		Requestor requestor = employeeService.readEmployee(requestorId);
+		Employee requestor = employeeService.readEmployee(requestorId);
 				
 		
 		ReimbursementRequest req = new ReimbursementRequest(reqId, requestor, projectedReimbursement, isUrgent, isPending,
@@ -67,7 +68,7 @@ public class ReimbursementRequestController {
 		
 		List<ReimbursementRequest> reqList = new ArrayList<>();
 		
-		reqList = ReimbursementRequestService.getAllReimbursementRequests();
+		reqList = reimbursementRequestService.readAllReimbursementRequests();
 		
 		String str = "";
 		for (int i = 0; i < reqList.size(); i++) {
@@ -97,7 +98,7 @@ public class ReimbursementRequestController {
 		
 		int requestorId = Integer.parseInt(ctx.formParam("requestorid"));
 		
-		Requestor requestor = employeeService.readEmployee(requestorId);
+		Employee requestor = employeeService.readEmployee(requestorId);
 				
 		
 		ReimbursementRequest req = new ReimbursementRequest(reqId, requestor, projectedReimbursement, isUrgent, isPending,
