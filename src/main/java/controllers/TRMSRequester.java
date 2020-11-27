@@ -22,7 +22,7 @@ public class TRMSRequester {
 	public void uploadGrade(Context ctx) {
 		
 	}
-	//for direct supervisor approvla
+	//for direct supervisor approval
 	public void uploadPresentation(Context ctx) {
 		
 	}

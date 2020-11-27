@@ -1,10 +1,10 @@
 package controllers;
 
+import org.apache.log4j.Logger;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
 
 import io.javalin.http.Context;
 import pojos.Event;
@@ -84,7 +84,7 @@ public class EventController {
 			
 			List<Event> eventList = new ArrayList<>();
 		
-			eventList = eventService.getAllEvents();
+			eventList = eventService.readAllEvents();
 			
 			String str = "";
 		

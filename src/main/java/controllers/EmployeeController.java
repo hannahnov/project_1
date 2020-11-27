@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import io.javalin.http.Context;
+import pojos.Employee;
 import pojos.EmployeeRank;
 import pojos.Event;
 import service.EmployeeService;
