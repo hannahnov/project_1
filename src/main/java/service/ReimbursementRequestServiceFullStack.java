@@ -64,14 +64,17 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 
 	@Override
 	public ReimbursementRequest readRequestsByBencoId(int bencoId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		log.info("Reimbursement request service: read request by benco ID");
+		
+		return reqDao.readRequestsByBencoId(bencoId);
 	}
 
 	@Override
 	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("Reimbursement request service: read request by dephead ID");
+		
+		return reqDao.readRequestsByDepheadId(depheadId);
 	}
 
 }
