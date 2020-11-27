@@ -26,8 +26,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	public void createReimbursementRequest(ReimbursementRequest req) {
 		log.info("Request dao postgres: creating request");
 		String sql = "insert into requests (employee_id, projected_reimbursement, is_urgent, "
-				+ "request_date, work_days_missed, justification, approval_status)"
-				+ " values(?, ?, ?, date(?), ?, ?, ?)";
+				+ "request_date, work_days_missed, justification, approval_status, description)"
+				+ " values(?, ?, ?, date(?), ?, ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -38,6 +38,7 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 			statement.setInt(5, req.getWorkDaysMissed());
 			statement.setString(6, req.getJustification());
 			statement.setInt(7, req.getApprovalStatus().getValue());
+			statement.setString(8, req.getDescription());
 			
 		}
 		catch (SQLException e) {
@@ -67,8 +68,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String justification = rs.getString("justification");
 				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
 				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
-						requestDate, workDaysMissed, justification, approvalStatus);
+						requestDate, workDaysMissed, justification, approvalStatus, description);
 				
 			} 
 			
@@ -98,8 +100,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String justification = rs.getString("justification");
 				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
 				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
-						requestDate, workDaysMissed, justification, approvalStatus);
+						requestDate, workDaysMissed, justification, approvalStatus, description);
 				requestList.add(request);
 				
 			} 
@@ -114,7 +117,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	public ReimbursementRequest updateReimbursementRequest(int reqId, ReimbursementRequest req) {
 		log.info("request Dao Postgres: updating request");
 		String sql = "update requests set event_id = ?, projected_reimbursement = ?, is_urgent = ?,"
-				+ " request_date = date(?), work_days_missed = ?, justification = ?, employee_id = ?, approval_status = ? "
+				+ " request_date = date(?), work_days_missed = ?, justification = ?, employee_id = ?, approval_status = ?,"
+				+ " description = ?"
 				+ "where request_id = ?";
 					
 		try (Connection conn = connUtil.createConnection()) {
@@ -127,7 +131,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 			statement.setString(6, req.getJustification());
 			statement.setInt(7, req.getRequestor().getEmplId());
 			statement.setInt(8, req.getApprovalStatus().getValue());
-			statement.setInt(9, reqId);
+			statement.setString(9, req.getDescription());
+			statement.setInt(10, reqId);
 				
 			
 			
@@ -180,8 +185,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String justification = rs.getString("justification");
 				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
 				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
-						requestDate, workDaysMissed, justification, approvalStatus);
+						requestDate, workDaysMissed, justification, approvalStatus, description);
 				
 			} 
 			
@@ -213,8 +219,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String justification = rs.getString("justification");
 				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
 				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
-						requestDate, workDaysMissed, justification, approvalStatus);
+						requestDate, workDaysMissed, justification, approvalStatus, description);
 				
 			} 
 			
@@ -246,9 +253,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String justification = rs.getString("justification");
 				Employee requestor = employeeDao.readEmployee(rs.getInt("employee_id"));
 				ApprovalStatus approvalStatus = ApprovalStatus.valueOf(rs.getInt("approval_status"));
+				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor, event, reqId, projectedReimbursement, isUrgent, 
-						requestDate, workDaysMissed, justification, approvalStatus);
-				
+						requestDate, workDaysMissed, justification, approvalStatus, description);
 			} 
 			
 		} catch (SQLException e) {

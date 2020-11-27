@@ -24,10 +24,27 @@ public class ReimbursementRequest {
 	
 	private ApprovalStatus approvalStatus;
 	
+	private String description;
+	
+
+	public ReimbursementRequest(Employee requestor, Event event, double projectedReimbursement, boolean isUrgent,
+			String requestDate, int workDaysMissed, String justification, ApprovalStatus approvalStatus,
+			String description) {
+		super();
+		this.requestor = requestor;
+		this.event = event;
+		this.projectedReimbursement = projectedReimbursement;
+		this.isUrgent = isUrgent;
+		this.requestDate = requestDate;
+		this.workDaysMissed = workDaysMissed;
+		this.justification = justification;
+		this.approvalStatus = approvalStatus;
+		this.description = description;
+	}
 
 	public ReimbursementRequest(Employee requestor, Event event, int requestId, double projectedReimbursement,
 			boolean isUrgent, String requestDate, int workDaysMissed, String justification,
-			ApprovalStatus approvalStatus) {
+			ApprovalStatus approvalStatus, String description) {
 		super();
 		this.requestor = requestor;
 		this.event = event;
@@ -38,6 +55,7 @@ public class ReimbursementRequest {
 		this.workDaysMissed = workDaysMissed;
 		this.justification = justification;
 		this.approvalStatus = approvalStatus;
+		this.description = description;
 	}
 
 	public ReimbursementRequest() {
@@ -115,6 +133,14 @@ public class ReimbursementRequest {
 
 	public void setApprovalStatus(ApprovalStatus approvalStatus) {
 		this.approvalStatus = approvalStatus;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

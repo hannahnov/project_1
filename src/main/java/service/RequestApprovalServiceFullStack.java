@@ -10,7 +10,6 @@ import daos.RequestApprovalDao;
 import daos.RequestApprovalDaoPostgres;
 import pojos.ApprovalStatus;
 import pojos.Employee;
-import pojos.Event;
 import pojos.ReimbursementRequest;
 
 public class RequestApprovalServiceFullStack implements RequestApprovalService {

@@ -1,14 +1,9 @@
 package controllers;
 
-import java.io.File;
-
 import org.apache.log4j.Logger;
-
-import com.google.common.primitives.Bytes;
 
 import io.javalin.http.Context;
 import pojos.Employee;
-import pojos.EventResult;
 import pojos.Message;
 import pojos.ReimbursementRequest;
 import service.EmployeeService;
@@ -156,6 +151,18 @@ public class TRMSApprover {
 	
 	//puts the appropriate amount of money in the employee's account
 	public void grantReimbursement(Context ctx) {
+		
+		System.out.println("Responding to PUT grant reimbursement request");
+		
+		log.info("Controller: update employee info to add reimbursement");
+		
+		int requestId = Integer.valueOf(ctx.formParam("request_id"));
+		
+		int approverId = Integer.valueOf(ctx.formParam("employee_id"));
+		
+		double reimbursement = Double.valueOf(ctx.formParam("reimbursement_amount"));
+		
+		requestApprovalService.grantReimbursement(requestId, approverId, reimbursement);
 		
 	}
 
