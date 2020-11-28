@@ -6,10 +6,16 @@ import daos.EmployeeDao;
 import daos.EmployeeDaoPostgres;
 import daos.EventDao;
 import daos.EventDaoPostgres;
+import daos.EventResultDao;
+import daos.EventResultDaoPostgres;
+import daos.ReimbursementRequestDao;
+import daos.ReimbursementRequestDaoPostgres;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 import pojos.ApprovalStatus;
 import pojos.Employee;
 import pojos.Event;
+import pojos.EventResult;
 import pojos.Message;
 import pojos.ReimbursementRequest;
 import service.EmployeeService;
@@ -24,6 +30,8 @@ public class TRMSRequester {
 	private EmployeeDao employeeDao = new EmployeeDaoPostgres();
 	private EmployeeService employeeService = new EmployeeServiceFullStack();
 	private EventDao eventDao = new EventDaoPostgres();
+	private EventResultDao resultDao = new EventResultDaoPostgres();
+	private ReimbursementRequestDao requestDao = new ReimbursementRequestDaoPostgres();
 	private ReimbursementRequestService requestService = new ReimbursementRequestServiceFullStack();
 	private MessageService messageService = new MessageServiceFullStack();
 	
@@ -93,11 +101,33 @@ public class TRMSRequester {
 	public void uploadGrade(Context ctx) {
 		String grade = ctx.formParam("grade");
 		
+		int requestId = Integer.valueOf(ctx.formParam("request_id"));
+		
+		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
+		
+		EventResult result = new EventResult(req, grade);
+		
+		resultDao.createEventResult(result);
+		
+		ctx.html(result.getGrade());
 		
 	}
 	//for direct supervisor approval
 	public void uploadPresentation(Context ctx) {
+int requestId = Integer.valueOf(ctx.formParam("request_id"));
 		
+		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
+		
+		//TODO figure out how to upload
+		
+		byte[] presentation = ctx.uploadedFile("presentation");
+				ctx.formParam("presentation");
+		
+		EventResult result = new EventResult(req, presentation);
+		
+		resultDao.createEventResult(result);
+		
+		ctx.html(result.getGrade());
 	}
 
 }

@@ -11,6 +11,19 @@ public class EventResult {
 	
 	
 
+	
+	public EventResult(ReimbursementRequest req, byte[] presentation) {
+		super();
+		this.req = req;
+		this.presentation = presentation;
+	}
+
+	public EventResult(ReimbursementRequest req, String grade) {
+		super();
+		this.req = req;
+		this.grade = grade;
+	}
+
 	public EventResult(ReimbursementRequest req, String grade, byte[] presentation) {
 		super();
 		this.req = req;
