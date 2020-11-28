@@ -13,14 +13,11 @@ import java.util.List;
 
 import pojos.Employee;
 import pojos.EmployeeRank;
-import service.EmployeeService;
-import service.EmployeeServiceFullStack;
 import service.EventService;
 import service.EventServiceFullStack;
 
 public class EmployeeDaoPostgres implements EmployeeDao {
 	
-	EmployeeService employeeService = new EmployeeServiceFullStack();
 	EventService eventService = new EventServiceFullStack();
 	
 	private static Logger log = Logger.getRootLogger();
