@@ -1,5 +1,8 @@
 package controllers;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import org.apache.log4j.Logger;
 
 import daos.EmployeeDao;
@@ -119,11 +122,18 @@ int requestId = Integer.valueOf(ctx.formParam("request_id"));
 		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
 		
 		//TODO figure out how to upload
+		EventResult result = new EventResult();
+		UploadedFile presentation = ctx.uploadedFile("presentation");
+		InputStream q =	presentation.getContent();
+		byte[] attachment;
+		try {
+			attachment = q.readAllBytes();
+			result = new EventResult(req, attachment);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		byte[] presentation = ctx.uploadedFile("presentation");
-				ctx.formParam("presentation");
-		
-		EventResult result = new EventResult(req, presentation);
 		
 		resultDao.createEventResult(result);
 		

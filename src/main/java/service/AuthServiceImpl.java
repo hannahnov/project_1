@@ -16,7 +16,7 @@ public class AuthServiceImpl implements AuthService {
 	private Map<String, String> tokenRepo = new HashMap<>();
 	
 	@Override
-	public boolean authenticateUser(String username, String password, int employeeId) {
+	public boolean authenticateUser(String username, String password) {
 		
 		LogInInfoDao loginDao = new LogInInfoDaoPostgres();
 		
