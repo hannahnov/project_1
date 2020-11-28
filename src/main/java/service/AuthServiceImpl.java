@@ -4,7 +4,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import daos.LogInInfoDao;
@@ -17,7 +16,7 @@ public class AuthServiceImpl implements AuthService {
 	private Map<String, String> tokenRepo = new HashMap<>();
 	
 	@Override
-	public boolean authenticateUser(String username, String password) {
+	public boolean authenticateUser(String username, String password, int employeeId) {
 		
 		LogInInfoDao loginDao = new LogInInfoDaoPostgres();
 		
