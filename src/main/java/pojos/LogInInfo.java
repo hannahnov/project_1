@@ -3,15 +3,13 @@ package pojos;
 public class LogInInfo {
 	private int employeeId;
 	private String userName;
-	private String emailAddress;
 	private String password;
 	
 	
-	public LogInInfo(int employeeId, String userName, String emailAddress, String password) {
+	public LogInInfo(int employeeId, String userName, String password) {
 		super();
 		this.employeeId = employeeId;
 		this.userName = userName;
-		this.emailAddress = emailAddress;
 		this.password = password;
 	}
 	public LogInInfo() {
@@ -29,12 +27,7 @@ public class LogInInfo {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getEmailAddress() {
-		return emailAddress;
-	}
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
+	
 	public String getPassword() {
 		return password;
 	}

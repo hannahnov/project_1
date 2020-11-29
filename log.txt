@@ -247,3 +247,66 @@
 2020-11-28 23:26:16 INFO  root:18 - Reimbursement request service: create request
 2020-11-28 23:26:16 INFO  root:27 - Request dao postgres: creating request
 2020-11-28 23:26:20 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 23:27:06 INFO  root:21 - program has started
+2020-11-28 23:27:54 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 23:27:54 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 23:27:54 INFO  root:17 - Event service: create event
+2020-11-28 23:27:54 INFO  root:25 - Event dao postgres: creating event
+2020-11-28 23:27:54 INFO  root:34 - Event service: read all events
+2020-11-28 23:27:54 INFO  root:78 - Event Dao Postgres: reading all events
+2020-11-28 23:27:54 INFO  root:18 - Reimbursement request service: create request
+2020-11-28 23:27:54 INFO  root:27 - Request dao postgres: creating request
+2020-11-29 08:56:29 INFO  root:21 - program has started
+2020-11-29 08:59:37 INFO  root:21 - program has started
+2020-11-29 09:02:10 INFO  root:21 - program has started
+2020-11-29 09:03:29 INFO  root:21 - program has started
+2020-11-29 09:07:16 INFO  root:21 - program has started
+2020-11-29 09:07:21 INFO  root:98 - Login Dao Postgres: reading password info
+2020-11-29 09:11:42 INFO  root:21 - program has started
+2020-11-29 09:14:39 INFO  root:21 - program has started
+2020-11-29 09:17:56 INFO  root:21 - program has started
+2020-11-29 09:22:33 INFO  root:21 - program has started
+2020-11-29 09:25:03 INFO  root:21 - program has started
+2020-11-29 09:28:53 INFO  root:21 - program has started
+2020-11-29 09:30:25 INFO  root:21 - program has started
+2020-11-29 09:38:40 INFO  root:21 - program has started
+2020-11-29 09:39:55 INFO  root:21 - program has started
+2020-11-29 09:42:30 INFO  root:21 - program has started
+2020-11-29 09:42:49 INFO  root:21 - program has started
+2020-11-29 09:46:53 INFO  root:21 - program has started
+2020-11-29 09:47:05 INFO  root:98 - Login Dao Postgres: reading password info
+2020-11-29 09:49:07 INFO  root:21 - program has started
+2020-11-29 09:49:11 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:52:08 INFO  root:21 - program has started
+2020-11-29 09:52:25 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:53:03 INFO  root:21 - program has started
+2020-11-29 09:53:10 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:53:42 INFO  root:21 - program has started
+2020-11-29 09:53:48 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:55:17 INFO  root:21 - program has started
+2020-11-29 09:55:32 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:56:17 INFO  root:21 - program has started
+2020-11-29 09:56:29 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 09:56:29 INFO  root:27 - Employee service: read employee
+2020-11-29 09:56:29 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 10:00:14 INFO  root:21 - program has started
+2020-11-29 10:00:36 INFO  root:21 - program has started
+2020-11-29 10:01:13 INFO  root:21 - program has started
+2020-11-29 10:02:03 INFO  root:21 - program has started
+2020-11-29 10:02:30 INFO  root:21 - program has started
+2020-11-29 10:04:47 INFO  root:21 - program has started
+2020-11-29 10:08:47 INFO  root:21 - program has started
+2020-11-29 10:23:14 INFO  root:21 - program has started
+2020-11-29 10:23:30 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 10:25:45 INFO  root:21 - program has started
+2020-11-29 10:26:00 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 10:26:14 INFO  root:21 - program has started
+2020-11-29 10:26:34 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 10:26:35 INFO  root:27 - Employee service: read employee
+2020-11-29 10:26:35 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 10:26:53 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 10:29:25 INFO  root:21 - program has started
+2020-11-29 10:29:41 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 10:29:41 INFO  root:27 - Employee service: read employee
+2020-11-29 10:29:41 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 10:31:19 INFO  root:51 - Controller: creating reimbursement request

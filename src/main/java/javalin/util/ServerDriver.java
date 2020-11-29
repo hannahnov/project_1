@@ -22,7 +22,7 @@ public class ServerDriver {
 		
 		
 		//methods for auth controller
-		app.get("/login", ctx -> authController.login(ctx));
+		app.post("/login", ctx -> authController.login(ctx));
 		app.get("/checkuser", ctx -> authController.checkUser(ctx));
 		
 		//methods for approverController

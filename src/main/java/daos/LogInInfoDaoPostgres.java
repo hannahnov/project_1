@@ -32,10 +32,9 @@ public class LogInInfoDaoPostgres implements LogInInfoDao {
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 	
-				String emailAddress = rs.getString("email_address");
 				String userName = rs.getString("user_name");
 				String password = rs.getString("password");
-				logInInfo = new LogInInfo(employeeId, userName, emailAddress, password);
+				logInInfo = new LogInInfo(employeeId, userName, password);
 				
 			} 
 			
@@ -59,10 +58,9 @@ public class LogInInfoDaoPostgres implements LogInInfoDao {
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 				int employeeId = rs.getInt("employee_id");
-				String emailAddress = rs.getString("email_address");
 				String userName = rs.getString("user_name");
 				String password = rs.getString("password");
-				logInInfo = new LogInInfo(employeeId, userName, emailAddress, password);
+				logInInfo = new LogInInfo(employeeId, userName, password);
 				logInList.add(logInInfo);
 			} 
 			
@@ -76,15 +74,14 @@ public class LogInInfoDaoPostgres implements LogInInfoDao {
 	public LogInInfo updateLogInInfo(int employeeId, LogInInfo login) {
 		log.info("Login dao postgres: updating login");
 		
-		String sql = "update logininfo set email_address = ?, user_name = ?, password = ?,"
+		String sql = "update logininfo set user_name = ?, password = ?,"
 				+  " where employee_id = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setString(1, login.getEmailAddress());
-			statement.setString(2, login.getUserName());
-			statement.setString(3, login.getPassword());
-			statement.setInt(4, employeeId);
+			statement.setString(1, login.getUserName());
+			statement.setString(2, login.getPassword());
+			statement.setInt(3, employeeId);
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -106,9 +103,8 @@ public class LogInInfoDaoPostgres implements LogInInfoDao {
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 				int employeeId = rs.getInt("employee_id");
-				String emailAddress = rs.getString("email_address");
 				String password = rs.getString("password");
-				logInInfo = new LogInInfo(employeeId, userName, emailAddress, password);
+				logInInfo = new LogInInfo(employeeId, userName, password);
 				
 			} 
 			

@@ -19,7 +19,14 @@ public class AuthController {
 		
 		String password = ctx.formParam("password");
 		
+		System.out.println("username is " + username + " and password is " + password);
+		
 		int employeeId = Integer.valueOf(ctx.formParam("employee_id"));
+		
+		if (username == null || password == null) {
+			ctx.status(401);
+			ctx.redirect("login.html?error=failed-login");
+		}
 		
 		boolean authenticated = auth.authenticateUser(username, password);
 		if(authenticated) {
@@ -29,18 +36,18 @@ public class AuthController {
 			Employee empl = employeeService.readEmployee(employeeId);
 			for (int i = 0; i < employeeList.size(); i++) {
 				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
-					ctx.redirect("supervisor_page.html");
+					ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
 					break;
 				}
 			}
 			if (empl.getEmployeeRank().getValue() == 1) {
-			ctx.redirect("deparment_head.html");
+			ctx.redirect("http://127.0.0.1:5500/department_head.html");
 			}
 			if (empl.getEmployeeRank().getValue() == 2) {
-				ctx.redirect("benco_page.html");
+				ctx.redirect("http://127.0.0.1:5500/benco_page.html");
 			}
 			else {
-				ctx.redirect("underling_page.html");
+				ctx.redirect("http://127.0.0.1:5500/underling_page.html");
 			}
 			
 
