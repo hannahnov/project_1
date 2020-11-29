@@ -1,1 +1,77 @@
 2020-11-28 17:44:20 INFO  root:21 - program has started
+2020-11-28 17:50:55 INFO  root:21 - program has started
+2020-11-28 17:51:01 INFO  root:69 - Controller: create a message
+2020-11-28 17:51:01 INFO  root:26 - Reimbursement request service: read request
+2020-11-28 17:51:01 INFO  root:53 - request Dao Postgres: reading request
+2020-11-28 17:51:01 INFO  root:27 - Employee service: read employee
+2020-11-28 17:51:01 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:51:01 INFO  root:27 - Employee service: read employee
+2020-11-28 17:51:01 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:51:01 INFO  root:16 - Message service: create message
+2020-11-28 17:51:01 INFO  root:25 - Message dao postgres: creating message
+2020-11-28 17:55:32 INFO  root:21 - program has started
+2020-11-28 17:56:31 INFO  root:21 - program has started
+2020-11-28 17:56:42 INFO  root:69 - Controller: create a message
+2020-11-28 17:57:07 INFO  root:21 - program has started
+2020-11-28 17:57:25 INFO  root:69 - Controller: create a message
+2020-11-28 17:57:25 INFO  root:26 - Reimbursement request service: read request
+2020-11-28 17:57:25 INFO  root:53 - request Dao Postgres: reading request
+2020-11-28 17:57:25 INFO  root:27 - Employee service: read employee
+2020-11-28 17:57:25 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:57:25 INFO  root:27 - Employee service: read employee
+2020-11-28 17:57:25 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:57:25 INFO  root:16 - Message service: create message
+2020-11-28 17:57:25 INFO  root:25 - Message dao postgres: creating message
+2020-11-28 17:58:31 INFO  root:21 - program has started
+2020-11-28 17:58:38 INFO  root:69 - Controller: create a message
+2020-11-28 17:58:38 INFO  root:26 - Reimbursement request service: read request
+2020-11-28 17:58:38 INFO  root:53 - request Dao Postgres: reading request
+2020-11-28 17:58:38 INFO  root:27 - Employee service: read employee
+2020-11-28 17:58:38 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:58:38 INFO  root:27 - Employee service: read employee
+2020-11-28 17:58:38 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 17:58:38 INFO  root:16 - Message service: create message
+2020-11-28 17:58:38 INFO  root:25 - Message dao postgres: creating message
+2020-11-28 18:24:15 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:24:15 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:26:19 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:26:19 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:26:30 INFO  root:21 - program has started
+2020-11-28 18:26:38 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:26:38 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:27:49 INFO  root:21 - program has started
+2020-11-28 18:27:54 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:27:54 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:29:22 INFO  root:21 - program has started
+2020-11-28 18:29:34 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:29:34 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:31:39 INFO  root:21 - program has started
+2020-11-28 18:32:25 INFO  root:45 - Controller: creating reimbursement request
+2020-11-28 18:32:25 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 18:32:26 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-28 19:15:35 INFO  root:21 - program has started
+2020-11-28 19:16:13 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:20:25 INFO  root:21 - program has started
+2020-11-28 19:20:52 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:22:06 INFO  root:21 - program has started
+2020-11-28 19:22:19 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:24:04 INFO  root:21 - program has started
+2020-11-28 19:24:08 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:24:30 INFO  root:21 - program has started
+2020-11-28 19:25:09 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:27:05 INFO  root:21 - program has started
+2020-11-28 19:27:39 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 19:29:29 INFO  root:21 - program has started
+2020-11-28 19:29:51 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 20:11:38 INFO  root:21 - program has started
+2020-11-28 20:12:08 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 20:12:08 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 20:24:40 INFO  root:21 - program has started
+2020-11-28 20:25:07 INFO  root:51 - Controller: creating reimbursement request
+2020-11-28 20:25:07 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-28 20:25:07 INFO  root:17 - Event service: create event
+2020-11-28 20:25:07 INFO  root:25 - Event dao postgres: creating event
+2020-11-28 20:25:07 INFO  root:34 - Event service: read all events
+2020-11-28 20:25:07 INFO  root:77 - Event Dao Postgres: reading all events
+2020-11-28 20:25:07 INFO  root:18 - Reimbursement request service: create request
+2020-11-28 20:25:07 INFO  root:27 - Request dao postgres: creating request

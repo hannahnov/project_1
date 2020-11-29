@@ -23,18 +23,17 @@ public class EventDaoPostgres implements EventDao {
 	@Override
 	public void createEvent(Event event) {
 		log.info("Event dao postgres: creating event");
-		String sql = "insert into events (event_id, grading_format, event_name, event_start_date, event_type, event_location, event_cost)"
-				+ " values(?, ?, ?, date(?), ?, ?, ?)";
+		String sql = "insert into events (grading_format, event_name, event_start_date, event_type, event_location, event_cost)"
+				+ " values(?, ?, date(?), ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setInt(1, event.getEventId());
-			statement.setInt(2, event.getGradingFormat().getValue());
-			statement.setString(3, event.getName());
-			statement.setString(4, event.getEventStartDate());
-			statement.setInt(5, event.getEventType().getValue());
-			statement.setString(6, event.getLocation());
-			statement.setDouble(7, event.getCost());
+			statement.setInt(1, event.getGradingFormat().getValue());
+			statement.setString(2, event.getName());
+			statement.setString(3, event.getEventStartDate());
+			statement.setInt(4, event.getEventType().getValue());
+			statement.setString(5, event.getLocation());
+			statement.setDouble(6, event.getCost());
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
@@ -46,7 +45,7 @@ public class EventDaoPostgres implements EventDao {
 	@Override
 	public Event readEvent(int eventId) {
 		log.info("Event Dao Postgres: reading event");
-		String sql = "select * from events where eventid = ?";
+		String sql = "select * from events where event_id = ?";
 		Event event = new Event();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);

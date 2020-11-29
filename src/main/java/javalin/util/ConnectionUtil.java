@@ -13,15 +13,12 @@ public class ConnectionUtil {
 	private static Connection conn;
 	
 	public Connection createConnection() throws SQLException {
-		
-		if (conn == null) {
-		Connection conn1 = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?", "postgres", "Ripeanut1!");
-		conn = conn1;
-		return conn;
-	}
-		else {
+			
+			Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?", "postgres", "Ripeanut1!");
+			
 			return conn;
+			
 		}
 	
 }
-}
+

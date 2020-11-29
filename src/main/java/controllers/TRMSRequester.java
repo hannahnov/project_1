@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -19,10 +20,14 @@ import pojos.ApprovalStatus;
 import pojos.Employee;
 import pojos.Event;
 import pojos.EventResult;
+import pojos.EventType;
+import pojos.GradingFormat;
 import pojos.Message;
 import pojos.ReimbursementRequest;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
+import service.EventService;
+import service.EventServiceFullStack;
 import service.MessageService;
 import service.MessageServiceFullStack;
 import service.ReimbursementRequestService;
@@ -37,6 +42,7 @@ public class TRMSRequester {
 	private ReimbursementRequestDao requestDao = new ReimbursementRequestDaoPostgres();
 	private ReimbursementRequestService requestService = new ReimbursementRequestServiceFullStack();
 	private MessageService messageService = new MessageServiceFullStack();
+	private EventService eventService = new EventServiceFullStack();
 	
 	//creates request form with appropriate information
 	public void createRequest(Context ctx) {
@@ -45,19 +51,57 @@ public class TRMSRequester {
 		log.info("Controller: creating reimbursement request");
 		
 		int employeeId = Integer.valueOf(ctx.formParam("employee_id"));
+		String parm = ctx.formParam("grading_format");
+		System.out.println("The value is " + parm);
+		GradingFormat gradingFormat = GradingFormat.valueOf(Integer.valueOf(ctx.formParam("grading_format")));
+		EventType eventType = EventType.valueOf(Integer.valueOf(ctx.formParam("event_type")));
+		String eventStartDate = ctx.formParam("event_start_date");
 		Employee requestor = employeeDao.readEmployee(employeeId);
 		int eventId = Integer.valueOf(ctx.formParam("event_id"));
-		Event event = eventDao.readEvent(eventId);
-		double projectedReimbursement = Double.valueOf(ctx.formParam("projected_reimbursement"));
 		boolean isUrgent = false;
 		String requestDate = ctx.formParam("request_date");
 		int workDaysMissed = Integer.valueOf(ctx.formParam("work_days_missed"));
 		String justification = ctx.formParam("justification");
 		ApprovalStatus approvalStatus = ApprovalStatus.PENDING;
 		String description = ctx.formParam("description");
+		String eventLocation = ctx.formParam("event_location");
+		double eventCost = Double.valueOf(ctx.formParam("event_cost"));
+		String eventName = ctx.formParam("event_name");
+		double projectedReimbursement = 0;
+		int approvalInt = approvalStatus.getValue();
+		double percentage = 0.0;
+		if (approvalInt == 1) {
+			percentage = .8;
+		}
+		if (approvalInt == 2) {
+			percentage = .6;
+		}
+		if (approvalInt == 3) {
+			percentage = .75;
+		}
+		if (approvalInt == 4) {
+			percentage = 1;
+		}
+		if (approvalInt == 5) {
+			percentage = .9;
+		}
+		if (approvalInt == 6) {
+			percentage = .3;
+		}
+		projectedReimbursement = percentage * eventCost;
+		Event event = new Event(gradingFormat, eventName, eventStartDate, eventType, eventLocation, eventCost);
+		eventService.createEvent(event);
+		List<Event> eventList = eventService.readAllEvents();
+		for (int i = 0; i < eventList.size(); i++) {
+			if (eventList.get(i).getName().compareTo(event.getName()) == 0) {
+			event = eventList.get(i);
+			break;
+			}
+		}
 		ReimbursementRequest request = new ReimbursementRequest(requestor, event, projectedReimbursement, isUrgent,
 				requestDate, workDaysMissed, justification, approvalStatus, description);
 		requestService.createReimbursementRequest(request);
+		
 		
 		ctx.html(request.toString());
 	}
