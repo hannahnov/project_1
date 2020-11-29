@@ -97,11 +97,11 @@ public class TRMSApprover {
 		
 		log.info("Controller: read a message");
 		
-		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
+		int recipientId = ctx.cookieStore("id");
 		
 		Message message = messageService.readMessageByRecipientId(recipientId);
 		
-		ctx.html(message.toString());
+		ctx.json(message);
 	}
 	
 	//view grade (if benco) view presentation (if direct supervisor)

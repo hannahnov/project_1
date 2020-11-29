@@ -118,12 +118,13 @@ public class TRMSRequester {
 		
 		int requestId = Integer.valueOf(ctx.formParam("request_id"));
 		ReimbursementRequest req = requestService.readReimbursementRequest(requestId);
-		int senderId = Integer.valueOf(ctx.formParam("sender_id"));
+		int senderId = ctx.cookieStore("employee_id");
+		//int senderId = Integer.valueOf(ctx.formParam("sender_id"));
 		Employee sender = employeeService.readEmployee(senderId);
 		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
 		Employee recipient = employeeService.readEmployee(recipientId);
 		String dateSent = ctx.formParam("date_sent");
-		boolean received = Boolean.valueOf(ctx.formParam("is_received"));
+		boolean received = false;
 		String messageHeader = ctx.formParam("message_header");
 		String message = ctx.formParam("message");
 		

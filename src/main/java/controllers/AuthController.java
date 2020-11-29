@@ -34,6 +34,8 @@ public class AuthController {
 			ctx.status(200);
 			ctx.cookieStore("security", auth.createToken(username));
 			Employee empl = employeeService.readEmployee(employeeId);
+			ctx.cookieStore("id", employeeId);
+			System.out.println("The cookie is " + ctx.cookieStore("id"));
 			for (int i = 0; i < employeeList.size(); i++) {
 				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
 					ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
@@ -53,7 +55,7 @@ public class AuthController {
 
 		} else {
 			ctx.status(401);
-			ctx.redirect("login.html?error=failed-login");
+			ctx.redirect("http://127.0.0.1:5500/incorrect_login_info.html");
 		}
 		
 	}

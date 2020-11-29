@@ -36,6 +36,7 @@ public class MessageDaoPostgres implements MessageDao {
 			statement.setBoolean(5, message.isReceieved());
 			statement.setString(6, message.getHeader());
 			statement.setString(7, message.getMessage());
+			statement.executeQuery();
 	
 		}
 		catch (SQLException e) {
