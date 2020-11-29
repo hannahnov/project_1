@@ -57,7 +57,6 @@ public class TRMSRequester {
 		EventType eventType = EventType.valueOf(Integer.valueOf(ctx.formParam("event_type")));
 		String eventStartDate = ctx.formParam("event_start_date");
 		Employee requestor = employeeDao.readEmployee(employeeId);
-		int eventId = Integer.valueOf(ctx.formParam("event_id"));
 		boolean isUrgent = false;
 		String requestDate = ctx.formParam("request_date");
 		int workDaysMissed = Integer.valueOf(ctx.formParam("work_days_missed"));
@@ -98,12 +97,16 @@ public class TRMSRequester {
 			break;
 			}
 		}
-		ReimbursementRequest request = new ReimbursementRequest(requestor, event, projectedReimbursement, isUrgent,
+	ReimbursementRequest request = new ReimbursementRequest(requestor, event, projectedReimbursement, isUrgent,
 				requestDate, workDaysMissed, justification, approvalStatus, description);
-		requestService.createReimbursementRequest(request);
+	requestService.createReimbursementRequest(request);
 		
 		
-		ctx.html(request.toString());
+		ctx.html(event.toString());
+		
+		ctx.status(200);
+		ctx.redirect("http://127.0.0.1:5500/project1_login.html");
+
 	}
 	
 	//if more information is requested

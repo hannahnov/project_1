@@ -26,8 +26,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	public void createReimbursementRequest(ReimbursementRequest req) {
 		log.info("Request dao postgres: creating request");
 		String sql = "insert into requests (employee_id, projected_reimbursement, is_urgent, "
-				+ "request_date, work_days_missed, justification, approval_status, description)"
-				+ " values(?, ?, ?, date(?), ?, ?, ?, ?)";
+				+ "request_date, work_days_missed, justification, approval_status, description, event_id)"
+				+ " values(?, ?, ?, date(?), ?, ?, ?, ?, ?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -39,6 +39,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 			statement.setString(6, req.getJustification());
 			statement.setInt(7, req.getApprovalStatus().getValue());
 			statement.setString(8, req.getDescription());
+			statement.setInt(9, req.getEvent().getEventId());
+			statement.executeQuery();
 			
 		}
 		catch (SQLException e) {

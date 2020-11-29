@@ -94,10 +94,12 @@ public class Event {
 	public void setEventId(int eventId) {
 		this.eventId = eventId;
 	}
+
+
 	@Override
 	public String toString() {
 		return "Event [gradingFormat=" + gradingFormat + ", eventId=" + eventId + ", name=" + name + ", eventStartDate="
-				+ eventStartDate + ", eventType=" + eventType + "]";
+				+ eventStartDate + ", eventType=" + eventType + ", location=" + location + ", cost=" + cost + "]";
 	}
 
 	public String getLocation() {

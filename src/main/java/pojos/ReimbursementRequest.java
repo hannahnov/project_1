@@ -5,6 +5,14 @@ public class ReimbursementRequest {
 //	date, time, location, description, cost, grading format,
 //	and type of event; work-related justification.  
 	
+	@Override
+	public String toString() {
+		return "ReimbursementRequest [requestor=" + requestor + ", event=" + event + ", requestId=" + requestId
+				+ ", projectedReimbursement=" + projectedReimbursement + ", isUrgent=" + isUrgent + ", requestDate="
+				+ requestDate + ", workDaysMissed=" + workDaysMissed + ", justification=" + justification
+				+ ", approvalStatus=" + approvalStatus + ", description=" + description + "]";
+	}
+
 	private Employee requestor;
 	
 	private Event event;

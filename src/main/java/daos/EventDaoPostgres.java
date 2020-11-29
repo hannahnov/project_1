@@ -34,6 +34,7 @@ public class EventDaoPostgres implements EventDao {
 			statement.setInt(4, event.getEventType().getValue());
 			statement.setString(5, event.getLocation());
 			statement.setDouble(6, event.getCost());
+			statement.executeQuery();
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
