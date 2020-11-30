@@ -10,9 +10,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import javalin.util.ConnectionUtil;
-import pojos.Employee;
 import pojos.Message;
-import pojos.ReimbursementRequest;
 
 public class MessageDaoPostgres implements MessageDao {
 	private static Logger log = Logger.getRootLogger();
@@ -29,9 +27,9 @@ public class MessageDaoPostgres implements MessageDao {
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setInt(1, message.getReq().getRequestId());
-			statement.setInt(2, message.getSender().getEmplId());
-			statement.setInt(3, message.getRecipient().getEmplId());
+			statement.setInt(1, message.getRequestId());
+			statement.setInt(2, message.getSenderId());
+			statement.setInt(3, message.getRecipientId());
 			statement.setString(4, message.getDateSent());
 			statement.setBoolean(5, message.isReceieved());
 			statement.setString(6, message.getHeader());
@@ -48,10 +46,11 @@ public class MessageDaoPostgres implements MessageDao {
 	}
 
 	@Override
-	public Message readMessageByRecipientId(int recipientId) {
+	public List<Message> readMessageByRecipientId(int recipientId) {
 		log.info("message Dao Postgres: reading message");
 		String sql = "select * from messages where recipient_id = ?";
 		Message message = new Message();
+		List<Message> messageList = new ArrayList<>();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
@@ -60,20 +59,21 @@ public class MessageDaoPostgres implements MessageDao {
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 				int messageId = rs.getInt("message_id");
-				ReimbursementRequest req = reqDao.readReimbursementRequest(rs.getInt("request_id"));
-				Employee sender = employeeDao.readEmployee(rs.getInt("sender_id"));
-				Employee recipient = employeeDao.readEmployee(recipientId);
+				int req = rs.getInt("request_id");
+				int sender = rs.getInt("sender_id");
+				int recipient = recipientId;
 				String date = rs.getString("date_sent");
 				Boolean isReceived = rs.getBoolean("is_received");
 				String header = rs.getString("message_header");
 				String message1 = rs.getString("message");
 				message = new Message(messageId, req, sender, recipient, date, isReceived, header, message1);
+				messageList.add(message);
 			} 
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return message;
+		return messageList;
 	}
 
 	@Override
@@ -88,9 +88,9 @@ public class MessageDaoPostgres implements MessageDao {
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 				int messageId = rs.getInt("message_id");
-				ReimbursementRequest req = reqDao.readReimbursementRequest(rs.getInt("request_id"));
-				Employee sender = employeeDao.readEmployee(rs.getInt("sender_id"));
-				Employee recipient = employeeDao.readEmployee(rs.getInt("recipient_id"));
+				int req = rs.getInt("request_id");
+				int sender = rs.getInt("sender_id");
+				int recipient = rs.getInt("recipient_id");
 				String date = rs.getString("date_sent");
 				Boolean isReceived = rs.getBoolean("is_received");
 				String header = rs.getString("message_header");
@@ -114,9 +114,9 @@ public class MessageDaoPostgres implements MessageDao {
 					
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setInt(1, message.getReq().getRequestId());
-			statement.setInt(2, message.getSender().getEmplId());
-			statement.setInt(3, message.getRecipient().getEmplId());
+			statement.setInt(1, message.getRequestId());
+			statement.setInt(2, message.getSenderId());
+			statement.setInt(3, message.getRecipientId());
 			statement.setString(4, message.getDateSent());
 			statement.setBoolean(5, message.isReceieved());
 			statement.setString(6, message.getHeader());

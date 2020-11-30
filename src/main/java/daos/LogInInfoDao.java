@@ -15,4 +15,6 @@ public interface LogInInfoDao {
 	
 	public String getPassword(String userName);
 
+	public LogInInfo readLogInInfo(String username, String password);
+
 }

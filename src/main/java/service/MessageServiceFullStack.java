@@ -20,7 +20,7 @@ public class MessageServiceFullStack implements MessageService {
 	}
 
 	@Override
-	public Message readMessageByRecipientId(int recipientId) {
+	public List<Message> readMessageByRecipientId(int recipientId) {
 	log.info("Message service: read message by recipeint Id");
 		
 		return messageDao.readMessageByRecipientId(recipientId);

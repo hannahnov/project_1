@@ -587,3 +587,893 @@
 2020-11-29 16:57:52 INFO  root:27 - Employee service: read employee
 2020-11-29 16:57:52 INFO  root:61 - employeeDaoPostgres: reading employee
 2020-11-29 16:57:56 INFO  root:98 - Controller: read a message
+2020-11-29 16:58:46 INFO  root:21 - program has started
+2020-11-29 16:59:07 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 16:59:07 INFO  root:27 - Employee service: read employee
+2020-11-29 16:59:07 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 16:59:14 INFO  root:98 - Controller: read a message
+2020-11-29 17:03:52 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 17:03:52 INFO  root:27 - Employee service: read employee
+2020-11-29 17:03:52 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 17:23:06 INFO  root:21 - program has started
+2020-11-29 17:23:19 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 17:23:20 INFO  root:27 - Employee service: read employee
+2020-11-29 17:23:20 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 17:23:21 INFO  root:98 - Controller: read a message
+2020-11-29 18:02:12 INFO  root:21 - program has started
+2020-11-29 18:02:52 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 18:02:52 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 18:02:52 INFO  root:49 - login information approved
+2020-11-29 18:02:53 INFO  root:27 - Employee service: read employee
+2020-11-29 18:02:53 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:02:58 INFO  root:98 - Controller: read a message
+2020-11-29 18:12:12 INFO  root:21 - program has started
+2020-11-29 18:12:29 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 18:12:29 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 18:12:29 INFO  root:53 - login information approved
+2020-11-29 18:12:29 INFO  root:27 - Employee service: read employee
+2020-11-29 18:12:29 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:12:31 INFO  root:100 - Controller: read a message
+2020-11-29 18:14:56 INFO  root:100 - Controller: read a message
+2020-11-29 18:14:57 INFO  root:100 - Controller: read a message
+2020-11-29 18:14:57 INFO  root:100 - Controller: read a message
+2020-11-29 18:16:11 INFO  root:100 - Controller: read a message
+2020-11-29 18:16:12 INFO  root:100 - Controller: read a message
+2020-11-29 18:16:12 INFO  root:100 - Controller: read a message
+2020-11-29 18:16:23 INFO  root:21 - program has started
+2020-11-29 18:16:31 INFO  root:100 - Controller: read a message
+2020-11-29 18:19:45 INFO  root:21 - program has started
+2020-11-29 18:20:34 INFO  root:21 - program has started
+2020-11-29 18:20:35 INFO  root:100 - Controller: read a message
+2020-11-29 18:20:35 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:20:35 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:20:35 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:20:35 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:20:35 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:20:35 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:20:35 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:23:03 INFO  root:100 - Controller: read a message
+2020-11-29 18:23:03 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:23:03 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:23:04 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:23:04 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:23:04 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:23:04 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:23:04 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:11 INFO  root:100 - Controller: read a message
+2020-11-29 18:28:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:28:11 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:28:11 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:28:12 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:28:12 INFO  root:100 - Controller: read a message
+2020-11-29 18:28:12 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:28:12 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:12 INFO  root:100 - Controller: read a message
+2020-11-29 18:28:12 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:28:12 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:28:12 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:28:12 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:28:13 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:13 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:28:13 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:31 INFO  root:100 - Controller: read a message
+2020-11-29 18:32:31 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:32:31 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:32:31 INFO  root:100 - Controller: read a message
+2020-11-29 18:32:31 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:32:31 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:32:31 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:32:31 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:32:32 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:32:32 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:32 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:36 INFO  root:100 - Controller: read a message
+2020-11-29 18:32:36 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:32:36 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:32:36 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:32:36 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:32:36 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:36 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:32:36 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:100 - Controller: read a message
+2020-11-29 18:39:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:39:10 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:39:10 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:39:10 INFO  root:100 - Controller: read a message
+2020-11-29 18:39:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:39:10 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:39:10 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:39:10 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:11 INFO  root:100 - Controller: read a message
+2020-11-29 18:39:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:39:11 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:39:11 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:39:11 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:39:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:12 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:100 - Controller: read a message
+2020-11-29 18:39:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:39:58 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:39:58 INFO  root:100 - Controller: read a message
+2020-11-29 18:39:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:39:58 INFO  root:52 - message Dao Postgres: reading message
+2020-11-29 18:39:58 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:39:58 INFO  root:55 - request Dao Postgres: reading request
+2020-11-29 18:39:58 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:39:58 INFO  root:48 - Event Dao Postgres: reading event
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:39:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 18:48:44 INFO  root:21 - program has started
+2020-11-29 18:49:02 INFO  root:97 - Controller: read a message
+2020-11-29 18:49:02 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:49:02 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 18:53:05 INFO  root:97 - Controller: read a message
+2020-11-29 18:53:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:53:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 18:59:07 INFO  root:97 - Controller: read a message
+2020-11-29 18:59:07 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:59:07 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 18:59:07 INFO  root:97 - Controller: read a message
+2020-11-29 18:59:07 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:59:07 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 18:59:07 INFO  root:97 - Controller: read a message
+2020-11-29 18:59:07 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 18:59:07 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:31 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:31 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:31 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:31 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:31 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:31 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:31 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:31 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:31 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:35 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:35 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:35 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:57 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:57 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:57 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:57 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:57 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:57 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:01:57 INFO  root:97 - Controller: read a message
+2020-11-29 19:01:57 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:01:57 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:02 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:02 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:02 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:02 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:02 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:02 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:02 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:02 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:02 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:24 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:24 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:24 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:24 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:24 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:24 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:02:24 INFO  root:97 - Controller: read a message
+2020-11-29 19:02:24 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:02:24 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:04:38 INFO  root:97 - Controller: read a message
+2020-11-29 19:04:38 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:04:38 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:04:38 INFO  root:97 - Controller: read a message
+2020-11-29 19:04:38 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:04:38 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:04:38 INFO  root:97 - Controller: read a message
+2020-11-29 19:04:38 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:04:38 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:04:44 INFO  root:97 - Controller: read a message
+2020-11-29 19:04:44 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:04:44 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:46 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:46 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:46 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:46 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:46 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:46 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:46 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:46 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:46 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:47 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:47 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:47 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:58 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:58 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:58 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:58 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:58 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:58 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:05:59 INFO  root:97 - Controller: read a message
+2020-11-29 19:05:59 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:05:59 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:11 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:11 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:11 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:12 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:12 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:12 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:21 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:21 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:21 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:06:22 INFO  root:97 - Controller: read a message
+2020-11-29 19:06:22 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:06:22 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:42 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:42 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:42 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:42 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:42 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:42 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:42 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:42 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:42 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:43 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:43 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:43 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:50 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:51 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:51 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:51 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:51 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:51 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:51 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:08:52 INFO  root:97 - Controller: read a message
+2020-11-29 19:08:52 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:08:52 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:09:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:09:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:09:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:09:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:09:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:09:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:09:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:09:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:09:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:07 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:07 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:07 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:07 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:07 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:07 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:08 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:17 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:17 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:17 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:17 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:17 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:17 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:17 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:17 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:17 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:10:18 INFO  root:97 - Controller: read a message
+2020-11-29 19:10:18 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:10:18 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:14:20 INFO  root:97 - Controller: read a message
+2020-11-29 19:14:20 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:14:20 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:14:21 INFO  root:97 - Controller: read a message
+2020-11-29 19:14:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:14:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:14:21 INFO  root:97 - Controller: read a message
+2020-11-29 19:14:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:14:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:14:27 INFO  root:97 - Controller: read a message
+2020-11-29 19:14:27 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:14:27 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:15:00 INFO  root:97 - Controller: read a message
+2020-11-29 19:15:00 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:15:00 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:15:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:15:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:15:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:15:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:15:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:15:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:15:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:15:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:15:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:18:48 INFO  root:97 - Controller: read a message
+2020-11-29 19:18:48 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:18:48 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:18:48 INFO  root:97 - Controller: read a message
+2020-11-29 19:18:48 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:18:48 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:18:48 INFO  root:97 - Controller: read a message
+2020-11-29 19:18:48 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:18:48 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:18:49 INFO  root:97 - Controller: read a message
+2020-11-29 19:18:49 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:18:49 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:18:52 INFO  root:97 - Controller: read a message
+2020-11-29 19:18:52 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:18:52 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:19:34 INFO  root:97 - Controller: read a message
+2020-11-29 19:19:34 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:19:34 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:19:35 INFO  root:97 - Controller: read a message
+2020-11-29 19:19:35 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:19:35 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:19:35 INFO  root:97 - Controller: read a message
+2020-11-29 19:19:35 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:19:35 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:19:35 INFO  root:97 - Controller: read a message
+2020-11-29 19:19:35 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:19:35 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:19:40 INFO  root:97 - Controller: read a message
+2020-11-29 19:19:40 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:19:40 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:01 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:01 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:01 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:02 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:02 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:02 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:09 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:10 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:10 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:20:12 INFO  root:97 - Controller: read a message
+2020-11-29 19:20:12 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:20:12 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:32 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:32 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:32 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:32 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:32 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:32 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:32 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:32 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:32 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:32 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:32 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:32 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:37 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:37 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:37 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:21:54 INFO  root:97 - Controller: read a message
+2020-11-29 19:21:54 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:21:54 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:22:08 INFO  root:97 - Controller: read a message
+2020-11-29 19:22:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:22:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:22:08 INFO  root:97 - Controller: read a message
+2020-11-29 19:22:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:22:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:22:08 INFO  root:97 - Controller: read a message
+2020-11-29 19:22:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:22:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:22:08 INFO  root:97 - Controller: read a message
+2020-11-29 19:22:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:22:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:22:10 INFO  root:97 - Controller: read a message
+2020-11-29 19:22:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:22:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:14 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:14 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:14 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:14 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:14 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:14 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:14 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:14 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:14 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:15 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:15 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:15 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:33 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:33 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:33 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:33 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:43 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:43 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:43 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:43 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:43 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:43 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:43 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:43 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:43 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:23:43 INFO  root:97 - Controller: read a message
+2020-11-29 19:23:43 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:23:43 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:29 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:29 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:29 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:30 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:30 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:30 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:39 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:39 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:39 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:50 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:50 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:50 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:27:50 INFO  root:97 - Controller: read a message
+2020-11-29 19:27:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:27:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:31:57 INFO  root:21 - program has started
+2020-11-29 19:32:13 INFO  root:100 - Controller: read a message
+2020-11-29 19:32:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:32:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:32:59 INFO  root:100 - Controller: read a message
+2020-11-29 19:32:59 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:32:59 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:00 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:00 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:00 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:00 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:00 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:00 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:00 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:00 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:00 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:26 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:26 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:26 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:26 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:26 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:26 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:26 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:26 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:26 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:33:26 INFO  root:100 - Controller: read a message
+2020-11-29 19:33:26 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:33:26 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:34:07 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 19:34:07 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 19:34:08 INFO  root:53 - login information approved
+2020-11-29 19:34:08 INFO  root:27 - Employee service: read employee
+2020-11-29 19:34:08 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 19:35:05 INFO  root:100 - Controller: read a message
+2020-11-29 19:35:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:35:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:35:05 INFO  root:100 - Controller: read a message
+2020-11-29 19:35:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:35:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:35:05 INFO  root:100 - Controller: read a message
+2020-11-29 19:35:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:35:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:35:05 INFO  root:100 - Controller: read a message
+2020-11-29 19:35:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:35:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:35:16 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 19:35:16 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 19:35:16 INFO  root:53 - login information approved
+2020-11-29 19:35:16 INFO  root:27 - Employee service: read employee
+2020-11-29 19:35:16 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 19:35:58 INFO  root:79 - Controller: create a message
+2020-11-29 19:35:58 INFO  root:16 - Message service: create message
+2020-11-29 19:35:58 INFO  root:23 - Message dao postgres: creating message
+2020-11-29 19:36:27 INFO  root:100 - Controller: read a message
+2020-11-29 19:36:27 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:36:27 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:36:50 INFO  root:100 - Controller: read a message
+2020-11-29 19:36:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:36:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:36:51 INFO  root:100 - Controller: read a message
+2020-11-29 19:36:51 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:36:51 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:37:10 INFO  root:100 - Controller: read a message
+2020-11-29 19:37:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:37:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:37:10 INFO  root:100 - Controller: read a message
+2020-11-29 19:37:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:37:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:37:10 INFO  root:100 - Controller: read a message
+2020-11-29 19:37:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:37:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:37:10 INFO  root:100 - Controller: read a message
+2020-11-29 19:37:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:37:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:37:10 INFO  root:100 - Controller: read a message
+2020-11-29 19:37:10 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:37:10 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:39:47 INFO  root:100 - Controller: read a message
+2020-11-29 19:39:47 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:39:47 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:39:48 INFO  root:100 - Controller: read a message
+2020-11-29 19:39:48 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:39:48 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:39:50 INFO  root:100 - Controller: read a message
+2020-11-29 19:39:50 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:39:50 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:41:12 INFO  root:100 - Controller: read a message
+2020-11-29 19:41:12 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:41:12 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:42:08 INFO  root:100 - Controller: read a message
+2020-11-29 19:42:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:42:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:42:14 INFO  root:100 - Controller: read a message
+2020-11-29 19:42:14 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:42:14 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:51:00 INFO  root:100 - Controller: read a message
+2020-11-29 19:51:00 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 19:51:00 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 19:52:13 INFO  root:21 - program has started
+2020-11-29 19:52:15 INFO  root:100 - Controller: read a message
+2020-11-29 19:52:51 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 19:52:52 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 19:52:52 INFO  root:53 - login information approved
+2020-11-29 19:52:52 INFO  root:27 - Employee service: read employee
+2020-11-29 19:52:52 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 19:52:54 INFO  root:100 - Controller: read a message
+2020-11-29 20:01:52 INFO  root:21 - program has started
+2020-11-29 20:01:59 INFO  root:100 - Controller: read a message
+2020-11-29 20:02:18 INFO  root:21 - program has started
+2020-11-29 20:02:22 INFO  root:100 - Controller: read a message
+2020-11-29 20:03:01 INFO  root:100 - Controller: read a message
+2020-11-29 20:03:01 INFO  root:100 - Controller: read a message
+2020-11-29 20:03:01 INFO  root:100 - Controller: read a message
+2020-11-29 20:03:18 INFO  root:100 - Controller: read a message
+2020-11-29 20:03:28 INFO  root:21 - program has started
+2020-11-29 20:03:31 INFO  root:100 - Controller: read a message
+2020-11-29 20:52:24 INFO  root:21 - program has started
+2020-11-29 20:52:35 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 20:52:36 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 20:52:36 INFO  root:53 - login information approved
+2020-11-29 20:53:55 INFO  root:21 - program has started
+2020-11-29 20:54:08 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 20:54:08 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 20:54:08 INFO  root:53 - login information approved
+2020-11-29 20:54:08 INFO  root:27 - Employee service: read employee
+2020-11-29 20:54:08 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 20:54:35 INFO  root:100 - Controller: read a message
+2020-11-29 20:55:54 INFO  root:21 - program has started
+2020-11-29 20:56:45 INFO  root:21 - program has started
+2020-11-29 20:56:58 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 20:56:58 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 20:56:58 INFO  root:53 - login information approved
+2020-11-29 20:56:58 INFO  root:27 - Employee service: read employee
+2020-11-29 20:56:58 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 20:57:02 INFO  root:100 - Controller: read a message
+2020-11-29 20:59:37 INFO  root:21 - program has started
+2020-11-29 20:59:49 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 20:59:49 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 20:59:49 INFO  root:53 - login information approved
+2020-11-29 20:59:49 INFO  root:27 - Employee service: read employee
+2020-11-29 20:59:49 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 20:59:51 INFO  root:100 - Controller: read a message
+2020-11-29 21:00:53 INFO  root:21 - program has started
+2020-11-29 21:01:09 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 21:01:09 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 21:01:09 INFO  root:53 - login information approved
+2020-11-29 21:01:09 INFO  root:27 - Employee service: read employee
+2020-11-29 21:01:09 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 21:01:12 INFO  root:100 - Controller: read a message
+2020-11-29 21:03:54 INFO  root:21 - program has started
+2020-11-29 21:04:11 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 21:04:11 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 21:04:11 INFO  root:53 - login information approved
+2020-11-29 21:04:11 INFO  root:27 - Employee service: read employee
+2020-11-29 21:04:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 21:04:13 INFO  root:100 - Controller: read a message
+2020-11-29 21:15:18 INFO  root:21 - program has started
+2020-11-29 21:15:39 INFO  root:21 - program has started
+2020-11-29 21:15:56 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 21:15:57 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 21:15:57 INFO  root:53 - login information approved
+2020-11-29 21:15:57 INFO  root:27 - Employee service: read employee
+2020-11-29 21:15:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 21:16:01 INFO  root:100 - Controller: read a message
+2020-11-29 21:23:38 INFO  root:100 - Controller: read a message
+2020-11-29 21:23:38 INFO  root:100 - Controller: read a message
+2020-11-29 21:23:47 INFO  root:21 - program has started
+2020-11-29 21:24:21 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 21:24:21 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 21:24:21 INFO  root:53 - login information approved
+2020-11-29 21:24:21 INFO  root:27 - Employee service: read employee
+2020-11-29 21:24:21 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 21:24:23 INFO  root:100 - Controller: read a message
+2020-11-29 21:34:07 INFO  root:100 - Controller: read a message
+2020-11-29 21:35:45 INFO  root:100 - Controller: read a message
+2020-11-29 21:51:32 INFO  root:21 - program has started
+2020-11-29 21:52:02 INFO  root:100 - Controller: read a message
+2020-11-29 21:52:10 INFO  root:100 - Controller: read a message
+2020-11-29 21:52:18 INFO  root:100 - Controller: read a message
+2020-11-29 21:52:31 INFO  root:100 - Controller: read a message
+2020-11-29 21:52:31 INFO  root:100 - Controller: read a message
+2020-11-29 21:52:34 INFO  root:100 - Controller: read a message
+2020-11-29 21:53:08 INFO  root:100 - Controller: read a message
+2020-11-29 21:53:08 INFO  root:100 - Controller: read a message
+2020-11-29 21:53:12 INFO  root:100 - Controller: read a message
+2020-11-29 21:53:21 INFO  root:100 - Controller: read a message
+2020-11-29 21:53:21 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 21:53:21 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 21:54:44 INFO  root:100 - Controller: read a message
+2020-11-29 21:54:44 INFO  root:100 - Controller: read a message
+2020-11-29 21:54:48 INFO  root:100 - Controller: read a message
+2020-11-29 21:54:49 INFO  root:100 - Controller: read a message
+2020-11-29 21:55:05 INFO  root:100 - Controller: read a message
+2020-11-29 21:55:05 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 21:55:05 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 21:55:09 INFO  root:100 - Controller: read a message
+2020-11-29 21:55:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 21:55:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 21:58:39 INFO  root:100 - Controller: read a message
+2020-11-29 21:58:39 INFO  root:100 - Controller: read a message
+2020-11-29 21:58:41 INFO  root:100 - Controller: read a message
+2020-11-29 21:58:42 INFO  root:100 - Controller: read a message
+2020-11-29 21:59:21 INFO  root:100 - Controller: read a message
+2020-11-29 21:59:22 INFO  root:100 - Controller: read a message
+2020-11-29 22:00:22 INFO  root:100 - Controller: read a message
+2020-11-29 22:00:22 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:00:22 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:00:45 INFO  root:100 - Controller: read a message
+2020-11-29 22:00:45 INFO  root:100 - Controller: read a message
+2020-11-29 22:00:50 INFO  root:100 - Controller: read a message
+2020-11-29 22:10:37 INFO  root:100 - Controller: read a message
+2020-11-29 22:10:37 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:10:37 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:10:37 INFO  root:100 - Controller: read a message
+2020-11-29 22:10:37 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:10:37 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:10:38 INFO  root:100 - Controller: read a message
+2020-11-29 22:10:38 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:10:38 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:11:11 INFO  root:100 - Controller: read a message
+2020-11-29 22:11:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:11:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:11:11 INFO  root:100 - Controller: read a message
+2020-11-29 22:11:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:11:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:11:13 INFO  root:100 - Controller: read a message
+2020-11-29 22:11:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:11:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:15:37 INFO  root:100 - Controller: read a message
+2020-11-29 22:15:37 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-29 22:15:37 INFO  root:50 - message Dao Postgres: reading message
+2020-11-29 22:16:44 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 22:16:44 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 22:16:44 INFO  root:53 - login information approved
+2020-11-29 22:16:44 INFO  root:27 - Employee service: read employee
+2020-11-29 22:16:44 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 22:35:35 INFO  root:21 - program has started
+2020-11-29 22:35:41 INFO  root:100 - Controller: read a message
+2020-11-29 22:35:41 INFO  root:100 - Controller: read a message
+2020-11-29 22:35:49 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 22:35:49 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 22:35:49 INFO  root:53 - login information approved
+2020-11-29 22:35:49 INFO  root:27 - Employee service: read employee
+2020-11-29 22:35:49 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 22:35:52 INFO  root:100 - Controller: read a message
+2020-11-29 22:36:33 INFO  root:100 - Controller: read a message
+2020-11-29 22:36:33 INFO  root:100 - Controller: read a message
+2020-11-29 22:36:33 INFO  root:100 - Controller: read a message
+2020-11-29 22:38:47 INFO  root:21 - program has started
+2020-11-29 22:39:05 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 22:39:06 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 22:39:06 INFO  root:53 - login information approved
+2020-11-29 22:39:06 INFO  root:27 - Employee service: read employee
+2020-11-29 22:39:06 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 22:39:58 INFO  root:21 - program has started
+2020-11-29 22:40:26 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 22:40:26 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 22:40:26 INFO  root:53 - login information approved
+2020-11-29 22:40:26 INFO  root:27 - Employee service: read employee
+2020-11-29 22:40:26 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 22:40:31 INFO  root:100 - Controller: read a message
+2020-11-29 22:48:11 INFO  root:21 - program has started
+2020-11-29 23:10:48 INFO  root:21 - program has started
+2020-11-29 23:11:59 INFO  root:21 - program has started
+2020-11-29 23:12:13 INFO  root:100 - Controller: read a message
+2020-11-29 23:12:13 INFO  root:100 - Controller: read a message
+2020-11-29 23:12:31 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 23:12:31 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 23:12:31 INFO  root:53 - login information approved
+2020-11-29 23:12:31 INFO  root:27 - Employee service: read employee
+2020-11-29 23:12:31 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 23:12:42 INFO  root:100 - Controller: read a message
+2020-11-29 23:14:35 INFO  root:21 - program has started
+2020-11-29 23:14:42 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 23:14:42 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 23:14:42 INFO  root:53 - login information approved
+2020-11-29 23:14:43 INFO  root:27 - Employee service: read employee
+2020-11-29 23:14:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 23:15:02 INFO  root:21 - program has started
+2020-11-29 23:15:08 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 23:15:08 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 23:15:08 INFO  root:53 - login information approved
+2020-11-29 23:15:08 INFO  root:27 - Employee service: read employee
+2020-11-29 23:15:08 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 23:16:09 INFO  root:21 - program has started
+2020-11-29 23:16:13 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-29 23:16:13 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-29 23:16:13 INFO  root:53 - login information approved
+2020-11-29 23:16:13 INFO  root:27 - Employee service: read employee
+2020-11-29 23:16:13 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-29 23:32:56 INFO  root:100 - Controller: read a message
+2020-11-29 23:32:56 INFO  root:100 - Controller: read a message
+2020-11-29 23:32:56 INFO  root:100 - Controller: read a message
+2020-11-30 05:35:20 INFO  root:21 - program has started
+2020-11-30 05:35:44 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-11-30 05:35:44 INFO  root:95 - Login Dao Postgres: reading password info
+2020-11-30 05:35:44 INFO  root:53 - login information approved
+2020-11-30 05:35:44 INFO  root:27 - Employee service: read employee
+2020-11-30 05:35:44 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-11-30 05:35:46 INFO  root:100 - Controller: read a message
+2020-11-30 05:35:46 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:35:46 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:40:29 INFO  root:100 - Controller: read a message
+2020-11-30 05:40:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:40:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:40:51 INFO  root:100 - Controller: read a message
+2020-11-30 05:40:51 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:40:51 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:44:33 INFO  root:100 - Controller: read a message
+2020-11-30 05:44:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:44:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:44:59 INFO  root:100 - Controller: read a message
+2020-11-30 05:44:59 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:44:59 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:45:13 INFO  root:100 - Controller: read a message
+2020-11-30 05:45:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:45:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:45:29 INFO  root:100 - Controller: read a message
+2020-11-30 05:45:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:45:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:48:11 INFO  root:100 - Controller: read a message
+2020-11-30 05:48:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:48:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:48:13 INFO  root:100 - Controller: read a message
+2020-11-30 05:48:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:48:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:48:13 INFO  root:100 - Controller: read a message
+2020-11-30 05:48:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:48:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:51:45 INFO  root:100 - Controller: read a message
+2020-11-30 05:51:45 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:51:45 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:51:46 INFO  root:100 - Controller: read a message
+2020-11-30 05:51:46 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:51:46 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:52:03 INFO  root:100 - Controller: read a message
+2020-11-30 05:52:03 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:52:03 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:52:03 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:52:13 INFO  root:100 - Controller: read a message
+2020-11-30 05:52:13 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:52:13 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:52:13 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:52:29 INFO  root:100 - Controller: read a message
+2020-11-30 05:52:29 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:52:29 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:52:29 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:53:08 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:53:08 INFO  root:100 - Controller: read a message
+2020-11-30 05:53:08 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:53:08 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:54:33 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:54:33 INFO  root:100 - Controller: read a message
+2020-11-30 05:54:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:54:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:54:44 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:54:44 INFO  root:100 - Controller: read a message
+2020-11-30 05:54:44 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:54:44 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:55:15 INFO  root:100 - Controller: read a message
+2020-11-30 05:55:15 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 05:55:15 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 05:55:15 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 05:55:44 INFO  root:53 - Controller: read a reimbursement request by benco ID
+2020-11-30 06:03:41 INFO  root:100 - Controller: read a message
+2020-11-30 06:03:41 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 06:03:41 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 06:05:39 INFO  root:100 - Controller: read a message
+2020-11-30 06:05:39 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 06:05:39 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:11 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:11 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:11 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:15 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:15 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:15 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:17 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:17 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:17 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:18 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:18 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:18 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:33 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:33 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:33 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:49 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:49 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:49 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 07:36:51 INFO  root:100 - Controller: read a message
+2020-11-30 07:36:51 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 07:36:51 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 08:07:09 INFO  root:100 - Controller: read a message
+2020-11-30 08:07:09 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 08:07:09 INFO  root:50 - message Dao Postgres: reading message
+2020-11-30 08:07:42 INFO  root:100 - Controller: read a message
+2020-11-30 08:07:42 INFO  root:24 - Message service: read message by recipeint Id
+2020-11-30 08:07:42 INFO  root:50 - message Dao Postgres: reading message

@@ -1,11 +1,16 @@
 package controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import io.javalin.http.Context;
 import pojos.Employee;
 import pojos.Message;
 import pojos.ReimbursementRequest;
+import service.AuthService;
+import service.AuthServiceImpl;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 import service.EventResultService;
@@ -75,11 +80,8 @@ public class TRMSApprover {
 		
 		
 		int requestId = Integer.valueOf(ctx.formParam("request_id"));
-		ReimbursementRequest req = reimbursementRequestService.readReimbursementRequest(requestId);
 		int senderId = Integer.valueOf(ctx.formParam("sender_id"));
-		Employee sender = employeeService.readEmployee(senderId);
 		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
-		Employee recipient = employeeService.readEmployee(recipientId);
 		String dateSent = ctx.formParam("date_sent");
 		boolean received = Boolean.valueOf(ctx.formParam("is_received"));
 		String messageHeader = ctx.formParam("message_header");
@@ -87,7 +89,7 @@ public class TRMSApprover {
 		
 	//	(int messageId, ReimbursementRequest req, Employee sender, Employee recipient, String dateSent,
 			//	boolean receieved, String header, String message)
-		Message msg = new Message(req, sender, recipient, dateSent, received, messageHeader, message);
+		Message msg = new Message(requestId, senderId, recipientId, dateSent, received, messageHeader, message);
 		
 		  messageService.createMessage(msg);
 	}
@@ -96,12 +98,12 @@ public class TRMSApprover {
 		System.out.println("Responding to Get request read a message");
 		
 		log.info("Controller: read a message");
-		
-		int recipientId = ctx.cookieStore("id");
-		
-		Message message = messageService.readMessageByRecipientId(recipientId);
-		
-		ctx.json(message);
+		int recipientId  = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
+		//int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
+		System.out.println(recipientId);
+		//create array
+		List<Message> messageList  = messageService.readMessageByRecipientId(recipientId);
+		ctx.json(messageList);
 	}
 	
 	//view grade (if benco) view presentation (if direct supervisor)
@@ -110,7 +112,7 @@ public class TRMSApprover {
 		
 		log.info("Controller: read an event Grade by benco ID");
 		
-		int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
+		int bencoId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
 		String grade = resultService.readResultGrade(bencoId);
 		
@@ -123,7 +125,7 @@ public class TRMSApprover {
 			
 		log.info("Controller: read an event presentation");
 		
-		int depheadId = Integer.valueOf(ctx.formParam("dephead_id"));
+		int depheadId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
 		//TODO figure out byte variable type
 		
@@ -141,7 +143,7 @@ public class TRMSApprover {
 		
 		int approval = Integer.valueOf(ctx.formParam("approval_status"));
 		
-		int employeeId = Integer.valueOf(ctx.formParam("employee_id"));
+		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
 		int requestId = Integer.valueOf(ctx.formParam("request_id"));
 		String date = ctx.formParam("approval_date");
@@ -158,7 +160,7 @@ public class TRMSApprover {
 		
 		int requestId = Integer.valueOf(ctx.formParam("request_id"));
 		
-		int approverId = Integer.valueOf(ctx.formParam("employee_id"));
+		int approverId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
 		double reimbursement = Double.valueOf(ctx.formParam("reimbursement_amount"));
 		

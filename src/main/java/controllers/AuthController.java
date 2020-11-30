@@ -1,7 +1,9 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import io.javalin.http.Context;
 import pojos.Employee;
@@ -11,6 +13,7 @@ import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 
 public class AuthController {
+	public static Map<String, Integer> loginMap = new HashMap<>();
 	private EmployeeService employeeService = new EmployeeServiceFullStack();
 	private AuthService auth = new AuthServiceImpl();
 	
@@ -28,14 +31,20 @@ public class AuthController {
 			ctx.redirect("login.html?error=failed-login");
 		}
 		
-		boolean authenticated = auth.authenticateUser(username, password);
-		if(authenticated) {
+		int authenticated = auth.authenticateUser(username, password);
+		if(authenticated != -1) {
 			List<Employee> employeeList = new ArrayList<>();
 			ctx.status(200);
-			ctx.cookieStore("security", auth.createToken(username));
+			
+			
+
+			//ctx.cookieStore("security", auth.createToken(authenticated));
+			loginMap.put(ctx.cookieStore("funcookieId123"), authenticated);
 			Employee empl = employeeService.readEmployee(employeeId);
-			ctx.cookieStore("id", employeeId);
-			System.out.println("The cookie is " + ctx.cookieStore("id"));
+			
+			
+			System.out.println("The cookie is " + ctx.cookieStore("funcookieId123"));
+			
 			for (int i = 0; i < employeeList.size(); i++) {
 				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
 					ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
@@ -64,5 +73,11 @@ public class AuthController {
 		ctx.html(auth.validateToken(ctx.cookieStore("security")));
 	}
 	
+	public void logout(Context ctx) {	
+			ctx.clearCookieStore();
+			ctx.redirect( "index.html");
+		}
 
 }
+
+

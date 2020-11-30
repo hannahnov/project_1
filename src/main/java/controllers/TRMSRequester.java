@@ -50,7 +50,7 @@ public class TRMSRequester {
 		
 		log.info("Controller: creating reimbursement request");
 		
-		int employeeId = Integer.valueOf(ctx.formParam("employee_id"));
+		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		String parm = ctx.formParam("grading_format");
 		System.out.println("The value is " + parm);
 		GradingFormat gradingFormat = GradingFormat.valueOf(Integer.valueOf(ctx.formParam("grading_format")));
@@ -97,7 +97,7 @@ public class TRMSRequester {
 			break;
 			}
 		}
-	ReimbursementRequest request = new ReimbursementRequest(requestor, event, projectedReimbursement, isUrgent,
+	ReimbursementRequest request = new ReimbursementRequest(employeeId, event.getEventId(), projectedReimbursement, isUrgent,
 				requestDate, workDaysMissed, justification, approvalStatus, description);
 	requestService.createReimbursementRequest(request);
 		
@@ -117,20 +117,16 @@ public class TRMSRequester {
 		
 		
 		int requestId = Integer.valueOf(ctx.formParam("request_id"));
-		ReimbursementRequest req = requestService.readReimbursementRequest(requestId);
-		int senderId = ctx.cookieStore("employee_id");
-		//int senderId = Integer.valueOf(ctx.formParam("sender_id"));
-		Employee sender = employeeService.readEmployee(senderId);
+		int senderId = Integer.valueOf(ctx.formParam("sender_id"));
 		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
-		Employee recipient = employeeService.readEmployee(recipientId);
 		String dateSent = ctx.formParam("date_sent");
-		boolean received = false;
+		boolean received = Boolean.valueOf(ctx.formParam("is_received"));
 		String messageHeader = ctx.formParam("message_header");
 		String message = ctx.formParam("message");
 		
 	//	(int messageId, ReimbursementRequest req, Employee sender, Employee recipient, String dateSent,
 			//	boolean receieved, String header, String message)
-		Message msg = new Message(req, sender, recipient, dateSent, received, messageHeader, message);
+		Message msg = new Message(requestId, senderId, recipientId, dateSent, received, messageHeader, message);
 		
 		  messageService.createMessage(msg);
 	}

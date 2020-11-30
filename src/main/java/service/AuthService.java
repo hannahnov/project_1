@@ -2,9 +2,9 @@ package service;
 
 public interface AuthService {
 	
-	public boolean authenticateUser(String username, String password);
+	public int authenticateUser(String username, String password);
 	
-	public String createToken(String username);
+	public String createToken(int employeeId);
 	
 	public String validateToken(String token);
 }

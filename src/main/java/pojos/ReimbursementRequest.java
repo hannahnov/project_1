@@ -5,17 +5,11 @@ public class ReimbursementRequest {
 //	date, time, location, description, cost, grading format,
 //	and type of event; work-related justification.  
 	
-	@Override
-	public String toString() {
-		return "ReimbursementRequest [requestor=" + requestor + ", event=" + event + ", requestId=" + requestId
-				+ ", projectedReimbursement=" + projectedReimbursement + ", isUrgent=" + isUrgent + ", requestDate="
-				+ requestDate + ", workDaysMissed=" + workDaysMissed + ", justification=" + justification
-				+ ", approvalStatus=" + approvalStatus + ", description=" + description + "]";
-	}
-
-	private Employee requestor;
 	
-	private Event event;
+
+	private int requestorId;
+	
+	private int eventId;
 	
 	private int requestId;
 	
@@ -35,12 +29,14 @@ public class ReimbursementRequest {
 	private String description;
 	
 
-	public ReimbursementRequest(Employee requestor, Event event, double projectedReimbursement, boolean isUrgent,
+
+
+	public ReimbursementRequest(int requestorId, int eventId, double projectedReimbursement, boolean isUrgent,
 			String requestDate, int workDaysMissed, String justification, ApprovalStatus approvalStatus,
 			String description) {
 		super();
-		this.requestor = requestor;
-		this.event = event;
+		this.requestorId = requestorId;
+		this.eventId = eventId;
 		this.projectedReimbursement = projectedReimbursement;
 		this.isUrgent = isUrgent;
 		this.requestDate = requestDate;
@@ -50,12 +46,12 @@ public class ReimbursementRequest {
 		this.description = description;
 	}
 
-	public ReimbursementRequest(Employee requestor, Event event, int requestId, double projectedReimbursement,
+	public ReimbursementRequest(int requestorId, int eventId, int requestId, double projectedReimbursement,
 			boolean isUrgent, String requestDate, int workDaysMissed, String justification,
 			ApprovalStatus approvalStatus, String description) {
 		super();
-		this.requestor = requestor;
-		this.event = event;
+		this.requestorId = requestorId;
+		this.eventId = eventId;
 		this.requestId = requestId;
 		this.projectedReimbursement = projectedReimbursement;
 		this.isUrgent = isUrgent;
@@ -64,6 +60,26 @@ public class ReimbursementRequest {
 		this.justification = justification;
 		this.approvalStatus = approvalStatus;
 		this.description = description;
+	}
+
+	public int getRequestorId() {
+		return requestorId;
+	}
+
+	public void setRequestorId(int requestorId) {
+		this.requestorId = requestorId;
+	}
+
+	public int getEventId() {
+		return eventId;
+	}
+
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
+	}
+
+	public void setUrgent(boolean isUrgent) {
+		this.isUrgent = isUrgent;
 	}
 
 	public ReimbursementRequest() {
@@ -78,13 +94,7 @@ public class ReimbursementRequest {
 		this.isUrgent = isUrgent;
 	}
 
-	public Employee getRequestor() {
-		return requestor;
-	}
 
-	public void setRequestor(Employee requestor) {
-		this.requestor = requestor;
-	}
 
 	public double getProjectedReimbursement() {
 		return projectedReimbursement;
@@ -111,13 +121,6 @@ public class ReimbursementRequest {
 		this.requestDate = requestDate;
 	}
 
-	public Event getEvent() {
-		return event;
-	}
-
-	public void setEvent(Event event) {
-		this.event = event;
-	}
 
 	public int getWorkDaysMissed() {
 		return workDaysMissed;

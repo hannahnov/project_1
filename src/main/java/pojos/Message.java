@@ -4,11 +4,11 @@ public class Message {
 	
 	private int messageId;
 	
-	private ReimbursementRequest req;
+	private int requestId;
 	
-	private Employee sender;
+	private int senderId;
 	
-	private Employee recipient;
+	private int recipientId;
 	
 	private String dateSent;
 	
@@ -20,31 +20,70 @@ public class Message {
 	
 	
 
-	public Message(ReimbursementRequest req, Employee sender, Employee recipient, String dateSent, boolean receieved,
+
+	public Message(int requestId, int senderId, int recipientId, String dateSent, boolean receieved, String header,
+			String message) {
+		super();
+		this.requestId = requestId;
+		this.senderId = senderId;
+		this.recipientId = recipientId;
+		this.dateSent = dateSent;
+		this.receieved = receieved;
+		this.header = header;
+		this.message = message;
+	}
+
+
+
+	public Message(int messageId, int requestId, int senderId, int recipientId, String dateSent, boolean receieved,
 			String header, String message) {
 		super();
-		this.req = req;
-		this.sender = sender;
-		this.recipient = recipient;
-		this.dateSent = dateSent;
-		this.receieved = receieved;
-		this.header = header;
-		this.message = message;
-	}
-
-
-	public Message(int messageId, ReimbursementRequest req, Employee sender, Employee recipient, String dateSent,
-			boolean receieved, String header, String message) {
-		super();
 		this.messageId = messageId;
-		this.req = req;
-		this.sender = sender;
-		this.recipient = recipient;
+		this.requestId = requestId;
+		this.senderId = senderId;
+		this.recipientId = recipientId;
 		this.dateSent = dateSent;
 		this.receieved = receieved;
 		this.header = header;
 		this.message = message;
 	}
+
+
+
+	public int getRequestId() {
+		return requestId;
+	}
+
+
+
+	public void setRequestId(int requestId) {
+		this.requestId = requestId;
+	}
+
+
+
+	public int getSenderId() {
+		return senderId;
+	}
+
+
+
+	public void setSenderId(int senderId) {
+		this.senderId = senderId;
+	}
+
+
+
+	public int getRecipientId() {
+		return recipientId;
+	}
+
+
+
+	public void setRecipientId(int recipientId) {
+		this.recipientId = recipientId;
+	}
+
 
 
 	public Message() {
@@ -52,21 +91,6 @@ public class Message {
 	}
 
 
-	public Employee getSender() {
-		return sender;
-	}
-
-	public void setSender(Employee sender) {
-		this.sender = sender;
-	}
-
-	public Employee getRecipient() {
-		return recipient;
-	}
-
-	public void setRecipient(Employee recipient) {
-		this.recipient = recipient;
-	}
 
 	public String getDateSent() {
 		return dateSent;
@@ -109,12 +133,5 @@ public class Message {
 		this.messageId = messageId;
 	}
 
-	public ReimbursementRequest getReq() {
-		return req;
-	}
-
-	public void setReq(ReimbursementRequest req) {
-		this.req = req;
-	}
 	
 }

@@ -7,7 +7,7 @@ import pojos.Message;
 public interface MessageDao {
 public void createMessage(Message message);
 	
-	public Message readMessageByRecipientId(int recipientId);
+	public List<Message> readMessageByRecipientId(int recipientId);
 	
 	public List<Message> readAllMessages();
 	

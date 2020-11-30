@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>HomePage</title>
+  <link href = "project1_style.css" rel = "stylesheet" type = "text/css">
+</head>
+<body>
+    <main>
+ <form id="login" method="POST" action="http://localhost:9096/login">
+    <h1>Tuition Reimbursement Management Homepage</h1>
+     <h2>Login Page</h2><br> 
+     <h3> Incorrect username or password</h3>   
+    <div class="login">     
+        <label><b>Username    
+        </b>    
+        </label>    
+        <input type="text" name="user_name" id="Uname" placeholder="Username" required>    
+        <br><br>    
+        <label><b>Password
+        </b>    
+        </label>    
+        <input type="Password" name="password" id="Pass" placeholder="Password" required>    
+        <br><br>
+        <label><b>Employee Id    
+        </b>    
+        </label>    
+        <input type="text" name="employee_id" id="EmplId" placeholder="Employee Id" required>    
+        <br><br>      
+        <button type="submit" onclick="requestSubmit()">Log In</button>	   
+        <br><br>    
+        <br><br> 
+    </div>     
+    </form>     
+</main>    
+</body>    
+</html>

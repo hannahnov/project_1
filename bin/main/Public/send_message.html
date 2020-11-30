@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TrForm</title>
+<link href="request_page.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+​
+<main>
+​
+	<h2>New Message</h2>
+​
+	 
+<form method = "post" action = "http://localhost:9096/sendmessageap" >
+<legend><b> Please enter the following information reqarding your message: </b></legend><br>
+<label class="label" for= "requestId">Request Id: 
+</label><input  type="number" id ="requestId" name = "request_id"/><br>
+<label class="label" for= "recipientId">Recipient Id: 
+</label><input  type="number" id ="recipientId" name = "recipient_id"/><br>
+<label class="label" for= "senderId">Enter your employee Id: 
+</label><input  type="number" id ="senderId" name = "sender_id"/><br>
+
+<label class="label" for= "startDate">Date sent: </label><input  type="date" id ="dateSent" name = "date_sent"/><br>
+
+<label class="label" for= "messageHeader">Enter a brief header for your message: 
+</label><input  type="text" id ="messageHeader" name = "message_header"/><br>
+
+
+<label class="label" for= "message">Enter your message below: 
+</label><textarea rows = "5" cols = "50" name = "message"> </textarea><br>
+
+<button type="submit" onclick="requestSubmit()">Submit</button>		
+​
+			</div>
+			</form>
+			
+​
+	
+</main>
+​
+<footer>
+<p> &copy; Novack 2020</p>
+</footer>
+		
+</div>
+</body>
+</html>

@@ -26,7 +26,7 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 		
 		ReimbursementRequest request = requestDao.readReimbursementRequest(requestId);
 		
-		Employee requestor = employeeDao.readEmployee(request.getRequestor().getEmplId());
+		Employee requestor = employeeDao.readEmployee(request.getRequestorId());
 		
 		
 		
@@ -60,7 +60,7 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 	public void grantReimbursement(int requestId, int approverId, double reimbursement) {
 		log.info("Request Approval service: granting reimbursement to employee");
 		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
-		Employee employee = employeeDao.readEmployee(req.getRequestor().getEmplId());
+		Employee employee = employeeDao.readEmployee(req.getRequestorId());
 		double actualReimbursement = reimbursement;
 		
 		if (reimbursement + (employee.getAvailableReimbursement() +  employee.getPendingReimbursement()) >= 1000) {
