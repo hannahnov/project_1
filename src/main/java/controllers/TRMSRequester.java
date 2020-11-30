@@ -160,28 +160,28 @@ public class TRMSRequester {
 		
 	}
 	//for direct supervisor approval
-	public void uploadPresentation(Context ctx) {
-int requestId = Integer.valueOf(ctx.formParam("request_id"));
-		
-		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
-		
-		//TODO figure out how to upload
-		EventResult result = new EventResult();
-		UploadedFile presentation = ctx.uploadedFile("presentation");
-		InputStream q =	presentation.getContent();
-		byte[] attachment;
-		try {
-			attachment = q.readAllBytes();
-			result = new EventResult(req, attachment);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		resultDao.createEventResult(result);
-		
-		ctx.html(result.getGrade());
-	}
-
-}
+//	public void uploadPresentation(Context ctx) {
+//int requestId = Integer.valueOf(ctx.formParam("request_id"));
+//		
+//		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
+//		
+//		//TODO figure out how to upload
+//		EventResult result = new EventResult();
+//		UploadedFile presentation = ctx.uploadedFile("presentation");
+//		InputStream q =	presentation.getContent();
+//		byte[] attachment;
+//		try {
+//			attachment = q.readAllBytes();
+//			result = new EventResult(req, attachment);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		resultDao.createEventResult(result);
+//		
+//		ctx.html(result.getGrade());
+//	}
+//
+//}
