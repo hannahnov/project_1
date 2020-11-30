@@ -39,7 +39,7 @@ public class ServerDriver {
 		//methods for requesterController
 		app.post("/createrequest", ctx->requesterController.createRequest(ctx));
 		app.post("/sendmessagere", ctx->requesterController.sendMessage(ctx));
-		app.get("/viewmessagere", ctx->requesterController.viewMessage(ctx));
+		//app.get("/viewmessagere", ctx->requesterController.viewMessage(ctx));
 		app.put("/uploadgrade", ctx->requesterController.uploadGrade(ctx));
 		app.put("/uploadpresentation", ctx->requesterController.uploadPresentation(ctx));
 		

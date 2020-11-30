@@ -132,18 +132,18 @@ public class TRMSRequester {
 	}
 	
 	//read request for more information
-	public void viewMessage(Context ctx) {
-		System.out.println("Responding to Get request read a message");
-		
-		log.info("Controller: read a message");
-		
-		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
-		
-		Message message = messageService.readMessageByRecipientId(recipientId);
-		
-		ctx.html(message.toString());
-		
-	}
+//	public void viewMessage(Context ctx) {
+//		System.out.println("Responding to Get request read a message");
+//		
+//		log.info("Controller: read a message");
+//		
+//		int recipientId = Integer.valueOf(ctx.formParam("recipient_id"));
+//		
+//		Message message = messageService.readMessageByRecipientId(recipientId);
+//		
+//		ctx.html(message.toString());
+//		
+//	}
 	//for benco approval
 	public void uploadGrade(Context ctx) {
 		String grade = ctx.formParam("grade");
