@@ -50,13 +50,15 @@ public class TRMSApprover {
 	public void bencoViewRequests(Context ctx) {
 		System.out.println("Responding to Get read reimbursement request by benco ID");
 		
+		List<ReimbursementRequest> reqList = new ArrayList<>();
+		
 		log.info("Controller: read a reimbursement request by benco ID");
 		
-		int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
+		int bencoId = AuthController.loginMap.get(ctx.cookie("funcookie123"));
 		
-		ReimbursementRequest req = reimbursementRequestService.readRequestsByBencoId(bencoId);
+		 reqList = reimbursementRequestService.readRequestsByBencoId(bencoId);
 		
-		ctx.html(req.toString());
+		ctx.json(reqList);
 		
 	}
 	

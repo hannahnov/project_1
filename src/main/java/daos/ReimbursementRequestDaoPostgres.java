@@ -168,8 +168,10 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	@Override
 	public ReimbursementRequest readRequestBySupervisorId(int supervisorId) {
 		log.info("request Dao Postgres: reading request by supervisorId");
-		String sql = "select * from requests where employee_id = (select employee_id from employees where "
-				+ "directsupervisor_id = ?)";
+		//TODO make sure correct
+		String sql = "select * from requests r"
+				+ "join employees e on r.employee_id = e.employee_id "
+				+ "join employees g on e.employee_id = g.directsupervisor_id where e.employee_id = ?";
 		ReimbursementRequest request = new ReimbursementRequest();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -200,11 +202,17 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	}
 
 	@Override
-	public ReimbursementRequest readRequestsByBencoId(int bencoId) {
+	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId) {
 		log.info("request Dao Postgres: reading request by bencoId");
-		String sql = "select * from requests where employee_id = (select employee_id from employees where "
-				+ "department_id = (select department_id from employees where employee_id = ?))";
+		String sql = "select * "
+				+ "from requests r"
+				+ "join employees e"
+				+ "on  r.employee_id = e.employee_id "
+				+ "join departments d"
+				+ "on e.department_id = d.department_id "
+				+ "where e.employee_id = ?";
 		ReimbursementRequest request = new ReimbursementRequest();
+		List <ReimbursementRequest> reqList = new ArrayList<>();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
@@ -224,20 +232,26 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 				String description = rs.getString("description");
 				request = new ReimbursementRequest(requestor.getEmplId(), event.getEventId(), reqId, projectedReimbursement, isUrgent, 
 						requestDate, workDaysMissed, justification, approvalStatus, description);
+				reqList.add(request);
 				
 			} 
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return request;
+		return reqList;
 	}
 
 	@Override
 	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
 		log.info("request Dao Postgres: reading request by depheadId");
-		String sql = "select * from requests where employee_id = (select employee_id from employees where "
-				+ "department_id = (select department_id from employees where employee_id = ?))";
+		String sql = "select * "
+				+ "from requests "
+				+ "join employees "
+				+ "on  r.employee_id = e.employee_id "
+				+ "join departments "
+				+ "on e.department_id = d.department_id "
+				+ "where e.employee_id = ?";
 		ReimbursementRequest request = new ReimbursementRequest();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);

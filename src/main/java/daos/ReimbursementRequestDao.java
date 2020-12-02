@@ -17,7 +17,7 @@ public interface ReimbursementRequestDao {
 	
 	public ReimbursementRequest readRequestBySupervisorId(int supervisorId);
 
-	public ReimbursementRequest readRequestsByBencoId(int bencoId);
+	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId);
 	
 	public ReimbursementRequest readRequestsByDepheadId(int depheadId);
 

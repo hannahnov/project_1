@@ -63,7 +63,7 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 	}
 
 	@Override
-	public ReimbursementRequest readRequestsByBencoId(int bencoId) {
+	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId) {
 		
 		log.info("Reimbursement request service: read request by benco ID");
 		

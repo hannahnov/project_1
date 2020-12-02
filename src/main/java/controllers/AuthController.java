@@ -43,7 +43,7 @@ public class AuthController {
 			Employee empl = employeeService.readEmployee(employeeId);
 			
 			
-			System.out.println("The cookie is " + ctx.cookieStore("funcookieId123"));
+			System.out.println("The cookie is " + loginMap.get(ctx.cookieStore("funcookieId123")));
 			
 			for (int i = 0; i < employeeList.size(); i++) {
 				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
