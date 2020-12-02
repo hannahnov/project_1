@@ -205,10 +205,10 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId) {
 		log.info("request Dao Postgres: reading request by bencoId");
 		String sql = "select * "
-				+ "from requests r"
-				+ "join employees e"
-				+ "on  r.employee_id = e.employee_id "
-				+ "join departments d"
+				+ "from requests r "
+				+ "join employees e "
+				+ "on r.employee_id = e.employee_id "
+				+ "join departments d "
 				+ "on e.department_id = d.department_id "
 				+ "where e.employee_id = ?";
 		ReimbursementRequest request = new ReimbursementRequest();
@@ -246,8 +246,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
 		log.info("request Dao Postgres: reading request by depheadId");
 		String sql = "select * "
-				+ "from requests "
-				+ "join employees "
+				+ "from requests r "
+				+ "join employees e "
 				+ "on  r.employee_id = e.employee_id "
 				+ "join departments "
 				+ "on e.department_id = d.department_id "

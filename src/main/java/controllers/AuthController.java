@@ -55,10 +55,10 @@ public class AuthController {
 			ctx.redirect("http://127.0.0.1:5500/department_head.html");
 			}
 			if (empl.getEmployeeRank().getValue() == 2) {
-				ctx.redirect("http://127.0.0.1:5500/benco_page.html");
+				ctx.redirect("http://127.0.0.1:5500/New%20folder/benco_page.html");
 			}
 			else {
-				ctx.redirect("http://127.0.0.1:5500/underling_page.html");
+				ctx.redirect("http://127.0.0.1:5500/New%20folder/underling_page.html");
 			}
 			
 

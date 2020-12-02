@@ -69,9 +69,10 @@ public class TRMSApprover {
 		
 		int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
 		
-		ReimbursementRequest req = reimbursementRequestService.readRequestsByBencoId(bencoId);
+
+		List<ReimbursementRequest> reqList = reimbursementRequestService.readRequestsByBencoId(bencoId);
 		
-		ctx.html(req.toString());
+		ctx.json(reqList);
 	}
 	
 	//Used to request information
