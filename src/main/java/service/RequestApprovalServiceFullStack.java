@@ -11,6 +11,7 @@ import daos.RequestApprovalDaoPostgres;
 import pojos.ApprovalStatus;
 import pojos.Employee;
 import pojos.ReimbursementRequest;
+import pojos.RequestApproval;
 
 public class RequestApprovalServiceFullStack implements RequestApprovalService {
 	private static Logger log = Logger.getRootLogger();
@@ -69,6 +70,12 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 		employee.setAwardedReimbursement(employee.getAwardedReimbursement() + actualReimbursement);
 		employee.setAvailableReimbursement(employee.getAvailableReimbursement() - actualReimbursement);
 		employeeDao.updateEmployee(employee.getEmplId(), employee);
+	}
+
+	@Override
+	public void createRequestApproval(RequestApproval Request) {
+		log.info("Request Approval service: creating a request approval");
+		approvalDao.createRequestApproval(Request);
 	}
 
 }

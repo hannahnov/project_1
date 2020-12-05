@@ -43,7 +43,8 @@ public class AuthController {
 			Employee empl = employeeService.readEmployee(employeeId);
 			
 			
-			System.out.println("The cookie is " + loginMap.get(ctx.cookieStore("funcookieId123")));
+			
+			System.out.println(empl.getFirstName() + "'s rank is " + empl.getEmployeeRank().getValue());
 			
 			for (int i = 0; i < employeeList.size(); i++) {
 				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
@@ -54,11 +55,11 @@ public class AuthController {
 			if (empl.getEmployeeRank().getValue() == 1) {
 			ctx.redirect("http://127.0.0.1:5500/department_head.html");
 			}
-			if (empl.getEmployeeRank().getValue() == 2) {
-				ctx.redirect("http://127.0.0.1:5500/New%20folder/benco_page.html");
+			else if (empl.getEmployeeRank().getValue() == 2) {
+				ctx.redirect("http://127.0.0.1:5500/benco_page.html");
 			}
 			else {
-				ctx.redirect("http://127.0.0.1:5500/New%20folder/underling_page.html");
+			ctx.redirect("http://127.0.0.1:5500/underling_page.html");
 			}
 			
 

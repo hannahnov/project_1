@@ -1915,3 +1915,254 @@
 2020-12-02 18:46:42 INFO  root:103 - Controller: read a message
 2020-12-02 18:46:42 INFO  root:24 - Message service: read message by recipeint Id
 2020-12-02 18:46:42 INFO  root:50 - message Dao Postgres: reading message
+2020-12-02 21:02:08 INFO  root:21 - program has started
+2020-12-02 21:04:18 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-02 21:04:18 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-02 21:04:18 INFO  root:53 - login information approved
+2020-12-02 21:04:18 INFO  root:27 - Employee service: read employee
+2020-12-02 21:04:18 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-02 21:05:04 INFO  root:21 - program has started
+2020-12-02 21:05:20 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-02 21:05:20 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-02 21:05:20 INFO  root:53 - login information approved
+2020-12-02 21:05:20 INFO  root:27 - Employee service: read employee
+2020-12-02 21:05:20 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-02 21:05:22 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:05:22 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-02 21:05:22 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-02 21:08:06 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:08:06 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-02 21:08:06 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-02 21:15:52 INFO  root:21 - program has started
+2020-12-02 21:16:21 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:17:11 INFO  root:21 - program has started
+2020-12-02 21:17:58 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:18:08 INFO  root:21 - program has started
+2020-12-02 21:18:34 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:19:22 INFO  root:21 - program has started
+2020-12-02 21:19:30 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:19:30 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-02 21:19:30 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-02 21:27:40 INFO  root:21 - program has started
+2020-12-02 21:27:59 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-02 21:27:59 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-02 21:27:59 INFO  root:53 - login information approved
+2020-12-02 21:27:59 INFO  root:27 - Employee service: read employee
+2020-12-02 21:27:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-02 21:28:04 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:28:29 INFO  root:21 - program has started
+2020-12-02 21:28:41 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-02 21:28:41 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-02 21:28:41 INFO  root:53 - login information approved
+2020-12-02 21:28:41 INFO  root:27 - Employee service: read employee
+2020-12-02 21:28:41 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-02 21:28:43 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:28:43 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-02 21:28:43 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-02 21:29:09 INFO  root:21 - program has started
+2020-12-02 21:29:13 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-02 21:29:13 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-02 21:29:13 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-04 20:01:27 INFO  root:21 - program has started
+2020-12-04 20:02:39 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:02:39 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:02:39 INFO  root:53 - login information approved
+2020-12-04 20:02:39 INFO  root:27 - Employee service: read employee
+2020-12-04 20:02:39 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:02:54 INFO  root:21 - program has started
+2020-12-04 20:03:33 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:03:33 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:03:33 INFO  root:53 - login information approved
+2020-12-04 20:03:33 INFO  root:27 - Employee service: read employee
+2020-12-04 20:03:33 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:04:25 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:04:25 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:04:25 INFO  root:53 - login information approved
+2020-12-04 20:04:25 INFO  root:27 - Employee service: read employee
+2020-12-04 20:04:25 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:04:35 INFO  root:21 - program has started
+2020-12-04 20:04:54 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:04:54 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:04:54 INFO  root:53 - login information approved
+2020-12-04 20:04:54 INFO  root:27 - Employee service: read employee
+2020-12-04 20:04:54 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:05:54 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-04 20:08:05 INFO  root:21 - program has started
+2020-12-04 20:08:40 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:08:40 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:08:40 INFO  root:53 - login information approved
+2020-12-04 20:08:40 INFO  root:27 - Employee service: read employee
+2020-12-04 20:08:40 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:10:55 INFO  root:21 - program has started
+2020-12-04 20:11:08 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:11:09 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:11:09 INFO  root:53 - login information approved
+2020-12-04 20:11:09 INFO  root:27 - Employee service: read employee
+2020-12-04 20:11:09 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:11:20 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-04 20:13:12 INFO  root:21 - program has started
+2020-12-04 20:13:56 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:13:57 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:13:57 INFO  root:53 - login information approved
+2020-12-04 20:13:57 INFO  root:27 - Employee service: read employee
+2020-12-04 20:13:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:13:58 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-04 20:13:58 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-04 20:13:58 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-04 20:13:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:13:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:13:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:13:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:13:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:13:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:16:22 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:16:22 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:16:22 INFO  root:53 - login information approved
+2020-12-04 20:16:22 INFO  root:27 - Employee service: read employee
+2020-12-04 20:16:22 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:20:05 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:20:05 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:20:05 INFO  root:53 - login information approved
+2020-12-04 20:20:05 INFO  root:27 - Employee service: read employee
+2020-12-04 20:20:05 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:20:13 INFO  root:21 - program has started
+2020-12-04 20:20:24 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:20:24 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:20:24 INFO  root:53 - login information approved
+2020-12-04 20:20:24 INFO  root:27 - Employee service: read employee
+2020-12-04 20:20:24 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:22:59 INFO  root:51 - Controller: creating reimbursement request
+2020-12-04 20:22:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:23:00 INFO  root:17 - Event service: create event
+2020-12-04 20:23:00 INFO  root:25 - Event dao postgres: creating event
+2020-12-04 20:23:00 INFO  root:34 - Event service: read all events
+2020-12-04 20:23:00 INFO  root:78 - Event Dao Postgres: reading all events
+2020-12-04 20:23:00 INFO  root:18 - Reimbursement request service: create request
+2020-12-04 20:23:00 INFO  root:27 - Request dao postgres: creating request
+2020-12-04 20:23:41 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-04 20:23:41 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-04 20:23:41 INFO  root:53 - login information approved
+2020-12-04 20:23:41 INFO  root:27 - Employee service: read employee
+2020-12-04 20:23:41 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:23:43 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-04 20:23:43 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-04 20:23:43 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-04 20:23:43 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:23:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:23:43 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:23:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:23:43 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:23:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:23:43 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:23:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:25:11 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-04 20:25:11 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-04 20:25:11 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-04 20:25:11 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:25:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:25:11 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:25:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:25:11 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:25:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-04 20:25:11 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-04 20:25:11 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:32:22 INFO  root:21 - program has started
+2020-12-05 13:32:42 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:32:42 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:32:43 INFO  root:53 - login information approved
+2020-12-05 13:32:43 INFO  root:27 - Employee service: read employee
+2020-12-05 13:32:43 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:32:57 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:32:57 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:32:57 INFO  root:53 - login information approved
+2020-12-05 13:32:57 INFO  root:27 - Employee service: read employee
+2020-12-05 13:32:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:34:57 INFO  root:21 - program has started
+2020-12-05 13:35:22 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:35:22 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:35:22 INFO  root:53 - login information approved
+2020-12-05 13:35:22 INFO  root:27 - Employee service: read employee
+2020-12-05 13:35:22 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:36:10 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:36:10 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:36:10 INFO  root:53 - login information approved
+2020-12-05 13:36:10 INFO  root:27 - Employee service: read employee
+2020-12-05 13:36:10 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:37:00 INFO  root:21 - program has started
+2020-12-05 13:37:06 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:37:06 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:37:06 INFO  root:53 - login information approved
+2020-12-05 13:37:06 INFO  root:27 - Employee service: read employee
+2020-12-05 13:37:06 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:37:36 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:37:36 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:37:36 INFO  root:53 - login information approved
+2020-12-05 13:37:36 INFO  root:27 - Employee service: read employee
+2020-12-05 13:37:36 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:38:04 INFO  root:21 - program has started
+2020-12-05 13:38:17 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:38:18 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:38:18 INFO  root:53 - login information approved
+2020-12-05 13:38:18 INFO  root:27 - Employee service: read employee
+2020-12-05 13:38:18 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:40:21 INFO  root:21 - program has started
+2020-12-05 13:40:26 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:40:26 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:40:26 INFO  root:53 - login information approved
+2020-12-05 13:40:26 INFO  root:27 - Employee service: read employee
+2020-12-05 13:40:26 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:52:54 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:52:54 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:52:54 INFO  root:53 - login information approved
+2020-12-05 13:52:54 INFO  root:27 - Employee service: read employee
+2020-12-05 13:52:54 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:52:56 INFO  root:55 - Controller: read a reimbursement request by benco ID
+2020-12-05 13:52:56 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-05 13:52:56 INFO  root:206 - request Dao Postgres: reading request by bencoId
+2020-12-05 13:52:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-05 13:52:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:52:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-05 13:52:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:52:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-05 13:52:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:52:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-05 13:52:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:53:27 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:53:27 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:53:27 INFO  root:53 - login information approved
+2020-12-05 13:53:27 INFO  root:27 - Employee service: read employee
+2020-12-05 13:53:27 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:55:53 INFO  root:83 - Controller: create a message
+2020-12-05 13:55:53 INFO  root:16 - Message service: create message
+2020-12-05 13:55:53 INFO  root:23 - Message dao postgres: creating message
+2020-12-05 13:56:17 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:56:17 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:56:17 INFO  root:53 - login information approved
+2020-12-05 13:56:17 INFO  root:27 - Employee service: read employee
+2020-12-05 13:56:17 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:56:19 INFO  root:104 - Controller: read a message
+2020-12-05 13:56:19 INFO  root:24 - Message service: read message by recipeint Id
+2020-12-05 13:56:19 INFO  root:50 - message Dao Postgres: reading message
+2020-12-05 13:57:17 INFO  root:21 - program has started
+2020-12-05 13:57:30 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:57:30 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:57:30 INFO  root:53 - login information approved
+2020-12-05 13:57:30 INFO  root:27 - Employee service: read employee
+2020-12-05 13:57:30 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:57:48 INFO  root:83 - Controller: create a message
+2020-12-05 13:57:48 INFO  root:16 - Message service: create message
+2020-12-05 13:57:48 INFO  root:23 - Message dao postgres: creating message
+2020-12-05 13:58:24 INFO  root:21 - program has started
+2020-12-05 13:58:32 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:58:32 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:58:39 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-05 13:58:39 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-05 13:58:39 INFO  root:53 - login information approved
+2020-12-05 13:58:39 INFO  root:27 - Employee service: read employee
+2020-12-05 13:58:39 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-05 13:58:42 INFO  root:104 - Controller: read a message
+2020-12-05 13:58:42 INFO  root:24 - Message service: read message by recipeint Id
+2020-12-05 13:58:42 INFO  root:50 - message Dao Postgres: reading message
+2020-12-05 14:08:27 INFO  root:104 - Controller: read a message
+2020-12-05 14:08:27 INFO  root:24 - Message service: read message by recipeint Id
+2020-12-05 14:08:27 INFO  root:50 - message Dao Postgres: reading message

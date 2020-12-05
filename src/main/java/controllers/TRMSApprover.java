@@ -54,7 +54,8 @@ public class TRMSApprover {
 		
 		log.info("Controller: read a reimbursement request by benco ID");
 		
-		int bencoId = AuthController.loginMap.get(ctx.cookie("funcookie123"));
+		int bencoId = AuthController.loginMap.get(ctx.cookie("funcookieId123"));
+		//int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
 		
 		 reqList = reimbursementRequestService.readRequestsByBencoId(bencoId);
 		

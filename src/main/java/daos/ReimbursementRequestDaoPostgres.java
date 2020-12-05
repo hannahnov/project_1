@@ -170,8 +170,8 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 		log.info("request Dao Postgres: reading request by supervisorId");
 		//TODO make sure correct
 		String sql = "select * from requests r"
-				+ "join employees e on r.employee_id = e.employee_id "
-				+ "join employees g on e.employee_id = g.directsupervisor_id where e.employee_id = ?";
+				+ "inner join employees e on r.employee_id = e.employee_id "
+				+ "where directsupervisor_id = ?";
 		ReimbursementRequest request = new ReimbursementRequest();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -206,11 +206,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 		log.info("request Dao Postgres: reading request by bencoId");
 		String sql = "select * "
 				+ "from requests r "
-				+ "join employees e "
-				+ "on r.employee_id = e.employee_id "
-				+ "join departments d "
-				+ "on e.department_id = d.department_id "
-				+ "where e.employee_id = ?";
+				+ "inner join employees e "
+				+ "on  r.employee_id = e.employee_id "
+				+ "where e.department_id = (select department_id from employees where employee_id = ?)";
 		ReimbursementRequest request = new ReimbursementRequest();
 		List <ReimbursementRequest> reqList = new ArrayList<>();
 		try (Connection conn = connUtil.createConnection()) {
@@ -247,11 +245,9 @@ public class ReimbursementRequestDaoPostgres implements ReimbursementRequestDao 
 		log.info("request Dao Postgres: reading request by depheadId");
 		String sql = "select * "
 				+ "from requests r "
-				+ "join employees e "
+				+ "inner join employees e "
 				+ "on  r.employee_id = e.employee_id "
-				+ "join departments "
-				+ "on e.department_id = d.department_id "
-				+ "where e.employee_id = ?";
+				+ "where e.department_id = (select department_id from employees where employee_id = ?)";
 		ReimbursementRequest request = new ReimbursementRequest();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
