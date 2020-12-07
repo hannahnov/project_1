@@ -23,15 +23,21 @@ public class RequestApprovalDaoPostgres implements RequestApprovalDao {
 
 
 	@Override
-	public void createRequestApproval(RequestApproval requestApproval) {
+	public void createRequestApproval(RequestApproval requestApproval, int requestId) {
 		log.info("RequestApproval dao postgres: creating requestApproval");
 		String sql = "insert into requestapprovals (request_id, supervisor_approval_date, dephead_approval_date, "
 				+ "benco_approval_date, supervisor_approval, dephead_approval, benco_approval)"
 				+ " values(?, date(?), date(?), date(?), ?, ?, ?)";
+	
+		//TODO figure out why the requestId is like that!!!
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setInt(1, requestApproval.getRequest().getRequestId());
+			statement.setInt(1, requestId);
+			System.out.println(requestId + " " + requestApproval.getDirectSupApprovalDate() + " " + requestApproval.getDepHeadApprovalDate()
+			+ " " + requestApproval.getBenCoApprovalDate() + " " + requestApproval.getSupervisorApproval().getValue() 
+			+ " " + requestApproval.getDepHeadApproval().getValue() + " " + requestApproval.getBenCoApproval());
+			
 			statement.setString(2, requestApproval.getDirectSupApprovalDate());
 			statement.setString(3, requestApproval.getDepHeadApprovalDate());
 			statement.setString(4, requestApproval.getBenCoApprovalDate());
@@ -163,16 +169,17 @@ public class RequestApprovalDaoPostgres implements RequestApprovalDao {
 	@Override
 	public void approveRequest(int approval, int employeeId, int requestId, String approvalDate, 
 			String approvalEmployeeColumn, String approvalDateColumn) {
+		System.out.println("approving request by " + approvalEmployeeColumn);
 		log.info("requestApproval Dao Postgres: updating requestApproval");
-		String sql = "update requestapprovals set " + approvalEmployeeColumn + " = ?, " + approvalDateColumn 
-				+ " = date(?) "
+		String sql = "update requestapprovals set " + approvalEmployeeColumn + " = ? "
 				+ "where request_id = ?";
 					
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			statement.setInt(1, approval);
-			statement.setString(2, approvalDate);
-			statement.setInt(3, requestId);
+			statement.setInt(2, requestId);
+			
+			statement.executeQuery();
 			
 			
 		} catch (SQLException e) {

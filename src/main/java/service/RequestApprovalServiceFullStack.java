@@ -20,7 +20,8 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 	private ReimbursementRequestDao requestDao = new ReimbursementRequestDaoPostgres();
 	
 	@Override
-	public void approveRequest(int approval, int employeeId, int requestId, String approvalDate) {
+	public void approveRequest(int approval, int employeeId, int requestId, String approSvalDate) {
+		System.out.println("request approval service, approving request by " + employeeId);
 	log.info("Request Approval service: update Request Approval by approver ID");
 	
 		Employee empl = employeeDao.readEmployee(employeeId);
@@ -53,7 +54,7 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 			requestDao.updateReimbursementRequest(requestId, request);
 		}
 		
-		 approvalDao.approveRequest(approval, employeeId, requestId, approvalDate, 
+		 approvalDao.approveRequest(approval, employeeId, requestId, approvalDateColumn, 
 				 approvalEmployeeColumn, approvalDateColumn);
 	}
 
@@ -64,18 +65,21 @@ public class RequestApprovalServiceFullStack implements RequestApprovalService {
 		Employee employee = employeeDao.readEmployee(req.getRequestorId());
 		double actualReimbursement = reimbursement;
 		
-		if (reimbursement + (employee.getAvailableReimbursement() +  employee.getPendingReimbursement()) >= 1000) {
-			actualReimbursement = 1000 - (employee.getAvailableReimbursement() + employee.getPendingReimbursement());
-		}
-		employee.setAwardedReimbursement(employee.getAwardedReimbursement() + actualReimbursement);
+		System.out.println("actual reimbursement " + actualReimbursement);
+		
+//		if (reimbursement + (employee.getAvailableReimbursement() +  employee.getPendingReimbursement()) >= 1000) {
+//			actualReimbursement = 1000 - (employee.getAvailableReimbursement() + employee.getPendingReimbursement());
+//		}
+		employee.setAwardedReimbursement((employee.getAwardedReimbursement() + actualReimbursement));
+		System.out.println("employee awared reimbursement is " + employee.getAwardedReimbursement());
 		employee.setAvailableReimbursement(employee.getAvailableReimbursement() - actualReimbursement);
 		employeeDao.updateEmployee(employee.getEmplId(), employee);
 	}
 
 	@Override
-	public void createRequestApproval(RequestApproval Request) {
+	public void createRequestApproval(RequestApproval Request, int requestId) {
 		log.info("Request Approval service: creating a request approval");
-		approvalDao.createRequestApproval(Request);
+		approvalDao.createRequestApproval(Request, requestId);
 	}
 
 }

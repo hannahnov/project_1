@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -24,6 +25,7 @@ import pojos.EventType;
 import pojos.GradingFormat;
 import pojos.Message;
 import pojos.ReimbursementRequest;
+import pojos.RequestApproval;
 import service.EmployeeService;
 import service.EmployeeServiceFullStack;
 import service.EventService;
@@ -32,6 +34,8 @@ import service.MessageService;
 import service.MessageServiceFullStack;
 import service.ReimbursementRequestService;
 import service.ReimbursementRequestServiceFullStack;
+import service.RequestApprovalService;
+import service.RequestApprovalServiceFullStack;
 
 public class TRMSRequester {
 	private static Logger log = Logger.getRootLogger();
@@ -43,6 +47,8 @@ public class TRMSRequester {
 	private ReimbursementRequestService requestService = new ReimbursementRequestServiceFullStack();
 	private MessageService messageService = new MessageServiceFullStack();
 	private EventService eventService = new EventServiceFullStack();
+	private RequestApprovalService approvalService = new RequestApprovalServiceFullStack();
+	private AuthController authController = new AuthController();
 	
 	//creates request form with appropriate information
 	public void createRequest(Context ctx) {
@@ -56,7 +62,7 @@ public class TRMSRequester {
 		GradingFormat gradingFormat = GradingFormat.valueOf(Integer.valueOf(ctx.formParam("grading_format")));
 		EventType eventType = EventType.valueOf(Integer.valueOf(ctx.formParam("event_type")));
 		String eventStartDate = ctx.formParam("event_start_date");
-		Employee requestor = employeeDao.readEmployee(employeeId);
+		//Employee requestor = employeeDao.readEmployee(employeeId);
 		boolean isUrgent = false;
 		String requestDate = ctx.formParam("request_date");
 		int workDaysMissed = Integer.valueOf(ctx.formParam("work_days_missed"));
@@ -102,10 +108,22 @@ public class TRMSRequester {
 	requestService.createReimbursementRequest(request);
 		
 		
-		ctx.html(event.toString());
-		
+//		RequestApproval approval = new RequestApproval();
+//		ApprovalStatus bencoApproval = ApprovalStatus.PENDING;
+//		ApprovalStatus depHeadApproval = ApprovalStatus.PENDING;
+//		ApprovalStatus supervisorApproval = ApprovalStatus.PENDING;
+//		approval.setBenCoApproval(bencoApproval);
+//		approval.setDepHeadApproval(depHeadApproval);
+//		approval.setSupervisorApproval(supervisorApproval);
+//		approval.setBenCoApprovalDate(null);
+//		approval.setDepHeadApprovalDate(null);
+//		approval.setDirectSupApprovalDate(null);
+//		
+//		approvalService.createRequestApproval(approval, request.getRequestId());
+//		
 		ctx.status(200);
-		ctx.redirect("http://127.0.0.1:5500/project1_login.html");
+		authController.redirectHomePage(ctx);
+		
 
 	}
 	
@@ -129,6 +147,7 @@ public class TRMSRequester {
 		Message msg = new Message(requestId, senderId, recipientId, dateSent, received, messageHeader, message);
 		
 		  messageService.createMessage(msg);
+		  authController.redirectHomePage(ctx);
 	}
 	
 	//read request for more information
@@ -152,12 +171,41 @@ public class TRMSRequester {
 		
 		ReimbursementRequest req = requestDao.readReimbursementRequest(requestId);
 		
-		EventResult result = new EventResult(req, grade);
+		EventResult result = resultDao.readEventResult(requestId);
 		
-		resultDao.createEventResult(result);
+		result.setGrade(ctx.formParam("grade"));
 		
-		ctx.html(result.getGrade());
+		resultDao.updateEventResult(requestId, result);
 		
+		authController.redirectHomePage(ctx);
+		//ctx.html(result.getGrade());
+		
+	}
+
+	public void getEmployee(Context ctx) {
+		System.out.println("Responding to Get employee by employee ID");
+		
+		log.info("Controller: read an employee by employeeS ID");
+		
+		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
+		
+		Employee employee = employeeDao.readEmployee(employeeId);
+		List<Employee> employeeList = new ArrayList<>();
+		employeeList.add(employee);
+		
+		ctx.json(employeeList);
+	}
+
+	public void readRequest(Context ctx) {
+		System.out.println("Responding to Get request by employee ID");
+		
+		log.info("Controller: read a request by employee ID");
+		
+		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
+		
+		List<ReimbursementRequest> reqList = requestDao.readByRequestor(employeeId);
+		
+		ctx.json(reqList);
 	}
 }
 	//for direct supervisor approval

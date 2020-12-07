@@ -24,8 +24,10 @@ public class ServerDriver {
 		//methods for auth controller
 		app.post("/login", ctx -> authController.login(ctx));
 		app.get("/checkuser", ctx -> authController.checkUser(ctx));
+		app.post("/redirect", ctx->authController.redirectHomePage(ctx));
 		
 		//methods for approverController
+		
 		app.get("/supervisorrequests", ctx-> approverController.supervisorViewRequests(ctx));
 		app.get("/bencoviewrequests", ctx->approverController.bencoViewRequests(ctx));
 		app.get("/depheadviewrequests", ctx->approverController.depHeadViewRequests(ctx));
@@ -33,14 +35,20 @@ public class ServerDriver {
 		app.get("/viewmessagesap", ctx->approverController.viewMessages(ctx));
 		app.get("/vieweventgrade", ctx->approverController.viewEventGrade(ctx));
 		app.get("/viewpresentation", ctx->approverController.viewEventPresentation(ctx));
-		app.put("/approverequest", ctx->approverController.approveRequest(ctx));
-		app.put("/grantreimbursement", ctx->approverController.grantReimbursement(ctx));
+		app.post("/approverequest/:request_id", ctx->approverController.approveRequest(ctx));
+		app.post("/denyrequest/:request_id", ctx->approverController.denyRequest(ctx));
+		app.post("/grantreimbursement", ctx->approverController.grantReimbursement(ctx));
+		app.post("/approvegrade", ctx->approverController.approveGrade(ctx));
+		app.post("/denygrade", ctx->approverController.denyGrade(ctx));
+		
 		
 		//methods for requesterController
+		app.get("/underlingrequests", ctx->requesterController.readRequest(ctx));
+		app.get("/getemployee", ctx->requesterController.getEmployee(ctx));
 		app.post("/createrequest", ctx->requesterController.createRequest(ctx));
 		app.post("/sendmessagere", ctx->requesterController.sendMessage(ctx));
 		//app.get("/viewmessagere", ctx->requesterController.viewMessage(ctx));
-		app.put("/uploadgrade", ctx->requesterController.uploadGrade(ctx));
+		app.post("/uploadgrade", ctx->requesterController.uploadGrade(ctx));
 	//	app.put("/uploadpresentation", ctx->requesterController.uploadPresentation(ctx));
 		
 		

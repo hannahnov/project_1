@@ -2,9 +2,13 @@ package service;
 
 
 public interface EventResultService {
+	
+	void bencoApproveGrade(int requestId);
+	
+	void bencoDenyGrade(int requestId);
 
-	String readResultGrade(int bencoId);
+	String readResultGrade(int requestId);
 
-	byte[] readAttachment(int depheadId);
+	byte[] readAttachment(int requestId);
 
 }

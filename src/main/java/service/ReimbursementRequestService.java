@@ -16,10 +16,10 @@ public interface ReimbursementRequestService {
 	
 	public void deleteReimbursementRequest(int requestId);
 	
-	public ReimbursementRequest readRequestBySupervisorId(int supervisorId);
+	public List<ReimbursementRequest>  readRequestBySupervisorId(int supervisorId);
 	
 	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId);
 	
-	public ReimbursementRequest readRequestsByDepheadId(int depheadId);
+	public List<ReimbursementRequest>  readRequestsByDepheadId(int depheadId);
 
 }

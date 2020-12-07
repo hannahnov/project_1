@@ -55,7 +55,7 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 	}
 
 	@Override
-	public ReimbursementRequest readRequestBySupervisorId(int supervisorId) {
+	public List<ReimbursementRequest> readRequestBySupervisorId(int supervisorId) {
 		
 		log.info("Reimbursement request service: read request by supervisor ID");
 		
@@ -71,7 +71,7 @@ public class ReimbursementRequestServiceFullStack implements ReimbursementReques
 	}
 
 	@Override
-	public ReimbursementRequest readRequestsByDepheadId(int depheadId) {
+	public List<ReimbursementRequest> readRequestsByDepheadId(int depheadId) {
 		log.info("Reimbursement request service: read request by dephead ID");
 		
 		return reqDao.readRequestsByDepheadId(depheadId);

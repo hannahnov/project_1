@@ -25,4 +25,18 @@ public class EventResultServiceFullStack implements EventResultService {
 		return resultDao.readAttachmentByDepheadId(depheadId);
 	}
 
+	@Override
+	public void bencoApproveGrade(int requestId) {
+		log.info("eventResult service: benco approving grade");
+		resultDao.bencoApproveGrade(requestId);
+		
+	}
+
+	@Override
+	public void bencoDenyGrade(int requestId) {
+	log.info("eventresult service: bneco denying grade");
+	resultDao.bencoDenyGrade(requestId);
+		
+	}
+
 }

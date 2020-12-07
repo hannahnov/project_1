@@ -8,6 +8,6 @@ public interface RequestApprovalService {
 
 	void grantReimbursement(int requestId, int approverId, double reimbursement);
 	
-	void createRequestApproval(RequestApproval Request);
+	void createRequestApproval(RequestApproval Request, int requestId);
 
 }

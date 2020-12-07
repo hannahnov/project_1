@@ -15,10 +15,12 @@ public interface ReimbursementRequestDao {
 	
 	public int deleteReimbursementRequest(int reqId);
 	
-	public ReimbursementRequest readRequestBySupervisorId(int supervisorId);
+	public List<ReimbursementRequest> readRequestBySupervisorId(int supervisorId);
 
 	public List<ReimbursementRequest> readRequestsByBencoId(int bencoId);
 	
-	public ReimbursementRequest readRequestsByDepheadId(int depheadId);
+	public List<ReimbursementRequest> readRequestsByDepheadId(int depheadId);
+
+	public List<ReimbursementRequest> readByRequestor(int employeeId);
 
 }

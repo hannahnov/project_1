@@ -125,10 +125,10 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 	@Override
 	public Employee updateEmployee(int employeeId, Employee employee) {
 		log.info("Employee dao postgres: updating employee");
-		String sql = "update employees set first_name = ?, last_name = ?, supervisor_Id = ?"
+		String sql = "update employees set first_name = ?, last_name = ?, directsupervisor_id = ?,"
 				+ " available_reimbursement = ?, pending_reimbursement = ?, employee_rank = ?, email_address = ?"
-				+ ", deparment_id = ?, awarded_reimbursement = ? "
-				+ " where employeeid = ?";
+				+ ", department_id = ?, awarded_reimbursement = ? "
+				+ " where employee_id = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
@@ -142,6 +142,7 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 			statement.setInt(8, employee.getDepartmentId());
 			statement.setDouble(9, employee.getAwardedReimbursement());
 			statement.setInt(10, employeeId);
+			statement.executeQuery();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

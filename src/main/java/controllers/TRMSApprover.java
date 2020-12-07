@@ -6,7 +6,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import io.javalin.http.Context;
+import pojos.ApprovalStatus;
 import pojos.Employee;
+import pojos.EventResult;
 import pojos.Message;
 import pojos.ReimbursementRequest;
 import service.AuthService;
@@ -34,17 +36,27 @@ public class TRMSApprover {
 	private EventResultService resultService = new EventResultServiceFullStack();
 	
 	private RequestApprovalService requestApprovalService = new RequestApprovalServiceFullStack();
+	private AuthController authController = new AuthController();
+	
 	
 	public void supervisorViewRequests(Context ctx) {
 		System.out.println("Responding to Get read reimbursement request by supervisor ID");
 		
 		log.info("Controller: read a reimbursement request by supervisor ID");
 		
-		int supervisorId = Integer.valueOf(ctx.formParam("directsupervisor_id"));
+		List<ReimbursementRequest> reqList = new ArrayList<>();
 		
-		ReimbursementRequest req = reimbursementRequestService.readRequestBySupervisorId(supervisorId);
+		int supervisorId = AuthController.loginMap.get(ctx.cookie("funcookieId123"));
 		
-		ctx.html(req.toString());
+		System.out.println(supervisorId);
+		
+		reqList = reimbursementRequestService.readRequestBySupervisorId(supervisorId);
+		
+		System.out.println(reqList.toString());
+		
+		ctx.json(reqList);
+		
+		
 	}
 	
 	public void bencoViewRequests(Context ctx) {
@@ -68,7 +80,7 @@ public class TRMSApprover {
 		
 		log.info("Controller: read a reimbursement request by benco ID");
 		
-		int bencoId = Integer.valueOf(ctx.formParam("benco_id"));
+		int bencoId = AuthController.loginMap.get(ctx.cookie("funcookieId123"));
 		
 
 		List<ReimbursementRequest> reqList = reimbursementRequestService.readRequestsByBencoId(bencoId);
@@ -145,15 +157,31 @@ public class TRMSApprover {
 		
 		log.info("Controller: update request to add approval");
 		
-		int approval = Integer.valueOf(ctx.formParam("approval_status"));
+		int approval = 1;
 		
 		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
-		int requestId = Integer.valueOf(ctx.formParam("request_id"));
-		String date = ctx.formParam("approval_date");
+		int requestId = Integer.valueOf(ctx.pathParam("request_id"));
+		String date = "";//ctx.formParam("approval_date");
 		requestApprovalService.approveRequest(approval, employeeId, requestId, date);
+		authController.redirectHomePage(ctx);
 		
 	}
+	//changes the approval status of the request (if it is a benco approval the whole form is marked approved)
+		public void denyRequest(Context ctx) {
+			System.out.println("Responding to PUT deny request");
+			
+			log.info("Controller: update request to add denial");
+			
+			int approval = 3;
+			
+			int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
+			
+			int requestId = Integer.valueOf(ctx.formParam("request_id"));
+			String date = ""; //ctx.formParam("approval_date");
+			requestApprovalService.approveRequest(approval, employeeId, requestId, date);
+			
+		}
 	
 	//puts the appropriate amount of money in the employee's account
 	public void grantReimbursement(Context ctx) {
@@ -166,10 +194,36 @@ public class TRMSApprover {
 		
 		int approverId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
-		double reimbursement = Double.valueOf(ctx.formParam("reimbursement_amount"));
+		ReimbursementRequest req = reimbursementRequestService.readReimbursementRequest(requestId);
+		
+		double reimbursement = req.getProjectedReimbursement();
 		
 		requestApprovalService.grantReimbursement(requestId, approverId, reimbursement);
 		
+		authController.redirectHomePage(ctx);
+		
+	}
+
+	public void approveGrade(Context ctx) {
+System.out.println("Responding to benco approve grade request");
+		
+		log.info("Controller: update benco approval on event result");
+		
+		int requestId = Integer.valueOf(ctx.pathParam("request_id"));
+		
+
+		resultService.bencoApproveGrade(requestId);
+		authController.redirectHomePage(ctx);
+	}
+
+	public void denyGrade(Context ctx) {
+
+		log.info("Controller: benco deny grade");
+		
+		int requestId = Integer.valueOf(ctx.formParam("request_id"));
+		
+
+		resultService.bencoDenyGrade(requestId);
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import pojos.RequestApproval;
 
 public interface RequestApprovalDao {
-public void createRequestApproval(RequestApproval requestApproval);
+public void createRequestApproval(RequestApproval requestApproval, int requestId);
 	
 	public RequestApproval readRequestApproval(int requestId);
 	

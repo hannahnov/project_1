@@ -93,15 +93,15 @@ public class EventResultDaoPostgres implements EventResultDao {
 	@Override
 	public EventResult updateEventResult(int requestId, EventResult eventResult) {
 		log.info("EventResult Dao Postgres: updating eventResult");
-		String sql = "update eventresults set grade = ?, attachment = ? "
+		String sql = "update eventresults set grade = ? "
 				+ "where request_id = ?";
 					
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			//	(ReimbursementRequest req, String grade, byte[] presentation)
 				statement.setString(1, eventResult.getGrade());
-				statement.setBytes(2, eventResult.getPresentation());
-				statement.setInt(3, requestId);
+				statement.setInt(2, requestId);
+				statement.executeQuery();
 			
 			
 		} catch (SQLException e) {
@@ -187,6 +187,45 @@ public class EventResultDaoPostgres implements EventResultDao {
 			e.printStackTrace();
 		}
 		return eventResult.getPresentation();
+	}
+
+	@Override
+	public void bencoApproveGrade(int requestId) {
+		log.info("EventResult Dao Postgres: updating eventResult");
+		String sql = "update eventresults set benco_approval = true "
+				+ "where request_id = ?";
+					
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			//	(ReimbursementRequest req, String grade, byte[] presentation)
+
+				statement.setInt(1, requestId);
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+		
+
+	@Override
+	public void bencoDenyGrade(int requestId) {
+		log.info("EventResult Dao Postgres: updating eventResult");
+		String sql = "update eventresults set benco_approval = false "
+				+ "where request_id = ?";
+					
+		try (Connection conn = connUtil.createConnection()) {
+			statement = conn.prepareStatement(sql);
+			//	(ReimbursementRequest req, String grade, byte[] presentation)
+
+				statement.setInt(1, requestId);
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 		
 }

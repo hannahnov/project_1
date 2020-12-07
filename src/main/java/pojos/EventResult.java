@@ -9,8 +9,9 @@ public class EventResult {
 	
 	private byte[] presentation;
 	
+	private boolean bencoApproval;
 	
-
+	private boolean directsupervisorApproval;
 	
 	public EventResult(ReimbursementRequest req, byte[] presentation) {
 		super();
@@ -30,6 +31,24 @@ public class EventResult {
 		this.grade = grade;
 		this.presentation = presentation;
 	}
+	
+	public boolean isBencoApproval() {
+		return bencoApproval;
+	}
+
+	public void setBencoApproval(boolean bencoApproval) {
+		this.bencoApproval = bencoApproval;
+	}
+
+	public boolean isDirectsupervisorApproval() {
+		return directsupervisorApproval;
+	}
+
+	public void setDirectsupervisorApproval(boolean directsupervisorApproval) {
+		this.directsupervisorApproval = directsupervisorApproval;
+	}
+
+
 
 	public EventResult() {
 		// TODO Auto-generated constructor stub

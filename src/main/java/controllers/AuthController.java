@@ -33,7 +33,7 @@ public class AuthController {
 		
 		int authenticated = auth.authenticateUser(username, password);
 		if(authenticated != -1) {
-			List<Employee> employeeList = new ArrayList<>();
+			List<Employee> employeeList = employeeService.readAllEmployees();
 			ctx.status(200);
 			
 			
@@ -46,12 +46,7 @@ public class AuthController {
 			
 			System.out.println(empl.getFirstName() + "'s rank is " + empl.getEmployeeRank().getValue());
 			
-			for (int i = 0; i < employeeList.size(); i++) {
-				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
-					ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
-					break;
-				}
-			}
+			
 			if (empl.getEmployeeRank().getValue() == 1) {
 			ctx.redirect("http://127.0.0.1:5500/department_head.html");
 			}
@@ -61,7 +56,14 @@ public class AuthController {
 			else {
 			ctx.redirect("http://127.0.0.1:5500/underling_page.html");
 			}
-			
+			for (int i = 0; i < employeeList.size(); i++) {
+				System.out.println(employeeList.get(i).getDirectSupervisorId());
+				if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
+					System.out.println("redirecting to supervisor page");
+					ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
+					break;
+				}
+			}
 
 		} else {
 			ctx.status(401);
@@ -78,6 +80,31 @@ public class AuthController {
 			ctx.clearCookieStore();
 			ctx.redirect( "index.html");
 		}
+
+	public void redirectHomePage(Context ctx) {
+		int employeeId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
+		List<Employee> employeeList = employeeService.readAllEmployees();
+		Employee empl = employeeService.readEmployee(employeeId);
+
+		for (int i = 0; i < employeeList.size(); i++) {
+			System.out.println(employeeList.get(i).getDirectSupervisorId());
+			if (employeeList.get(i).getDirectSupervisorId() == employeeId) {
+				ctx.redirect("http://127.0.0.1:5500/supervisor_page.html");
+				break;
+			}
+		}
+		if (empl.getEmployeeRank().getValue() == 1) {
+		ctx.redirect("http://127.0.0.1:5500/department_head.html");
+		}
+		else if (empl.getEmployeeRank().getValue() == 2) {
+			ctx.redirect("http://127.0.0.1:5500/benco_page.html");
+		}
+		else {
+		ctx.redirect("http://127.0.0.1:5500/underling_page.html");
+		}
+		
+		
+	}
 
 }
 
