@@ -26,7 +26,7 @@ public class EventResultDaoPostgres implements EventResultDao {
 		
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
-			statement.setInt(1, result.getReq().getRequestId());
+			statement.setInt(1, result.getReq());
 			statement.setString(2, result.getGrade());
 			statement.setBytes(3, result.getPresentation());
 	
@@ -55,7 +55,7 @@ public class EventResultDaoPostgres implements EventResultDao {
 				String grade = rs.getString("grade");
 				byte[] presentation = rs.getBytes("attachment");
 
-				 eventResult = new EventResult(req, grade, presentation);
+				 eventResult = new EventResult(req.getRequestId(), grade, presentation);
 			} 
 			
 		} catch (SQLException e) {
@@ -80,7 +80,7 @@ public class EventResultDaoPostgres implements EventResultDao {
 				String grade = rs.getString("grade");
 				byte[] presentation = rs.getBytes("attachment");
 
-				 eventResult = new EventResult(req, grade, presentation);
+				 eventResult = new EventResult(req.getRequestId(), grade, presentation);
 				 eventResultList.add(eventResult);
 			} 
 			
@@ -132,12 +132,15 @@ public class EventResultDaoPostgres implements EventResultDao {
 }
 
 	@Override
-	public String readGradeByBencoId(int bencoId) {
+	public List<EventResult> readGradeByBencoId(int bencoId) {
 		
 		log.info("EventResult Dao Postgres: reading grade by bencoid");
-		String sql = "select * from eventresults where employee_id = (select employee_id from employees where "
-				+ "	department_id = (select department_id from employees where employee_id = ?))";
+		String sql = "select * from eventresults er inner join requests r on er.request_id = r.request_id " +
+				" inner join employees e " 
+				+ " on  r.employee_id = e.employee_id "
+				+ "where e.department_id = (select department_id from employees where employee_id = ?)";
 			EventResult eventResult = new EventResult();
+			List<EventResult> resultList = new ArrayList<>();
 		try (Connection conn = connUtil.createConnection()) {
 			statement = conn.prepareStatement(sql);
 			
@@ -151,13 +154,14 @@ public class EventResultDaoPostgres implements EventResultDao {
 				String grade = rs.getString("grade");
 				byte[] presentation = rs.getBytes("attachment");
 
-				 eventResult = new EventResult(req, grade, presentation);
+				 eventResult = new EventResult(req.getRequestId(), grade, presentation);
+				 resultList.add(eventResult);
 			} 
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return eventResult.getGrade();
+		return resultList;
 	}
 
 	@Override
@@ -180,7 +184,7 @@ public class EventResultDaoPostgres implements EventResultDao {
 				String grade = rs.getString("grade");
 				byte[] presentation = rs.getBytes("attachment");
 
-				 eventResult = new EventResult(req, grade, presentation);
+				 eventResult = new EventResult(req.getRequestId(), grade, presentation);
 			} 
 			
 		} catch (SQLException e) {

@@ -108,6 +108,7 @@ public class TRMSApprover {
 		Message msg = new Message(requestId, senderId, recipientId, dateSent, received, messageHeader, message);
 		
 		  messageService.createMessage(msg);
+		  authController.redirectHomePage(ctx);
 	}
 	//view requests or reminders
 	public void viewMessages(Context ctx) {
@@ -130,9 +131,10 @@ public class TRMSApprover {
 		
 		int bencoId = AuthController.loginMap.get(ctx.cookieStore("funcookieId123"));
 		
-		String grade = resultService.readResultGrade(bencoId);
+		List<EventResult> resultList = resultService.readResultGrade(bencoId);
 		
-		ctx.html(grade);
+		
+		ctx.json(resultList);
 	}
 	
 	public void viewEventPresentation(Context ctx) {
@@ -165,6 +167,14 @@ public class TRMSApprover {
 		String date = "";//ctx.formParam("approval_date");
 		requestApprovalService.approveRequest(approval, employeeId, requestId, date);
 		authController.redirectHomePage(ctx);
+		
+		Employee empl = employeeService.readEmployee(employeeId);
+		
+		if (empl.getEmployeeRank().getValue() == 2) {
+			ReimbursementRequest req = reimbursementRequestService.readReimbursementRequest(requestId);
+			ApprovalStatus approvalStatus = ApprovalStatus.APPROVED;
+			req.setApprovalStatus(approvalStatus);
+		}
 		
 	}
 	//changes the approval status of the request (if it is a benco approval the whole form is marked approved)

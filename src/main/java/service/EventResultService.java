@@ -1,5 +1,8 @@
 package service;
 
+import java.util.List;
+
+import pojos.EventResult;
 
 public interface EventResultService {
 	
@@ -7,7 +10,7 @@ public interface EventResultService {
 	
 	void bencoDenyGrade(int requestId);
 
-	String readResultGrade(int requestId);
+	List<EventResult> readResultGrade(int requestId);
 
 	byte[] readAttachment(int requestId);
 

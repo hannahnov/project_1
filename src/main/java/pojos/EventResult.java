@@ -3,7 +3,7 @@ package pojos;
 
 public class EventResult {
 	
-	private ReimbursementRequest req;
+	private int req;
 	
 	private String grade;
 	
@@ -13,21 +13,21 @@ public class EventResult {
 	
 	private boolean directsupervisorApproval;
 	
-	public EventResult(ReimbursementRequest req, byte[] presentation) {
+	public EventResult(int req, byte[] presentation) {
 		super();
-		this.req = req;
+		this.setReq(req);
 		this.presentation = presentation;
 	}
 
-	public EventResult(ReimbursementRequest req, String grade) {
+	public EventResult(int req, String grade) {
 		super();
-		this.req = req;
+		this.setReq(req);
 		this.grade = grade;
 	}
 
-	public EventResult(ReimbursementRequest req, String grade, byte[] presentation) {
+	public EventResult(int req, String grade, byte[] presentation) {
 		super();
-		this.req = req;
+		this.setReq(req);
 		this.grade = grade;
 		this.presentation = presentation;
 	}
@@ -54,13 +54,6 @@ public class EventResult {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ReimbursementRequest getReq() {
-		return req;
-	}
-
-	public void setReq(ReimbursementRequest req) {
-		this.req = req;
-	}
 
 	public String getGrade() {
 		return grade;
@@ -76,5 +69,13 @@ public class EventResult {
 
 	public void setPresentation(byte[] presentation) {
 		this.presentation = presentation;
+	}
+
+	public int getReq() {
+		return req;
+	}
+
+	public void setReq(int req) {
+		this.req = req;
 	}
 }
