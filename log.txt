@@ -2527,3 +2527,148 @@
 2020-12-07 14:16:42 INFO  root:67 - request Dao Postgres: reading request
 2020-12-07 14:16:42 INFO  root:48 - Event Dao Postgres: reading event
 2020-12-07 14:16:42 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:20:04 INFO  root:21 - program has started
+2020-12-07 14:20:48 INFO  root:120 - Login Dao Postgres: reading login info based on username and password
+2020-12-07 14:20:48 INFO  root:95 - Login Dao Postgres: reading password info
+2020-12-07 14:20:48 INFO  root:53 - login information approved
+2020-12-07 14:20:48 INFO  root:34 - Employee service: read all employees
+2020-12-07 14:20:48 INFO  root:94 - Employee dao postgres reading all Employees
+2020-12-07 14:20:48 INFO  root:27 - Employee service: read employee
+2020-12-07 14:20:48 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:20:50 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:20:50 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:20:50 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:20:50 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:20:50 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:20:50 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:20:50 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:20:50 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:20:50 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:55 INFO  root:117 - Controller: read a message
+2020-12-07 14:23:55 INFO  root:24 - Message service: read message by recipeint Id
+2020-12-07 14:23:56 INFO  root:50 - message Dao Postgres: reading message
+2020-12-07 14:23:56 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:56 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:56 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:67 - Controller: read a reimbursement request by benco ID
+2020-12-07 14:23:56 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-07 14:23:56 INFO  root:219 - request Dao Postgres: reading request by bencoId
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:56 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:56 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:56 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:56 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:56 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:56 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:56 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:57 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:57 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:57 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:57 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:23:57 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:23:57 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:23:57 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:23:57 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:23:57 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:58 INFO  root:117 - Controller: read a message
+2020-12-07 14:24:58 INFO  root:24 - Message service: read message by recipeint Id
+2020-12-07 14:24:58 INFO  root:50 - message Dao Postgres: reading message
+2020-12-07 14:24:59 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:24:59 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:24:59 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:67 - Controller: read a reimbursement request by benco ID
+2020-12-07 14:24:59 INFO  root:68 - Reimbursement request service: read request by benco ID
+2020-12-07 14:24:59 INFO  root:219 - request Dao Postgres: reading request by bencoId
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:24:59 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:24:59 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:24:59 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:24:59 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:24:59 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:24:59 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:24:59 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:25:00 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:25:00 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:25:00 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:25:00 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:130 - Controller: read an event Grade by benco ID
+2020-12-07 14:25:00 INFO  root:19 - EventResult service: read event grade by benco Id
+2020-12-07 14:25:00 INFO  root:137 - EventResult Dao Postgres: reading grade by bencoid
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee
+2020-12-07 14:25:00 INFO  root:67 - request Dao Postgres: reading request
+2020-12-07 14:25:00 INFO  root:48 - Event Dao Postgres: reading event
+2020-12-07 14:25:00 INFO  root:61 - employeeDaoPostgres: reading employee

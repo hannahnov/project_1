@@ -6,10 +6,10 @@
     
   <link href = "project1_style.css" rel = "stylesheet" type = "text/css">
 </head>
-<body>
+<body> 
     <main>
  <form id="login" method="POST" action="http://localhost:9096/login">
-    <h1>Tuition Reimbursement Management Homepage</h1>
+    <h1 style = "color:rgb(51, 68, 117)">Tuition Reimbursement Management Homepage</h1>
      <h4>Please login to access employee pages</h4><br>    
     <div class="login">     
         <label><b>Username    
@@ -25,7 +25,7 @@
         <label><b>Employee Id    
         </b>    
         </label>    
-        <input type="text" name="employee_id" id="EmplId" placeholder="Employee Id" required>    
+        <input type="number" name="employee_id" id="EmplId" placeholder="Employee Id" required>    
         <br><br>      
         <button type="submit" onclick="requestSubmit()">Log In</button>	   
         <br><br>    

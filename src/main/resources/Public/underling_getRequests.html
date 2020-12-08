@@ -5,14 +5,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Waiting requests: </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link  type='text/css' media='screen' href='project1_style.css' rel = "stylesheet">
+    <link  type='text/css' media='screen' href='project1_style.css' rel = 'stylesheet'>
 </head>
 <body>
-<h1 style = "color:rgb(49, 49, 112)">Waiting requests: </h1>
+    <h1 style = "color:rgb(49, 49, 112)">Waiting requests: </h1>
     <table id="message-table" class="table-style">
         <tr class="table-style">
-            <th id = "approveHeader" style= "color: rgb(46, 46, 100)"class="table-style">Approve<button>Approve</button></th>
-            <th id = "denyHeader" style= "color: rgb(46, 46, 100)"class="table-style">Deny<button>Deny</button></th>
             <th style= "color: rgb(46, 46, 100)"class="table-style">Request Id</th>
             <th style= "color: rgb(46, 46, 100)"class="table-style">Event Id</th>
             <th style= "color: rgb(46, 46, 100)"class="table-style">Projected Reimbursement</th>
@@ -29,17 +27,37 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+   <h3 style = "color:rgb(46, 46, 100)"> Submit any grades from completed events here: </h3>
+    <form id="login" method="POST" action="http://localhost:9096/uploadgrade">
+        <label><b>Enter request ID to submit grade: 
+        </b>    
+        </label>    
+        <input type="text" name="request_id" id="rID" placeholder="Request ID" required>    
+        <label><b>Enter grade: 
+        </b>    
+        </label>    
+        <input type="text" name="grade" id="grade" placeholder="Grade" required>   
+        <button class = "button" value="Log In"
+        type = "submit">Submit</button><br>
+    </form>
+   <h3 style = "color:rgb(46, 46, 100)"> Submit any presentation uploads from completed events here: </h3>
+    <form id="login" method="POST" action="http://localhost:9096/redirect">
+        <label><b>Enter request ID to submit presentation:  
+        </b>    
+        </label>    
+        <input type="text" name="request_id" id="rID" placeholder="Request ID" required>    
+        <button class = "button" value="Log In"
+        type = "submit">Submit</button><br>
+    </form>
+    
+    
     <form id="login" method="POST" action="http://localhost:9096/redirect">
         <button class = "button" value="Log In"
         type = "submit">Return to homepage</button><br>
     </form>
+   
 
 
-    <script src="bencoGetRequests.js" type="text/javascript"></script>
+    <script src="underling_getRequests.js" type="text/javascript"></script>
 </body>
 </html>

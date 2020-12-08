@@ -5,24 +5,39 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Waiting requests: </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link  type='text/css' media='screen' href='project1_style.css'>
+    <link  type='text/css' media='screen' href='project1_style.css' rel = "stylesheet">
 </head>
 <body>
-<h1>Waiting requests: </h1>
+<h1 style = "color:rgb(49, 49, 112)">Waiting requests: </h1>
     <table id="message-table" class="table-style">
         <tr class="table-style">
-            <th class="table-style">Request Id</th>
-            <th class="table-style">Event Id</th>
-            <th class="table-style">Projected Reimbursement</th>
-            <th class="table-style">Is Urgent</th>
-            <th class="table-style">Request Date</th>
-            <th class="table-style">Work Days Missed</th>
-            <th class="table-style">Justification</th>
-            <th class="table-style">Requester Id</th>
-            <th class="table-style">Approval status</th>
-            <th class="table-style">Event description</th>
+            <th id = "approveHeader" style= "color: rgb(46, 46, 100)"class="table-style">Approve<button>Approve</button></th>
+            <th id = "denyHeader" style= "color: rgb(46, 46, 100)"class="table-style">Deny<button>Deny</button></th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Request Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Event Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Projected Reimbursement</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Is Urgent</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Request Date</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Work Days Missed</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Justification</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Requester Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Approval status</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Event description</th>
         </tr>
     </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form id="login" method="POST" action="http://localhost:9096/redirect">
+        <button class = "button" value="Log In"
+        type = "submit">Return to homepage</button><br>
+    </form>
 
 
     <script src="bencoGetRequests.js" type="text/javascript"></script>

@@ -5,25 +5,37 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Messages</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link  type='text/css' media='screen' href='project1_style.css'>
+    <link  type='text/css' media='screen' href='project1_style.css' rel = "stylesheet">
 </head>
-<body>
-
-      
-    <input type="number" name="employee_id" id="employeeIdM" placeholder="Employee Id" required>
-    <button type="submit" id = "buttonM" onclick="requestSubmit()">Submit</button>	
+<body>	
+    <h1 style= "color: rgb(46, 46, 100)">Messages: </h1>
     <table id="message-table" class="table-style">
         <tr class="table-style">
-            <th class="table-style">Message Id</th>
-            <th class="table-style">Request Id</th>
-            <th class="table-style">Sender Id</th>
-            <th class="table-style">Recipient Id</th>
-            <th class="table-style">Date Sent</th>
-            <th class="table-style">Is Received</th>
-            <th class="table-style">Message Header</th>
-            <th class="table-style">Message</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Message Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Request Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Sender Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Recipient Id</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Date Sent</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Is Received</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Message Header</th>
+            <th style= "color: rgb(46, 46, 100)"class="table-style">Message</th>
         </tr>
     </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form id="login" method="POST" action="http://localhost:9096/redirect">
+        <button class = "button" value="Log In"
+        type = "submit">Return to homepage</button><br>
+    </form>
 
 
     <script src="view_messages.js" type="text/javascript"></script>

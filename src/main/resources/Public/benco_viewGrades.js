@@ -5,7 +5,7 @@ window.onload = function () {
   
     let xhr = new XMLHttpRequest();
 
-    const url = "http://localhost:9096/bencoviewrequests";
+    const url = "http://localhost:9096/vieweventgrade";
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
@@ -54,24 +54,17 @@ function addRow(Requests) {
     let tableRow = document.createElement("tr");
     let approveForm = document.createElement("form");
     approveForm.method = "POST";
-    approveForm.action = "http://localhost:9096/approverequest/" + Requests.requestId;
+    approveForm.action = "http://localhost:9096/approvegrade";
     let denyForm = document.createElement("form");
     denyForm.method = "POST";
-    denyForm.action = "http://localhost:9096/denyrequest/" + Requests.requestId;
+    denyForm.action = "http://localhost:9096/denygrade";
     let approveCol = document.createElement("td");
     let denyCol = document.createElement("td");
     let approveButton = document.createElement("button");
     let denyButton = document.createElement("button");
     let requestIdCol = document.createElement("td");
-    let eventIdCol = document.createElement("td");
-    let projectedReimbursementCol = document.createElement("td");
-    let isUrgentCol = document.createElement("td");
-    let requestDateCol = document.createElement("td");
-    let workDaysMissedCol = document.createElement("td");
-    let justificationCol = document.createElement("td");
-    let employeeIdCol = document.createElement("td");
-    let approvalStatusCol = document.createElement("td");
-    let descriptionCol = document.createElement("td");
+    let gradeCol = document.createElement("td");
+    let bencoApprovalCol = document.createElement("td");
    
     let approveHeader = document.getElementById("approveHeader");
     let denyHeader = document.getElementById("denyHeader");
@@ -83,52 +76,30 @@ function addRow(Requests) {
     table.appendChild(approveCol);
     table.appendChild(denyCol);
     table.appendChild(requestIdCol);
-    table.appendChild(eventIdCol);
-    table.appendChild(projectedReimbursementCol);
-    table.appendChild(isUrgentCol);
-    table.appendChild(requestDateCol);
-    table.appendChild(workDaysMissedCol);
-    table.appendChild(justificationCol);
-    table.appendChild(employeeIdCol);
-    table.appendChild(approvalStatusCol);
-    table.appendChild(descriptionCol);
+    table.appendChild(gradeCol);
+    table.appendChild(bencoApprovalCol);
     
 
     approveButton.innerHTML = 'Approve';
     denyButton.innerHTML = 'Deny';
-    projectedReimbursementCol.innerHTML = Requests.projectedReimbursement;
-    isUrgentCol.innerHTML = Requests.isUrgent;
-    requestIdCol.innerHTML = Requests.requestId; 
-    requestDateCol.innerHTML = Requests.requestDate;
-    workDaysMissedCol.innerHTML = Requests.workDaysMissed;
-    justificationCol.innerHTML = Requests.justification;
-    employeeIdCol.innerHTML = Requests.requestorId;
-    eventIdCol.innerHTML = Requests.eventId;
-    approvalStatusCol.innerHTML = Requests.approvalStatus;
-    descriptionCol.innerHTML = Requests.description;
+    requestIdCol.innerHTML = Requests.req; 
+    gradeCol.innerHTML = Requests.grade;
+    bencoApprovalCol.innerHTML = Requests.bencoApproval;
     
     approveButton.className = "approve-button";
     denyButton.className = "deny-button";
     approveCol.className = "table-style";
     denyCol.className = "table-style";
     requestIdCol.className = "table-style";
-     eventIdCol.className = "table-style";
-     projectedReimbursementCol.className = "table-style";
-     isUrgentCol.className = "table-style";
-     requestDateCol.className = "table-style";
-     workDaysMissedCol.className = "table-style";
-     justificationCol.className = "table-style";
-     employeeIdCol.className = "table-style";
-     approvalStatusCol.className = "table-style";
-     descriptionCol.className = "table-style";
+     gradeCol.className = "table-style";
+     bencoApprovalCol.className = "table-style";
 
-     approveButton.addEventListener("mouse-over", function () {
-        document.cookie = "request_id =" + reimbursement.requestId;
-    });
+      approveButton.addEventListener("mouseover", function () {
+         document.cookie = "request_id =" + reimbursement.requestId;
+     });
 
-    denyButton.addEventListener("mouse-over", function() {
-        document.cookie = "request_id =" + reimbursement.requestId;
-    });
-
+     denyButton.addEventListener("mouseover", function() {
+         document.cookie = "request_id =" + reimbursement.requestId;
+     });
 
 }
