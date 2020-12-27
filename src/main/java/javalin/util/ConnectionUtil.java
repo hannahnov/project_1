@@ -14,7 +14,7 @@ public class ConnectionUtil {
 	
 	public Connection createConnection() throws SQLException {
 			
-			Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?", "postgres", "Ripeanut1!");
+			Connection conn = DriverManager.getConnection("URL", "USERNAME", "PASSWORD");
 			
 			return conn;
 			
